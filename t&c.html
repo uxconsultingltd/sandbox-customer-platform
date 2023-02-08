@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US" data-lang="en-US" crm-lang="en-US" dir="ltr" crm-lcid="1033" same-site-mode="None">
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,&#32;initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<script type="text/javascript">
+
+	</script>
+	<title>My AccountCustom Portal </title>
+
+	<!--[if lt IE 9]>
+                      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+                  <![endif]-->
+
+	<!--[if lt IE 10]>
+                      <script src="~/js/formdata.js"></script>
+                  <![endif]-->
+
+	<link href="css/portal/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/portal/theme.css" rel="stylesheet" />
+	<link href="css/portal/SEThemeV2.css" rel="stylesheet" />
+	<link href="css/portal/portalbasictheme.css" rel="stylesheet" />
+	<link href="css/portal/glyphicons-font-awesome-migrate.min.css" rel="stylesheet" />
+	<link href="https://crm2devportal.powerappsportals.com/css/offlinenotification.css" rel="stylesheet" />
+</head>
+
+<body data-sitemap-state="/" data-dateformat="M/d/yyyy" data-timeformat="h:mm tt" data-datetimeformat="M/d/yyyy h:mm tt"
+	data-app-path="/" data-ckeditor-basepath="/js/BaseHtmlContentDesigner/Libs/msdyncrm_/libs/ckeditor/"
+	data-case-deflection-url="/_services/search/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89">
+
+	<div id="offlineNotificationBar" style="display: none;">
+		<div id="web"></div>
+		<div id="message">You’re offline. This is a read only version of the page.</div>
+		<div id="close" onclick="this.parentElement.style.display='none';"></div>
+	</div>
+
+	<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="skip-to-content"><a href="#mainContent">Skip to main content</a></div>
+		<div class="container">
+			<div class="navbar-header">
+
+				<button type="button" class="navbar-toggle collapsed" title="Toggle navigation" data-toggle="collapse"
+					data-target="#navbar" aria-expanded="false" onclick="setHeight();">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+
+				<nav aria-label="Main Navigation" class="navbar-right menu-bar " data-weblinks-maxdepth="2">
+					<ul class="nav navbar-nav weblinks">
+
+						<li class="weblink ">
+							<a aria-label="Home" href="/" title="Home">
+								Home
+							</a>
+
+						</li>
+
+						<li class="divider-vertical" aria-hidden="true"></li>
+						<li role="none" class="dropdown">
+							<a id="search" class="navbar-icon" href="#" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false" aria-label="Search">
+								<span class="glyphicon glyphicon-search"></a>
+							</a>
+							<div class="dropdown-menu dropdown-search">
+
+								<form method="GET" action="/search/" role="search" class="form-search">
+									<div class="input-group">
+
+
+
+										<label for="q" class="sr-only">
+											Search
+										</label>
+										<input type="text" class="form-control" id="q" name="q" placeholder="Search"
+											value="" title="Search">
+										<div class="input-group-btn">
+											<button type="submit" class="btn btn-default" title="Search"
+												aria-label="Search">
+												<span class="fa fa-search" aria-hidden="true"></span>
+											</button>
+										</div>
+									</div>
+								</form>
+
+
+							</div>
+						</li>
+
+						<li class="divider-vertical" aria-hidden="true"></li>
+
+
+						<li role="none">
+							<a aria-label="Sign in" href="/SignIn?returnUrl=%2F">
+								Sign in
+							</a>
+						</li>
+
+					</ul>
+
+				</nav>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="content-container" class="container wrapper-body" role="main">
+		<div id="content">
+
+
+			<div class="page-content" id="mainContent">
+
+
+				<section id="terms-and-conditions-section">
+					<h1><span class="xrm-editable-text xrm-attribute" data-languagecontext="English"><span
+								class="xrm-attribute-value-encoded xrm-attribute-value">Terms and Conditions
+
+							</span></span></h1>
+					<div class="xrm-editable-html xrm-attribute terms-and-conditions" data-languagecontext="English">
+						<div class="xrm-attribute-value">
+							<h2>Scottish Enterprise terms of use for websites</h2>
+
+							<p>These terms of use (together with the privacy policy and the cookies policy) tell you the
+								terms on which you may use this website. By using this website, you confirm that you
+								accept these terms of use and that you agree to comply with them. If you do not agree to
+								these terms of use, you are not permitted to use this website.</p>
+
+							<p>This website is operated by Scottish Enterprise, established under the Enterprise and New
+								Towns (Scotland) Act 1990 and having a principal office at Atrium Court, 50 Waterloo
+								Street, Glasgow G2 6HQ ("SE").</p>
+
+							<p>SE accept no responsibility and, to the fullest extent permitted by law, exclude all
+								liability in connection with browsing this site, use of information on this site and
+								downloading any material from it including, but not limited to, any liability for
+								errors, inaccuracies, omissions or misleading or defamatory statements. SE's disclaimers
+								of liability are set out in more detail on this page.</p>
+
+							<p>SE reserves the right to change these terms of use at any time by amending this page. Any
+								new terms will be displayed on the website and by continuing to use and access the
+								website following such changes, you agree to be bound by any variation made by us. It is
+								your responsibility to check these terms of use from time to time to verify such
+								variations</p>
+
+						</div>
+
+					</div>
+
+
+					</ul>
+			</div>
+			<form action="/Account/Login/TermsAndConditions?returnUrl=%2F" method="post">
+				<fieldset>
+					<input name="__RequestVerificationToken" type="hidden"
+						value="UJzGZ3PJhbKLHmqcfPbVrC_g1sNRN3kwR3MdG3H0mMAYtYrNAfjOM1TSh4PUBMWuuCmc1qoXNuxj8ZOMh2El6PMRda-aFE9j40P1OL3DU7w1">
+					<input id="InvitationCode" name="InvitationCode" type="hidden" value="">
+					<input data-val="true" data-val-required="The IsFacebook field is required." id="IsFacebook"
+						name="IsFacebook" type="hidden" value="False">
+					<input data-val="true" data-val-required="The UseExternalSignInAsync field is required."
+						id="UseExternalSignInAsync" name="UseExternalSignInAsync" type="hidden" value="True">
+					<input data-val="true" data-val-required="The IsInternalAADUser field is required."
+						id="IsInternalAADUser" name="IsInternalAADUser" type="hidden" value="False">
+					<div class="form-group" role="presentation">
+						<div class="checkbox" role="presentation">
+							<label for="terms-conditions-confirmation">
+								<input data-val="true"
+									data-val-required="The IsTermsAndConditionsAccepted field is required."
+									id="terms-conditions-confirmation" name="IsTermsAndConditionsAccepted" tabindex="0"
+									type="checkbox" value="true"><input name="IsTermsAndConditionsAccepted"
+									type="hidden" value="false">
+								<span class="xrm-editable-text xrm-attribute" data-languagecontext="English"><span
+										class="xrm-attribute-value-encoded xrm-attribute-value">I agree to these terms
+										and conditions.</span></span>
+							</label>
+						</div>
+					</div>
+					<div class="form-group" role="presentation">
+						<input type="submit" id="submit-agreement" class="btn btn-primary" tabindex="0" value="Continue"
+							disabled="">
+					</div>
+				</fieldset>
+			</form>
+			</section>
+
+			<!-- Adds aria-required='true' to the checkbox -->
+			<script>
+
+				window.onload = function () { 
+					let checkbox = document.getElementById("terms-conditions-confirmation");					
+					window.onload = checkbox.setAttribute('aria-required', true);
+				};
+			
+			</script>
+
+			<!-- Offline banner fixes -->
+			<script>
+				let offlineBanner = document.getElementById("offlineNotificationBar");
+				let btnClose = document.getElementById("close");
+				let aTag = document.createElement('a');
+
+				window.onload = function () { updateOfflineBanner() };
+
+				function updateOfflineBanner() {
+					btnClose.remove();
+					aTag.setAttribute('href', '#');
+					aTag.setAttribute('id', 'linkClose');
+					aTag.innerText = "Close";
+					offlineBanner.appendChild(aTag);
+
+					let linkClose = document.getElementById('linkClose');
+					linkClose.addEventListener('click', hideBanner);
+				}
+
+				function hideBanner() {
+					offlineBanner.style.display = 'none';
+				}
+			</script>
+
+
+		</div>
+
+	</div>
+	</div>
+
+	<script src="/js/pcf/loadPcfControls.js"></script>
+
+
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 footer__lower-content">
+					<div class="footer__links">
+						<a class="footer__link" href="/help/accessibility/">Accessibility</a>
+						<a class="footer__link" href="/help/cookie-policy/">Cookie policy</a>
+						<a class="footer__link" href="/help/privacy-notice/">Privacy notice</a>
+						<a class="footer__link" href="/help/terms-of-use/">Terms of use</a>
+						<a class="footer__link" href="/help/beta">Beta: this is a new service</a>
+					</div>
+				</div>
+			</div>
+			<div class="row footer__copyright"><span>© Scottish Enterprise 2022. All rights reserved.</span></div>
+		</div>
+	</footer>
+</body>
+
+</html>

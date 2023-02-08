@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-US" data-lang="en-US" crm-lang="en-US" dir="ltr" crm-lcid="1033" same-site-mode="None">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,&#32;initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <script type="text/javascript">
+
+  </script>
+  <title>My AccountCustom Portal </title>
+
+  <!--[if lt IE 9]>
+				<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+
+  <!--[if lt IE 10]>
+				<script src="~/js/formdata.js"></script>
+			<![endif]-->
+
+
+
+
+  <link href="css/portal/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/portal/theme.css" rel="stylesheet" />
+  <link href="css/portal/SEThemeV2.css" rel="stylesheet" />
+  <link href="css/portal/portalbasictheme.css" rel="stylesheet" />
+  <link href="css/portal/glyphicons-font-awesome-migrate.min.css" rel="stylesheet" />
+
+  <!-- <link href="https://se-qa-designsystem-website.azurewebsites.net/assets/styles/site.css?v=4.0.153.0" rel="stylesheet"> -->
+  <!-- <link href="/css/offlinenotification.css" rel="stylesheet" /> -->
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="skip-to-content"><a href="#mainContent">Skip to main content</a></div>
+    <div class="container">
+      <div class="navbar-header">
+
+        <!--div class="visible-xs-block">
+              <div class="xrm-editable-html&#32;xrm-attribute" data-languageContext="English"><div class="xrm-attribute-value"><div></div>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script><img src="/se-logo.png" name="se-logo.png" style="width: 170px; height: auto; background-color: #fafafa;">
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script></div></div>
+            </div-->
+        <div class="visible-sm-block visible-md-block visible-lg-block visible-xs-block navbar-brand">
+          <div class="xrm-editable-html&#32;xrm-attribute" data-languageContext="English">
+            <div class="xrm-attribute-value">
+              <div></div>
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script><img src="assets/se-logo-transparent.png"
+                name="se-logo.png" style="width: 170px; height: auto; background-color: #fafafa;">
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="navbar-toggle collapsed" title="Toggle navigation" data-toggle="collapse"
+          data-target="#navbar" aria-expanded="false" onclick="setHeight();">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+
+
+        <nav aria-label="Main Navigation" class="navbar-right menu-bar " data-weblinks-maxdepth="2">
+          <ul class="nav navbar-nav weblinks">
+
+            <li class="weblink ">
+              <a aria-label="Home" href="/" title="Home">
+                Home
+              </a> </li>
+
+
+            <li class="weblink ">
+              <a aria-label="My Account" href="/viewaccount/" title="My Account">
+                My Account
+              </a></li>
+
+
+
+            <li class="divider-vertical" aria-hidden="true"></li>
+            <li role="none" class="dropdown">
+              <a id="search" class="navbar-icon" href="#" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false" aria-label="Search">
+                <span class="glyphicon glyphicon-search"></a>
+              </a>
+              <div class="dropdown-menu dropdown-search">
+
+
+                <form method="GET" action="/search/" role="search" class="form-search">
+                  <div class="input-group">
+
+
+
+                    <label for="q" class="sr-only">
+                      Search
+                    </label>
+                    <input type="text" class="form-control" id="q" name="q" placeholder="Search" value=""
+                      title="Search">
+                    <div class="input-group-btn">
+                      <button type="submit" class="btn btn-default" title="Search" aria-label="Search">
+                        <span class="fa fa-search" aria-hidden="true"></span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+
+              </div>
+            </li>
+
+            <li class="divider-vertical" aria-hidden="true"></li>
+
+
+            <li class="dropdown" role="none">
+
+              <a href="#" class="dropdown-toggle" title="Krzysztof Owczarek (Test)" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="username">Krzysztof Owczarek (Test)</span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+
+
+
+
+
+                <li role="none">
+                  <a aria-label="Profile" href="/profile/" title="Profile">Profile</a>
+                </li>
+
+
+
+                <li class="divider" role="separator" aria-hidden="true"></li>
+                <li role="none">
+                  <a aria-label="Sign out" href="/Account/Login/LogOff?returnUrl=%2Fviewaccount%2F" title="Sign out">
+                    Sign out
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- add anti-forgery token-->
+  <div id="antiforgerytoken" data-url="/_layout/tokenhtml"></div>
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/preform.bundle-2c5735c41a.js"
+    type="text/javascript"></script>
+
+
+  <main>
+    
+    <section class="panel">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <h1>Cookie policy</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      
+      
+
+    <ul class="breadcrumb"> 
+      <li><a href="/home.html" title="Home">Home</a></li>
+      <li class="active">Cookie policy</li>
+    </ul>
+      
+      <div class="cookie-policy-cp">
+        <p>This website uses cookies to distinguish you from other users of this website. A cookie is a small file of letters and numbers that we store on your browser or the hard drive of your computer if you agree. Cookies contain information that is transferred to your computer's hard drive.</p>
+        <p>Cookies help Scottish Enterprise (“SE”, “us” or “we”) to provide you with a good experience when you browse our website and also allow us to improve our website. We assume that you are happy to receive all the cookies that your browser settings allow. You can change your cookie settings at any time.</p>
+        <p>We use the following cookies:</p>
+          <ul>
+            <li><b>Strictly necessary cookies</b> - These are cookies that are required for the operation of our website. They include, for example, cookies that enable you to log into secure areas of our website.</li>
+            <li><b>Analytical / performance cookies</b> - They allow us to recognise and count the number of visitors and to see how visitors move around our website when they are using it. This helps us to improve the way our website works, for example, by ensuring that users are finding what they are looking for easily.</li>
+            <li><b>Functionality cookies</b> - These are used to recognise you when you return to our website. This enables us to personalise our content for you, greet you by name and remember your preferences (for example, your choice of language or region).</li>
+            <li><b>Targeting cookies</b> - These cookies record your visit to our website, the pages you have visited and the links you have followed. We will use this information to make our website and the advertising displayed on it more relevant to your interests. We may also share this information with third parties for this purpose.</li>
+          </ul>
+        <p>You can find more information about the individual cookies we use and the purposes for which we use them in this table:</p>
+
+        <table aria-label="Cookies in Power Apps portals" class="table table-sm">
+          <thead>
+            <tr>
+            <th>Cookie name</th>
+            <th>Description</th>
+            <th>Lifetime</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <td>__RequestVerificationToken</td>
+            <td>Used by the <a href="/en-us/dotnet/api/system.web.helpers.antiforgeryconfig.cookiename" data-linktype="absolute-path">antiforgery</a> system.</td>
+            <td>Session</td>
+            </tr>
+            <tr>
+            <td>.AspNet.ApplicationCookie</td>
+            <td>Used to identify user sessions. A user session starts when a user browses portal for the first time. And ends when the session is closed. <a href="../configure/set-authentication-identity" data-linktype="relative-path">Authentication site settings</a> can be used to change session expiry time span.</td>
+            <td>Session</td>
+            </tr>
+
+            <tr>
+            <td>adxPreviewUnpublishedEntities</td>
+            <td>Stores preview <strong>ON/OFF</strong> mode used in classic CMS system for portal administrators.</td>
+            <td>Session</td>
+            </tr>
+
+            <tr>
+            <td>adx-notification</td>
+            <td>Used in basic form actions to store alert message to be shown on redirection.</td>
+            <td>Session</td>
+            </tr>
+
+            <tr>
+            <td>ARRAffinity</td>
+            <td>Added automatically by Azure websites and ensures that requests are load balanced between different sites. Doesn't store any of user information.</td>
+            <td>Session</td>
+            </tr>
+
+            <tr>
+            <td>ASP.NET_SessionId</td>
+            <td>Used to maintain the session of a logged in user to avoid repeated sign-in.</td>
+            <td>Session</td>
+            </tr>
+
+            <tr>
+            <td>ContextLanguageCode</td>
+            <td>Stores the default language of the user accessing portal within a session and across webpages. The cookie is deleted after session closes.</td>
+            <td>Session</td>
+            </tr>
+
+            <tr>
+            <td>Dynamics365PortalAnalytics</td>
+            <td>Critical service cookie to analyze service usage anonymously and aggregated for statistical purpose.</td>
+            <td>90 days</td>
+            </tr>
+
+            <tr>
+            <td>isDSTObserved</td>
+            <td>Stores a value to indicate if the current moment is in daylight saving time.</td>
+            <td>Session</td>
+            </tr>
+
+            <tr>
+            <td>isDSTSupport</td>
+            <td>Indicates whether a specified date and time falls in the range of daylight saving time.</td>
+            <td>Session</td>
+            </tr>
+
+            <tr>
+            <td>timeZoneCode</td>
+            <td>Stores the <em>timezonecode</em> field value of <em>CRM timezonedefinition</em> table for the current timezone.</td>
+            <td>Session</td>
+            </tr>
+
+            <tr>
+            <td>timezoneoffset</td>
+            <td>Stores the <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset" data-linktype="external">timezone difference</a> between UTC and Local browser time.</td>
+            <td>Session</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <p>Our website carries embedded ‘share’ buttons to enable users of the site to easily share articles with their friends through a number of popular social networks. These sites may set a cookie when you are also logged in to their service. SE does not control the dissemination of these cookies and you should check the relevant third party website for more information about these.</p>
+        <p>Similarly, SE sometimes embeds photos and video content from websites such as YouTube and Flickr. As a result, when you visit a page with content embedded from, for example, YouTube or Flickr, you may be presented with cookies from these websites. SE does not control the dissemination of these cookies. Again, you should check the relevant third party website for more information about these.</p>
+        <p>SE will not use cookies to collect personally identifiable information about you. However, if you wish to restrict or block the cookies which are set by SE websites, or any third party websites, you can do this through your browser settings. The Help function within your browser should tell you how.</p>
+        <p>Alternatively, you may wish to visit the <a href="https://www.aboutcookies.org/" target="_blank">About cookies</a><span class="sr-only">Opens a new tab</span> website, which contains comprehensive information about cookies and how to restrict or delete cookies on a wide variety of browsers.</p>
+        <p>Please be aware that restricting cookies may impact on the functionality of the SE website.</p>
+        <p>SE and our other websites use a number of suppliers who set cookies on our behalf in order to deliver the services that they are providing. We are constantly reviewing our use of cookies and, as such, this cookies policy will be regularly renewed to include up to date information about the cookies used by our suppliers. We would highly recommend that you check this page on a regular basis.</p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+    
+
+
+
+  <script src="/js/pcf/loadPcfControls.js"></script>
+
+  <div id="cookies" class="hide">
+    <div class="container">
+        <div class="cookies">
+          <h4>Cookies</h4>
+          <p>We use cookies to give you the best experience when you browse our website. You can change your cookie settings in your browser at any time. <a href="cookie-policy.html" class="cta-link">Find out more </a> about the cookies that we use and what they do.</p>
+          
+          <button class="btn btn-primary" id="cookies-btn">Continue</button>
+        </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-12 footer__lower-content">
+          <div class="footer__links">
+            <a class="footer__link" href="/help/accessibility/">Accessibility</a>
+            <a class="footer__link" href="/help/cookie-policy/">Cookie policy</a>
+            <a class="footer__link" href="/help/privacy-notice/">Privacy notice</a>
+            <a class="footer__link" href="/help/terms-of-use/">Terms of use</a>
+            <a class="footer__link" href="/help/beta">Beta: this is a new service</a>
+          </div>
+        </div>
+      </div>
+      <div class="row footer__copyright"><span>© Scottish Enterprise 2022. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+</main>
+
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/postpreform.bundle-f4f91a6eb4.js"
+    type="text/javascript"></script>
+
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/app.bundle-63b32aa50b.js"
+    type="text/javascript"></script>
+
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/default-1033.bundle-eda4e638fd.js"
+    type="text/javascript"></script>
+
+
+
+
+  <script>
+    //this event will update the title of the page based on active breadcrumb
+    $('.breadcrumb').ready(function () {
+      if ($('.breadcrumb').is(':visible')) {
+        document.querySelector('title').innerHTML = ($('.breadcrumb > li.active').text() + "&nbsp;· Custom Portal");
+      }
+    });
+
+    function GoToNewEditor() {
+      var editCmsUrlSegment = "EditInCms";
+      var currentUrl = window.location.href;
+      if (currentUrl.indexOf('?') > -1) {
+        var urlSegments = currentUrl.split("?");
+        window.location.href = window.location.origin + '/' + editCmsUrlSegment + window.location.pathname + '?' +
+          urlSegments[1];
+      } else {
+        window.location.href = window.location.origin + '/' + editCmsUrlSegment + window.location.pathname;
+      }
+    }
+  </script>
+
+
+
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      }).catch(function (err) {
+        console.log('Service Worker unregister action failed: ', err);
+      });
+    }
+  </script>
+
+      <script src="js/SECookie.js"></script>
+
+
+</body>
+
+</html>

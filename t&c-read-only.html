@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en-US" data-lang="en-US" crm-lang="en-US" dir="ltr" crm-lcid="1033" same-site-mode="None">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,&#32;initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <script type="text/javascript">
+
+  </script>
+  <title>My AccountCustom Portal </title>
+
+  <!--[if lt IE 9]>
+				<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+
+  <!--[if lt IE 10]>
+				<script src="~/js/formdata.js"></script>
+			<![endif]-->
+
+
+
+
+  <link href="css/portal/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/portal/theme.css" rel="stylesheet" />
+  <link href="css/portal/SEThemeV2.css" rel="stylesheet" />
+  <link href="css/portal/portalbasictheme.css" rel="stylesheet" />
+  <link href="css/portal/glyphicons-font-awesome-migrate.min.css" rel="stylesheet" />
+
+  <!-- <link href="https://se-qa-designsystem-website.azurewebsites.net/assets/styles/site.css?v=4.0.153.0" rel="stylesheet"> -->
+  <!-- <link href="/css/offlinenotification.css" rel="stylesheet" /> -->
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="skip-to-content"><a href="#mainContent">Skip to main content</a></div>
+    <div class="container">
+      <div class="navbar-header">
+
+        <!--div class="visible-xs-block">
+              <div class="xrm-editable-html&#32;xrm-attribute" data-languageContext="English"><div class="xrm-attribute-value"><div></div>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script><img src="/se-logo.png" name="se-logo.png" style="width: 170px; height: auto; background-color: #fafafa;">
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script></div></div>
+            </div-->
+        <div class="visible-sm-block visible-md-block visible-lg-block visible-xs-block navbar-brand">
+          <div class="xrm-editable-html&#32;xrm-attribute" data-languageContext="English">
+            <div class="xrm-attribute-value">
+              <div></div>
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script><img src="assets/se-logo-transparent.png"
+                name="se-logo.png" style="width: 170px; height: auto; background-color: #fafafa;">
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="navbar-toggle collapsed" title="Toggle navigation" data-toggle="collapse"
+          data-target="#navbar" aria-expanded="false" onclick="setHeight();">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+
+
+        <nav aria-label="Main Navigation" class="navbar-right menu-bar " data-weblinks-maxdepth="2">
+          <ul class="nav navbar-nav weblinks">
+
+            <li class="weblink ">
+              <a aria-label="Home" href="/" title="Home">
+                Home
+              </a> </p>
+
+
+            <li class="weblink ">
+              <a aria-label="My Account" href="/viewaccount/" title="My Account">
+                My Account
+              </a></p>
+
+
+
+            <li class="divider-vertical" aria-hidden="true"></p>
+            <li role="none" class="dropdown">
+              <a id="search" class="navbar-icon" href="#" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false" aria-label="Search">
+                <span class="glyphicon glyphicon-search"></a>
+              </a>
+              <div class="dropdown-menu dropdown-search">
+
+
+                <form method="GET" action="/search/" role="search" class="form-search">
+                  <div class="input-group">
+
+
+
+                    <label for="q" class="sr-only">
+                      Search
+                    </label>
+                    <input type="text" class="form-control" id="q" name="q" placeholder="Search" value=""
+                      title="Search">
+                    <div class="input-group-btn">
+                      <button type="submit" class="btn btn-default" title="Search" aria-label="Search">
+                        <span class="fa fa-search" aria-hidden="true"></span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+
+              </div>
+            </p>
+
+            <li class="divider-vertical" aria-hidden="true"></p>
+
+
+            <li class="dropdown" role="none">
+
+              <a href="#" class="dropdown-toggle" title="Krzysztof Owczarek (Test)" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="username">Krzysztof Owczarek (Test)</span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+
+
+
+
+
+                <li role="none">
+                  <a aria-label="Profile" href="/profile/" title="Profile">Profile</a>
+                </p>
+
+
+
+                <li class="divider" role="separator" aria-hidden="true"></p>
+                <li role="none">
+                  <a aria-label="Sign out" href="/Account/Login/LogOff?returnUrl=%2Fviewaccount%2F" title="Sign out">
+                    Sign out
+                  </a>
+                </p>
+              </ul>
+            </p>
+
+          </ul>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- add anti-forgery token-->
+  <div id="antiforgerytoken" data-url="/_layout/tokenhtml"></div>
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/preform.bundle-2c5735c41a.js"
+    type="text/javascript"></script>
+
+
+  <main>
+    
+    <section class="panel">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <h1>Terms and conditions</h1>
+            <p>Before you can access your account you need to read and agree to our terms and conditions.</p>
+            <p>These are the terms and conditions that you’ve agreed to follow when using your account.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      
+      
+
+    <ul class="breadcrumb"> 
+      <li><a href="/" title="Home">Home</a></p>
+      <li class="active">Terms and conditions</li>
+    </ul>
+      
+
+    <div class="terms-and-conditions">
+
+      <button id="btn__scroll-up" class="btn btn-primary" onclick="scrollUp()">Top<span class="sr-only">On click scrolls to the top of page</span>
+      </button>
+
+      <h2 class="margin-top-0">On this page</h2>
+      <p><a href="#terms-0">0. Introduction: Scottish Enterprise Customer Portal Terms</a></p>
+      <p><a href="#terms-1">1. Definitions and interpretation</a></p>
+      <p><a href="#terms-2">2. Rights of use</a></p>
+      <p><a href="#terms-3">3. Use of the portal</a></p>
+      <p><a href="#terms-4">4. Access to the portal</a></p>
+      <p><a href="#terms-5">5. Updates and upgrades</a></p>
+      <p><a href="#terms-6">6. Warranties</a></p>
+      <p><a href="#terms-7">7. Customer’s responsibilities</a></p>
+      <p><a href="#terms-8">8. Intellectual property</a></p>
+      <p><a href="#terms-9">9. Data protection</a></p>
+      <p><a href="#terms-10">10. Limitation of liability</a></p>
+      <p><a href="#terms-11">11. Term and termination</a></p>
+      <p><a href="#terms-12">12. Variation</a></p>
+      <p><a href="#terms-13">13. General</a></p>
+      <p><a href="#terms-14">14. Governing law and jurisdiction</a></p>
+
+<!-- 0 -->
+      <h2 id="terms-0">Scottish Enterprise Customer Portal Terms </h2>
+      <p class="lead">PLEASE READ THESE TERMS AND CONDITIONS CAREFULLY:</p>
+        
+      <p>This document sets out the terms and conditions (the “Conditions”) that apply to the use of the Portal (as defined below) provided by Scottish Enterprise, established by the Enterprise and New Towns (Scotland) Act 1990 and having its principal place of business at Atrium Court, 50 Waterloo Street, Glasgow, G2 6HQ (“SE”) by any business entity or business person creating the customer account (“Customer” ). These Conditions apply to the Customer’s use of the Portal to the exclusion of any other terms the Customer seeks to impose or incorporate, or which are implied by law, trade custom, practice or course of dealing. </p>
+
+      <p><b>The Portal is intended for use by businesses and persons that are conducting business. It is not suitable for use by consumers.</b></p>
+
+      <p><b>When the Customer Representative clicks the “accept” button on the “Create an Account” page of the Portal, the Customer shall be bound by these Conditions. If the Customer does not agree to these Conditions, the Customer Representative must not use or access the Portal.  If the Customer Representative continues to use the Portal, the Customer Representative will be deemed to have accepted these Conditions for and on behalf of the Customer.</b></p>
+
+<!-- 1 -->
+
+        <h2 id="terms-1">1. DEFINITIONS AND INTERPRETATION</h2>
+        <p class="item-level-1">1.1 In these Conditions:</p>
+        
+        <p><b>“Account”</b> means the account created for the Customer, by a Customer Representative by accepting these Conditions on behalf of the Customer on the “Create an Account” page of the Portal, which entitles Authorised Users to use the Portal in accordance with these Conditions in the UK; </p>
+
+        <p><b>“Authorised Users”</b> means the employees and contractors of the Customer who are authorised by the Customer to use the Portal;</p>
+
+        <p><b>“Controller”, “Personal Data”</b>, shall have the respective meanings given to them in applicable Data Protection Laws </p>
+
+        <p><b>“Customer Data”</b> means all data in any form (including Customer Personal Data) that is provided to SE or uploaded or hosted on any part of the Portal by the Customer or by any Authorised User;</p>
+
+        <p><b>“Customer Personal Data”</b> means Personal Data received from or on behalf of the Customer in connection with the performance of SE’s obligations under these Conditions; </p>
+
+        <p><b>“Customer Representative”</b> mean the person that creates an Account;</p>
+
+        <p><b>“Data Protection Law”</b> means all applicable data protection and privacy legislation in force from time to time in the UK including without limitation the UK GDPR; the Data Protection Act 2018 (and regulations made thereunder) (<b>“DPA 2018”</b>); the Privacy and Electronic Communications Regulations 2003 (SI 2003/2426) as amended and all other legislation and regulatory requirements in force from time to time which apply to a party relating to the use of Personal Data (including, without limitation, the privacy of electronic communications); and the guidance and  codes of practice  issued by the UK Information Commissioner’s Office (or equivalent regulatory body) from time to time;</p>
+
+        <p><b>“Effective Date”</b> means the date the Customer enters in to these Conditions which shall be the date on which the Customer creates an Account on the Portal;</p>
+
+        <p><b>“Intellectual Property Rights”</b> means any and all copyright, rights in inventions, patents, know-how, trade secrets, trade marks and trade names, service marks, design rights, rights in get-up, database rights and rights in data, semiconductor chip topography rights, utility models, domain names and all similar rights and, in each case:</p>
+          <p>(a)	whether registered or not; </p>
+          <p>(b)	including any applications to protect or register such rights;</p>
+          <p>(c)	including all renewals and extensions of such rights or applications;</p>
+          <p>(d)	whether vested, contingent or future; and</p>
+          <p>(e)	wherever existing;</p>
+        
+        
+        <p><b>“Portal”</b> means the portal provided by SE, which is available to Customers operating in Scotland or with intent to operate in Scotland, where businesses can create an Account which enables a bidirectional digital channel of communication between SE and the Customer, and shall include any upgrade and/or update;</p>
+        
+        <p><b>“Term”</b> has the meaning given in clause 12.1 of these Conditions; and</p>
+
+        <p><b>“UK GDPR”</b> has the meaning given to it in section 3(10) (as supplemented by section 205(4)) of the DPA 2018.</p>
+
+<!-- 2 -->
+        <h2 id="terms-2">2. RIGHTS OF USE</h2>
+        <p class="item-level-1">2.1 Subject to these Conditions, SE hereby grants to the Customer a limited, non-exclusive, non-transferrable right (without the right to grant sub-licences) to allow the Customer and Authorised Users to access and use the Portal (and any updates and upgrades) during the Term in order for Customer to:
+
+        <p class="item-level-2">2.1.1 register and maintain the Customer Account on the Portal;</p>
+        <p class="item-level-2">2.1.2 review, submit and complete documentations (“Documentation”) and to receive and accept communications from SE relating to the Documentation;</p>
+        <p class="item-level-2">2.1.3 upload business documents, business plans, data and/or other business information relating to any Documentation.</p>
+
+<!-- 3 -->
+
+        <h2 id="terms-3">3. USE OF THE PORTAL</h2>
+        <p class="item-level-1">3.1 The Customer shall, and shall procure all Authorised Users shall, at all times, comply with all provisions of these Conditions and any Amended Terms that may be issued from time-to-time.</p>
+
+        <p class="item-level-1">3.2 The Customer shall comply with any limits on the number of permitted Authorised Users that may be notified to the Customer by SE from time to time and the Customer shall not permit any additional users to have access to the Portal in excess of the number of permitted Authorised Users.</p>
+
+        <p class="item-level-1">3.3 The Customer shall not knowingly access, store, distribute or transmit any viruses, or any material during the course of its use of the Portal that:</p>
+
+        <p class="item-level-2">3.3.1 is unlawful, harmful, threatening, defamatory, obscene, infringing, harassing or racially or ethnically offensive;</p>
+        <p class="item-level-2">3.3.2 infringes any rights of third parties;</p>
+        <p class="item-level-2">3.3.3 facilitates illegal activity;</p>
+        <p class="item-level-2">3.3.4 depicts sexually explicit images;</p>
+        <p class="item-level-2">3.3.5 promotes unlawful violence;</p>
+        <p class="item-level-2">3.3.6 is discriminatory based on race, gender, colour, religious belief, sexual orientation, disability; or</p>
+        <p class="item-level-2">3.3.7 is otherwise illegal or causes damage or injury to any person or property.</p>
+
+        <p class="item-level-1">3.4 The Customer shall not except as may be allowed by any applicable law which is incapable of exclusion by agreement between SE and the Customer and except to the extent expressly permitted under these Conditions:</p>
+
+        <p class="item-level-2">3.4.1 attempt to copy, modify, duplicate, create derivative works from, frame, mirror, republish, download, display, transmit, or distribute all or any portion of the Portal in any form or media or by any means; or</p>
+        <p class="item-level-2">3.4.2 attempt to de-compile, reverse compile, disassemble, reverse engineer, work around technical limitations in the Portal or otherwise reduce to human-perceivable form all or any part of the Portal; or</p>
+        <p class="item-level-2">3.4.3 access all or any part of the Portal in order to build a product or service which competes with the Portal; or</p>
+        <p class="item-level-2">3.4.4 use the Portal to provide services to third parties; or</p>
+        <p class="item-level-2">3.4.5 license, sell, rent, lease, transfer, assign, distribute, display, disclose, or otherwise commercially exploit, or otherwise make the Portal available to any third party except the Authorised Users; or</p>
+        <p class="item-level-2">3.4.6 attempt to obtain, or assist third parties in obtaining, access to the Portal, other than as provided under these Conditions.</p>       
+
+        <p class="item-level-1">3.5 The Customer shall use all reasonable endeavours to prevent any unauthorised access to, or use of, the Portal and, in the event of any such unauthorised access or use, shall promptly notify SE.</p>
+
+        <p class="item-level-1">3.6 The Customer shall promptly notify SE about any possible misuse of the Portal or authentication credentials or any security incidents related to the Portal.</p>
+         
+        
+<!-- 4 -->
+        <h2 id="terms-4">4. ACCESS TO THE PORTAL</h2>
+
+        <p class="item-level-1">4.1 SE may suspend access to the Portal to the Customer and its Authorised Users if SE suspects that there has been any breach of security, misuse of the Portal or a breach of these Conditions by the Customer and/or its Authorised Users. Where SE suspends the Customer’s access to the Portal pursuant to this clause 4.1, SE will take such steps as it considers appropriate to investigate the issue and may restore or continue to suspend access to the Portal at its discretion. The Customer shall provide all such information and/or assistance to SE as part of any investigation under this clause 4.1.</p>
+
+        <p class="item-level-1">4.2 The Portal may be subject to delays, interruptions, errors or other problems resulting from use of the internet or public electronic communications networks used by the parties or third parties. The Customer acknowledges that such risks are inherent in the use of such communications facilities and that SE shall have no liability for any such delays, interruptions, errors or other problems relating to (without limitation) the Portal, Documentation.</p>
+
+<!-- 5 -->
+        <h2 id="terms-5">5. UPDATES AND UPGRADES</h2>
+   
+        <p class="item-level-1">5.1 The Customer acknowledges that SE shall be entitled to modify the features and functionality of the Portal by means of an update or upgrade.</p>
+        <p class="item-level-1">5.2 The Customer acknowledges that additional features and functionality modified by means of an update or upgrade may require amendments to these Conditions. </p>
+ 
+        
+<!-- 6 -->
+        <h2 id="terms-6">6. WARRANTIES</h2>
+
+        <p class="item-level-1">6.1 In consideration for access to the Portal, the Customer warrants and undertakes that:</p>
+
+        <p class="item-level-2">6.1.1 the details provided in registering an Account for the Portal are correct; </p>
+        <p class="item-level-2">6.1.2 the Customer Representative is duly authorised by the Customer to create an Account on the Portal on behalf of the Customer; </p>
+        <p class="item-level-2">6.1.3 the Customer Representative is duly authorised by the Customer to accept these Conditions on behalf of the Customer and bind the Customer to these Conditions; </p>
+        <p class="item-level-2">6.1.4 any Documentation is accurate and not misleading;</p>
+        <p class="item-level-2">6.1.5 only use the Portal for its own benefit and in connection with, and in its capacity as, a business or company; and</p>
+        <p class="item-level-2">6.1.6 it will comply with all applicable legal and regulatory requirements applying to the fulfilment of its obligations under these Conditions.</p>
+
+<!-- 7 -->
+        <h2 id="terms-7">7. CUSTOMER’S RESPONSIBILITIES</h2>
+
+        <p class="item-level-1">7.1 The Customer shall (and shall ensure all its Authorised Users shall):</p>
+        
+        <p class="item-level-2">7.1.1 at all times comply with all applicable laws relating to:</p>
+        <p class="item-level-2">(a) the use or receipt of the Portal and any support services (if applicable); and </p>
+        <p class="item-level-2">(b) its obligations under these Conditions;</p>
+      
+        <p class="item-level-2">7.1.2 provide SE with all necessary co-operation in relation to these Conditions and access to such information as may be required by SE in order to meet its obligations under these Conditions;</p>
+        <p class="item-level-2">7.1.3 ensure that the Authorised Users use the Portal and the any support services (if applicable) in accordance with these Conditions and</p>
+        <p class="item-level-2">7.1.4 be, to the extent permitted by applicable law and except as otherwise expressly provided in these Conditions, solely responsible for:</p>
+        <p class="item-level-2">(a)	procuring, maintaining and securing its network connections and telecommunications links from its systems to the Portal and all problems, conditions, delays, delivery failures and all other loss or damage arising from or relating to the Customer’s network connections or telecommunications links or caused by the internet; and </p>
+        <p class="item-level-2">(b)	complying with any cybersecurity requirement the Customer may be subject to, or requirement that applies to any regulated activity that the Customer may be engaged in.</p>
+ 
+
+<!-- 8 -->
+        <h2 id="terms-8">8. INTELLECTUAL PROPERTY</h2>
+   
+        <p class="item-level-1">8.1 All Intellectual Property Rights in and to the Portal (including any source code), and the support services belong to and shall remain vested in SE or SE’s licensors. </p>
+
+        <p class="item-level-1">8.2 Subject to clause 8.5, all Intellectual Property Rights in and to the information (including Customer Data) that is uploaded to the Portal by the Customer (excluding any Intellectual Property Rights contained in any documents, reports, forms and/or templates produced or provided by SE that are available on the Portal) shall remain vested in the Customer and the Customer hereby grants a royalty-free, non-transferable, non-exclusive licence for SE to use, disclose, modify, copy and other otherwise utilise such information and the Customer Data to the extent necessary to:</p>
+
+        <p class="item-level-2">8.2.1 provide the Customer with access to the Portal and to provide any support services (where applicable);</p>
+        <p class="item-level-2">8.2.2 maintain and administer the Customer’s Account on the Portal; and/or</p>
+        <p class="item-level-2">8.2.3 exercise or perform SE’s rights, remedies and obligations under these Conditions.</p>
+      
+        <p class="item-level-1">8.3 Except for the rights expressly granted in these Conditions, the Customer and any Authorised Users and their direct and indirect sub-contractors, shall not acquire in any way any title, rights of ownership, or Intellectual Property Rights of whatever nature in the Portal or the support services (as applicable) and no Intellectual Property Rights of either party are transferred or licensed as a result of these Conditions.</p>
+
+        <p class="item-level-1">8.4 SE may use any feedback and suggestions for improvement relating to the Portal or the support services (as applicable) provided by the Customer, or any Authorised User without charge or limitation (“Feedback”). The Customer hereby assigns (or shall procure the assignment of) all Intellectual Property Rights in the Feedback with full title guarantee (including by way of present assignment of future Intellectual Property Rights) to SE at the time such Feedback is first provided to SE. </p>
+
+        <p class="item-level-1">8.5 Customer agrees that SE may collect, use, and disclose quantitative data derived from the use of the Portal for its business purposes, including industry analysis, benchmarking and analytics. Any data collected, used, and disclosed will be in aggregate and anonymised form only and will not identify Customer or its Authorised Users.</p>
+     
+<!-- 9 -->
+        <h2 id="terms-9">9. DATA PROTECTION</h2>
+
+        <p><b>SE as a Controller</b></p>
+    
+        <p class="item-level-1">9.1 SE may process Customer Personal Data (i) in order to review, consider and/or make a decision on an Application and the granting of funding to the Customer; or (ii) to administer and maintain the Customer’s Account on the Portal or (ii) for such other purposes as set out in the [x] section of SE’s privacy policy, as amended from time to time, and in each case SE shall process such Customer Personal Data as a Controller for these purposes;  (“Controller Purposes”). SE shall process Customer Personal Data for the Controller Purposes in accordance with Data Protection Law and the terms of SE’s privacy policy which is available here: <a href="https://www.scottish-enterprise.com/help/privacy-notice">SE Privacy Policy</a></p>
+    
+<!-- 10 -->
+        <h2 id="terms-10">10. LIMITATION OF LIABILITY</h2>
+    
+        <p class="item-level-1">10.1 Notwithstanding any other provision of these Conditions, either party’s liability shall not be limited in any way in respect of the following:</p>
+      
+        <p class="item-level-2">10.1.1 death or personal injury caused by negligence;</p>
+        <p class="item-level-2">10.1.2 fraud or fraudulent misrepresentation; or</p>
+        <p class="item-level-2">10.1.3 any other liability which cannot be excluded or limited by applicable law.</p>
+
+
+        <p class="item-level-1">10.2 Subject to clause 10.1, in no event shall SE shall be liable to the Customer whether in contract, delict (including negligence) or restitution, or for breach of statutory duty or misrepresentation, or otherwise, for any special, indirect or consequential loss including loss of profit, loss of goodwill, business interruption, wasted expenditure and loss or damage to data, or the Customer providing any incorrect, misleading or insufficient information to SE, or the Customer’s incorrect use of the Portal.</p>
+
+        <p class="item-level-1">10.3 Subject to clauses 10.1 and 10.2, SE’s total aggregate liability howsoever arising under or in connection with these Conditions shall not exceed an amount equal to [one hundred pounds sterling (£100)].</p>
+
+        <p class="item-level-1">10.4 Except as expressly and specifically provided in these Conditions:</p>
+          
+        <p class="item-level-2">10.4.1 the Customer assumes sole responsibility for results obtained from the use of the Portal by the Customer, and for conclusions drawn from such use. SE shall have no liability for any damage caused by errors or omissions in any information, data, reports, instructions or scripts provided to SE by the Customer in connection with the Portal, or any actions taken by SE at the Customer’s direction;</p>
+        <p class="item-level-2">10.4.2 SE shall have full discretion in considering any Documentation;</p>
+        <p class="item-level-2">10.4.3 all warranties, representations, conditions and all other terms of any kind whatsoever implied by statute or common law are, to the fullest extent permitted by applicable law, excluded from these Conditions; and</p>
+        <p class="item-level-2">10.4.4 the Portal and the support services (as applicable) are provided to the Customer on an “as is” basis.</p>
+        
+<!-- 11 -->
+        <h2 id="terms-11">11. TERM AND TERMINATION</h2>
+  
+        <p class="item-level-1">11.1 These Conditions shall come into force on the Effective Date and shall continue until terminated in accordance with the terms of these Conditions <b>(“Term”)</b>. </p>
+        <p class="item-level-1">11.2 SE may terminate, disable or withdraw access to the for the Customer  and /or the Customer’s Authorised Users immediately at any time and for any reason. </p>
+        <p class="item-level-1">11.3 If SE withdraws the Customer’s access to the Portal under 11.2, it will endeavour to provide no less than one month’s advance notice, however this will not always be possible. Such notices may be provided by email.  </p>
+        <p class="item-level-1">11.4 SE may, at its sole discretion, cease or withdraw the provision of the Portal at any time.   </p>
+        <p class="item-level-1">11.5 If SE withdraws the Portal under 11.4, the Customer shall still be entitled to contact SE by alternative means. </p>
+        <p class="item-level-1">11.6 These Conditions shall automatically terminate in the event that the Customer’s Account on the Portal is deleted for any reason. </p>
+
+<!-- 12 -->
+        <h2 id="terms-12">12. VARIATION</h2>
+        
+        <p class="item-level-1">12.1	SE may amend these Conditions by notifying Customer of the updated terms through the Portal (“<b>Amended Terms</b>”) and the Amended Terms shall be deemed to be accepted by Customer and shall take effect at the point the Customer first accesses the Portal following such notification (“<b>Amendment Date</b>”) </p>
+  
+<!-- 13 -->
+        <h2 id="terms-13">13. GENERAL</h2>
+
+        <p class="item-level-1">13.1 SE will communicate with the Customer at the email address the Customer uses to register for the Portal. </p>
+
+        <p class="item-level-1">13.2 SE shall not be in breach of any of these Conditions or otherwise liable to the Customer for any breakdown of or failure to perform any obligations under these Conditions as a result of an event, circumstances or causes beyond SE’s reasonable control. </p>
+
+        <p class="item-level-1">13.3 SE shall have the right to assign, transfer, sub-contract, sub-licence, mortgage, charge, declare a trust of or deal in any other manner with any or all of its rights or obligations under these Conditions (including the licence rights granted), in whole or in part, without the Customer’s consent. </p>
+
+        <p class="item-level-1">13.4 These Conditions are personal to the Customer and the Customer shall not assign, transfer, sub-contract, sub-licence, mortgage, charge, declare a trust of or deal in any other manner with any or all of SE’s  rights or obligations under these Conditions (including the licence rights granted), in whole or in part.</p>
+
+        <p class="item-level-1">13.5 These Conditions contain the entire contract between SE and the Customer with regard to access to the Portal and any associated services and these Conditions supersede all previous contracts between SE and the Customer in respect of access to the Portal and any associated services. </p>
+
+        <p class="item-level-1">13.6 SE will exercise reasonable care and skill in making the Portal available to the Customer based on the information provided by the Customer, but the Customer will remain responsible for the accuracy of that information and the consequences if it is inaccurate. </p>
+
+        <p class="item-level-1">13.7 A waiver of any right or remedy under these Conditions or by law is only effective if given in writing and shall not be deemed a waiver of any subsequent right or remedy. A failure or delay by SE to exercise any right or remedy provided under these Conditions or by law shall not constitute a waiver of that or any other right or remedy, nor shall it prevent or restrict any further exercise of that or any other right or remedy. No single or partial exercise of any right or remedy provided under these Conditions or by law shall prevent or restrict the further exercise of that or any other right or remedy.</p>
+
+        <p class="item-level-1">13.8 If any provision or part-provision of these Conditions is or becomes invalid, illegal or unenforceable, it shall be deemed deleted, but that shall not affect the validity and enforceability of the rest of these Conditions. If any provision or part-provision of these Conditions is deleted under this clause 13.8, SE and the Customer shall negotiate in good faith to agree a replacement provision that, to the greatest extent possible, achieves the intended commercial result of the original provision. </p>
+
+        <p class="item-level-1">13.9 A person who is not a party to these Conditions will have no rights under the Contract (Third Party Rights) (Scotland) Act 2017 or otherwise to enforce any of these Conditions. </p>
+ 
+<!-- 14 -->     
+        <h2 id="terms-14">14. GOVERNING LAW AND JURISDICTION</h2>
+        <p class="item-level-1">14.1 These Conditions and any dispute or claim arising out of or in connection with it or its subject matter or formation (including non-contractual disputes or claims) shall be governed by and construed in accordance with the law of Scotland. Each party irrevocably agrees that the courts of Scotland shall have exclusive jurisdiction to settle any dispute or claim arising out of or in connection with these Conditions or its subject matter or formation (including non-contractual disputes or claims).</p>  
+    </div>
+
+
+    <script>
+      let mybutton = document.getElementById("btn__scroll-up");
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      function scrollUp() {
+        // document.body.scrollTop = 0;
+        // document.documentElement.scrollTop = 0;
+        window.scroll({top: 0, behavior: "smooth"})
+      }
+    </script>
+
+    </div>
+  </div>
+</section>
+    
+
+
+
+  <script src="/js/pcf/loadPcfControls.js"></script>
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-12 footer__lower-content">
+          <div class="footer__links">
+            <a class="footer__link" href="/help/accessibility/">Accessibility</a>
+            <a class="footer__link" href="/help/cookie-policy/">Cookie policy</a>
+            <a class="footer__link" href="/help/privacy-notice/">Privacy notice</a>
+            <a class="footer__link" href="/help/terms-of-use/">Terms of use</a>
+            <a class="footer__link" href="/help/beta">Beta: this is a new service</a>
+          </div>
+        </div>
+      </div>
+      <div class="row footer__copyright"><span>© Scottish Enterprise 2022. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+</main>
+
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/postpreform.bundle-f4f91a6eb4.js"
+    type="text/javascript"></script>
+
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/app.bundle-63b32aa50b.js"
+    type="text/javascript"></script>
+
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/default-1033.bundle-eda4e638fd.js"
+    type="text/javascript"></script>
+
+
+
+
+  <script>
+    //this event will update the title of the page based on active breadcrumb
+    $('.breadcrumb').ready(function () {
+      if ($('.breadcrumb').is(':visible')) {
+        document.querySelector('title').innerHTML = ($('.breadcrumb > li.active').text() + "&nbsp;· Custom Portal");
+      }
+    });
+
+    function GoToNewEditor() {
+      var editCmsUrlSegment = "EditInCms";
+      var currentUrl = window.location.href;
+      if (currentUrl.indexOf('?') > -1) {
+        var urlSegments = currentUrl.split("?");
+        window.location.href = window.location.origin + '/' + editCmsUrlSegment + window.location.pathname + '?' +
+          urlSegments[1];
+      } else {
+        window.location.href = window.location.origin + '/' + editCmsUrlSegment + window.location.pathname;
+      }
+    }
+  </script>
+
+
+
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      }).catch(function (err) {
+        console.log('Service Worker unregister action failed: ', err);
+      });
+    }
+  </script>
+
+
+
+</body>
+
+</html>
+<!-- Generated at 7/12/2022 10:24:40 AM -->
+<!-- Page OK -->

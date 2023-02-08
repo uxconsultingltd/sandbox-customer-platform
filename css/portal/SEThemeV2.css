@@ -1,0 +1,1045 @@
+:root {
+  font-size: 62.5% !important;
+}
+
+/* General styling */
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  height: 100%;
+  margin-bottom: 8rem !important;
+}
+
+/* Typography */
+h1 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+h2.tab-title {
+  margin-bottom: 2.5rem;
+}
+
+h3 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+h4 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-size: 1.9rem;
+  font-weight: 400;
+}
+
+/* Links styling */
+a {
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-size: 1.9rem;
+  font-weight: 400;
+  text-decoration: underline !important;
+}
+a:focus {
+  color: #134F76;
+  outline: 3px solid #FFBF47;
+}
+a:hover {
+  color: #134F76 !important;
+}
+
+/* part of the terms and condition scroll to top */
+.skip-to-content a {
+  padding: 1rem 2rem;
+  position: absolute;
+  top: -5rem;
+  left: 0px;
+  color: #FFFFFF;
+  border-radius: 2px;
+  background: #134F76;
+  transition: top 1s ease-out;
+  z-index: 100;
+  font-family: Segoe UI;
+  font-size: 1em;
+}
+.skip-to-content a:hover, .skip-to-content a:focus {
+  background: #09759d;
+  color: white !important;
+}
+
+.cta__go-back {
+  margin-top: 5rem;
+}
+
+.cta__link {
+  margin-bottom: 2.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/* Link - edit company details */
+#edit-company-details {
+  padding-top: 2.5rem;
+}
+
+/* Buttons styling */
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-size: 1.9rem;
+  font-weight: 400;
+  text-decoration: none !important;
+}
+
+a.btn-primary:hover {
+  color: white !important;
+}
+
+.btn-primary {
+  color: white !important;
+  background-color: #09759d !important;
+  border: 2px solid #09759d !important;
+}
+.btn-primary:focus {
+  outline: 3px solid #FFBF47;
+  background-color: #134F76 !important;
+  border: 2px solid #134F76 !important;
+}
+.btn-primary:hover {
+  background-color: #134F76 !important;
+  border: 2px solid #134F76 !important;
+}
+
+.btn-secondary {
+  color: #09759d !important;
+  background-color: white !important;
+  border: 2px solid #09759d !important;
+}
+.btn-secondary:focus {
+  outline: 3px solid #FFBF47;
+  color: #134F76 !important;
+  border: 2px solid #134F76 !important;
+}
+.btn-secondary:hover {
+  color: #134F76 !important;
+  border: 2px solid #134F76 !important;
+}
+
+#btn__scroll-up {
+  display: none;
+  position: fixed;
+  bottom: 15rem;
+  right: 3rem;
+  z-index: 99;
+  cursor: pointer;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+@media screen and (max-width: 767px) {
+  #btn__scroll-up {
+    width: 7rem;
+    bottom: 2rem;
+  }
+}
+
+.crmEntityFormView .actions {
+  border-top: none;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+/* Individual pages styling */
+/* Company details page */
+.company-details h4 {
+  font-weight: 600;
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.company-details h4:not(:first-child) {
+  margin-top: 3.5rem;
+}
+
+/* Registration confirmation page */
+.registration-confirmation {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.registration-confirmation h1 {
+  color: white;
+}
+.registration-confirmation p {
+  margin-bottom: 2.5rem;
+}
+
+/* Accessibility page */
+.accessibility-statement {
+  padding-top: 0;
+}
+.accessibility-statement h2 {
+  margin: 5rem 0 2.5rem 0;
+}
+.accessibility-statement ul li {
+  font-size: 1.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Company details page */
+section.company-details {
+  padding-top: 1.5rem !important;
+  padding-bottom: 0;
+}
+
+/* Terms and conditions page */
+.terms-and-conditions h2 {
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+}
+.terms-and-conditions p {
+  margin-bottom: 1.5rem;
+}
+
+/* Styling for the T&C's out-of-the-box template with the checkbox */
+#terms-and-conditions-section {
+  margin-top: 0;
+  padding-top: 0;
+}
+#terms-and-conditions-section h1 {
+  padding: 5rem 11rem;
+  background-color: #EEEEEE;
+}
+#terms-and-conditions-section .form-group {
+  padding-left: 11rem;
+}
+@media screen and (max-width: 991px) {
+  #terms-and-conditions-section h1 {
+    padding-left: 3rem;
+  }
+  #terms-and-conditions-section .form-group {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Terms and conditions indent styling*/
+.item-level-1 {
+  padding-left: 1.5rem;
+}
+
+.item-level-2 {
+  padding-left: 5rem;
+}
+
+#submit-agreement {
+  margin-top: 1.5rem;
+}
+
+/* Cookie policy page */
+.cookie-policy-cp li {
+  font-size: 1.9rem;
+}
+.cookie-policy-cp table {
+  font-size: 1.9rem;
+}
+
+/* Contact us page*/
+.contact-us-form input[type=email] {
+  width: 100%;
+}
+
+#se_accepttermsandconditions {
+  margin: 1px;
+}
+
+#se_accepttermsandconditions_label {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+/*Form elements*/
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+input::placeholder {
+  font-weight: 400;
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+/* Other components*/
+/* Beta banner */
+#beta-banner {
+  position: relative;
+  top: 0 !important;
+  width: 100%;
+  background-color: #09759d;
+  padding: 1.5rem 0;
+  z-index: 1;
+  color: white;
+  display: block;
+}
+
+.beta-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 2.5rem;
+}
+.beta-banner p {
+  font-size: 1.6rem;
+  margin: 0;
+}
+.beta-banner a {
+  color: white;
+  font-size: 1.6rem;
+}
+.beta-banner a:focus {
+  color: white;
+}
+
+.beta-tag {
+  font-size: 1.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #09759d;
+}
+
+.icon__close {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: transparent;
+  border: none !important;
+  margin-left: auto;
+}
+.icon__close:focus {
+  color: white;
+  outline: 3px solid #FFBF47;
+}
+
+/* Navbar styling */
+.navbar-brand {
+  padding: 0.8rem;
+}
+
+.navbar-static-top.navbar .menu-bar > .navbar-nav > li > a {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.navbar-static-top {
+  z-index: 1000;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  padding: 1.5rem;
+  text-decoration: none !important;
+  border: none !important;
+  min-height: 5rem;
+}
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:active {
+  color: #fff !important;
+  background-color: #09759d;
+  outline: none;
+  padding: 1.5rem;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  font-size: 1.6rem;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  box-shadow: none;
+  border: none;
+}
+
+#navbar .dropdown-menu {
+  margin: 0px;
+  border: none;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  margin-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  width: 100%;
+}
+
+#navbar .dropdown-menu {
+  margin-top: 0px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  padding: 0;
+}
+
+a.dropdown-toggle {
+  margin-left: 0 !important;
+  padding: 1.5rem;
+}
+a.dropdown-toggle:active {
+  padding: 1.5rem;
+}
+
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  font-size: 2rem;
+  padding: 0 0;
+  margin-bottom: 2.5rem;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 0;
+}
+.breadcrumb .active {
+  font-weight: 500;
+}
+
+/* Images */
+#logo {
+  width: auto !important;
+  margin-left: 0.6rem;
+}
+
+img {
+  width: 100%;
+}
+
+/* Form styling, section heading */
+legend.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+table.section {
+  max-width: 60%;
+  padding: 2rem 0;
+}
+
+/* Edit company details form - heading spacing */
+.crmEntityFormView .section-title {
+  padding-top: 1.5rem !important;
+  margin-bottom: 0.5rem;
+}
+
+#websiteurl {
+  width: 100%;
+}
+
+/* Input fields */
+input.form-control, .form-control {
+  display: block;
+  width: 50%;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.5rem;
+  line-height: 1.42857;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 2px solid black;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px RGBA(0 0 0/8%);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+input.form-control:focus, .form-control:focus {
+  color: #134F76;
+  outline: 3px solid #FFBF47;
+  border-color: black;
+}
+
+/* Radio's & checkboxes styling */
+input[type=radio], input[type=checkbox] {
+  border: 2px solid black;
+  width: 1.5rem;
+  height: 1.9rem;
+  padding: 0.5rem;
+}
+input[type=radio]:focus, input[type=checkbox]:focus {
+  color: #134F76;
+  outline: 3px solid #FFBF47;
+  border-color: black;
+  outline-offset: 1px;
+}
+
+.radio label, .checkbox label {
+  min-height: 2.1rem;
+  padding-left: 2rem;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 1.9rem;
+}
+
+/* Form view out-of-the-box overwrite */
+.crmEntityFormView, .entitylist, .modal-content, .popover-content {
+  border: none;
+}
+
+.crmEntityFormView .tab-title {
+  border-bottom: none;
+  -ms-text-rendering: optimizelegibility;
+  text-rendering: optimizelegibility;
+}
+
+.crmEntityFormView, .entitylist, .modal-content, .popover-content {
+  border: none !important;
+}
+
+.crmEntityFormView .cell {
+  padding: 1rem 0px;
+}
+
+/* Section */
+section {
+  padding: 5rem 0;
+}
+
+.account-features h2 {
+  margin-bottom: 1.5rem;
+}
+.account-features p {
+  margin-bottom: 5rem;
+}
+
+section h2 {
+  margin-bottom: 5rem;
+  margin-top: 0;
+}
+
+/* Section Backgrounds */
+.bg-grey {
+  background-color: #EEEEEE;
+}
+
+.bg-primary {
+  background-color: #09759d;
+}
+.bg-primary h1 {
+  color: white;
+}
+.bg-primary h2 {
+  color: white;
+}
+.bg-primary a {
+  color: white;
+}
+.bg-primary a:hover {
+  color: #00427f;
+}
+
+/* Panels */
+.panel {
+  background-color: #EEEEEE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+  margin: 0;
+}
+
+.confirmation-panel {
+  background-color: #00703C;
+  width: 100%;
+  padding: 1.5rem 5rem;
+  margin-bottom: 5rem;
+}
+
+.info-panel {
+  background-color: #09759d;
+  width: 100%;
+  padding: 1.5rem 5rem;
+  margin-bottom: 5rem;
+}
+.info-panel h1 {
+  color: white;
+}
+.info-panel p {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.error-panel {
+  background-color: #af000f;
+  width: 100%;
+  padding: 1.5rem 5rem;
+  margin-bottom: 5rem;
+}
+.error-panel h1 {
+  color: white;
+}
+
+/* Panel 50/50 */
+.panel5050 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Error validation summary box */
+.validation-summary {
+  color: #000;
+  background-color: white;
+  border: 3px solid #af000f;
+  padding: 2.5rem;
+  width: 60%;
+  margin-top: 5rem;
+  margin-bottom: 2.5rem 0 5rem 0;
+}
+.validation-summary h2 {
+  font-size: 3rem !important;
+  font-style: normal;
+  font-weight: 500;
+}
+.validation-summary a {
+  color: #af000f !important;
+}
+.validation-summary a:hover {
+  color: #7c000b !important;
+}
+@media only screen and (max-width: 991px) {
+  .validation-summary {
+    width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  background: #E5E5E5;
+  padding: 1rem;
+  width: 100%;
+  min-height: 8rem;
+}
+
+.footer__lower-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1.5rem;
+}
+
+.footer__link {
+  font-weight: 400;
+  color: #666;
+  margin: 1.5rem 2.5rem;
+  text-decoration: none;
+  padding-bottom: 0;
+}
+
+.footer__copyright {
+  font-size: 1.4rem;
+  color: rgb(102, 102, 102);
+  text-align: center;
+  white-space: nowrap;
+  margin-top: 1.5rem 0;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list-group-item {
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  border-left: none;
+  border-right: none;
+}
+
+/* Cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
+  padding: 2.5rem;
+  min-height: 490px;
+}
+
+.card__icon {
+  display: flex;
+  justify-content: center;
+}
+.card__icon img {
+  width: 100px !important;
+}
+
+/* Helpers, Utilities */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}
+
+.margin-top-0 {
+  margin-top: 0 !important;
+}
+
+.margin-top-l {
+  margin-top: 2.5rem;
+}
+
+.margin-top-xl {
+  margin-top: 5rem;
+}
+
+.space-l-top {
+  margin-top: 2.5rem;
+}
+
+.hide {
+  display: none !important;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.lead {
+  font-size: 2.4rem !important;
+  font-weight: 500;
+}
+
+/* RWD - media queries */
+@media only screen and (max-width: 1199px) {
+  table.section {
+    max-width: 80%;
+  }
+  .container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  body {
+    margin-bottom: 0px !important;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  section h2 {
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  a {
+    font-size: 1.6rem;
+  }
+  .btn {
+    font-size: 1.6rem;
+  }
+  /* Fix for the horizontal scrollbar on mobile view .row, .container overwrite */
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container {
+    width: 100%;
+  }
+  .panel {
+    padding: 5rem 0px;
+  }
+  .panel h1 {
+    margin-bottom: 2.5rem;
+  }
+  .card {
+    margin-bottom: 2.5rem;
+  }
+  .homepage-image {
+    margin-top: 2.5rem;
+  }
+  .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
+    background-color: white;
+  }
+  .panel5050 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  table.section {
+    max-width: 100%;
+  }
+  .beta-banner {
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .beta-banner p {
+    margin: 0;
+  }
+  footer {
+    position: relative !important;
+  }
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__link {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .btn {
+    width: 100%;
+  }
+  .card {
+    margin: 2.5rem;
+    min-height: 200px;
+  }
+  table.section {
+    padding: 0px;
+  }
+}
+/* Offline banner styling */
+#offlineNotificationBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.6rem;
+  background-color: #09759d !important;
+}
+#offlineNotificationBar a {
+  font-size: 1.6rem;
+  color: white;
+}
+
+#message {
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 1.6rem !important;
+  color: white !important;
+}
+
+/* Cookies */
+#cookies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.35);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+}
+#cookies h2 {
+  margin: 0 0 2.5rem 0;
+}
+#cookies .btn {
+  margin: 2.5rem 2.5rem 5rem 0 !important;
+}
+@media screen and (max-width: 767px) {
+  #cookies .btn {
+    margin: 2.5rem 0 0 0 !important;
+  }
+}
+
+.cookies-management {
+  display: flex;
+  max-height: inherit;
+  padding: 5rem 5rem 0 5rem;
+  border-radius: 5px;
+  background-color: white;
+  max-width: 800px;
+  max-height: 100%;
+  overflow-y: auto;
+}
+@media screen and (max-width: 991px) {
+  .cookies-management {
+    max-width: 80%;
+  }
+  .cookies-management .col-sm-3, .cookies-management .col-sm-9 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .cookies-management {
+    padding: 2.5rem;
+    max-width: 90%;
+  }
+  .cookies-management .btn {
+    margin: 2.5rem 0 0 0 !important;
+  }
+  .cookies-management .switch {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #cookies-advanced-settings .btn {
+    margin: 2.5rem 0 5rem 0 !important;
+  }
+}
+
+#accept-all {
+  margin: 5rem 0 !important;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+.switch-disabled {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #00703C;
+  border-radius: 50%;
+}
+.switch-disabled :before {
+  content: "On";
+  position: absolute;
+  margin: 10px 50px;
+}
+
+.tick {
+  position: absolute;
+}
+.tick svg {
+  fill: #00703C;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #09759d;
+}
+
+input:focus + .slider {
+  outline: 3px solid #FFBF47;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:hover {
+  outline: 3px solid #FFBF47;
+}
+.slider.round:focus {
+  outline: 3px solid #FFBF47;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch-label {
+  display: block;
+  position: relative;
+  margin: -14px 75px;
+}/*# sourceMappingURL=SEThemeV2.css.map */

@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+<html lang="en-US" data-lang="en-US" crm-lang="en-US" dir="ltr" crm-lcid="1033"
+	same-site-mode="None">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,&#32;initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type="text/javascript">
+      
+        </script>
+    <title>Customer Portal </title>
+
+    <!--[if lt IE 9]>
+                      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+                  <![endif]-->
+    <!--[if lt IE 10]>
+                      <script src="~/js/formdata.js"></script>
+                  <![endif]-->
+    <link href="css/portal/bootstrap.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+
+    <link href="css/portal/theme.css" rel="stylesheet" />
+    <link href="css/portal/SEThemeV2.css" rel="stylesheet" />
+    <link href="css/portal/portalbasictheme.css" rel="stylesheet" />
+    <link href="css/portal/glyphicons-font-awesome-migrate.min.css" rel="stylesheet" />
+    
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+      <!-- <link href="/css/offlinenotification.css" rel="stylesheet" /> -->
+
+    </head>
+<body data-sitemap-state="/profile/:/"
+	data-dateformat="M/d/yyyy"
+	data-timeformat="h:mm tt"
+	data-datetimeformat="M/d/yyyy h:mm tt"
+	data-app-path="/"
+	data-ckeditor-basepath="/js/BaseHtmlContentDesigner/Libs/msdyncrm_/libs/ckeditor/"
+	data-case-deflection-url="/_services/search/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89">
+
+	<div id="offlineNotificationBar" style="display: none;">
+		<div id="web"></div>
+		<div id="message">You&#8217;re offline. This is a read only version of the page.</div>
+		<div id="close" onclick="this.parentElement.style.display='none';"></div>
+	</div>
+
+	
+	<script type="text/javascript">
+		window["Microsoft"] = window["Microsoft"] || {};
+		window["Microsoft"].Dynamic365 = {
+			Portal: {
+				
+				User: {
+					contactId: '9f96f35f-c801-ed11-82e5-000d3a210302',
+					userName: '5ea920ee-107e-4a5b-b71e-43d9917c46d1'
+				},
+				
+				version: '9.4.5.16',
+				type: 'StarterPortal',
+				id: '05b81a92-aa4e-42cd-b9f2-17ccfc3e77cf'
+			}
+		}
+	</script>
+
+	
+		
+
+<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="skip-to-content"><a href="#mainContent">Skip to main content</a></div>
+    <div class="container">
+        <div class="navbar-header">
+
+            <!--div class="visible-xs-block">
+              <div class="xrm-editable-html&#32;xrm-attribute" data-cmstemplate-render-url="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/adx_contentsnippet/994e3a0a-d9d1-ec11-a7b5-000d3a2ea2b7/__templates/live-preview/L3Byb2ZpbGUv" data-cmstemplate-url="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/adx_contentsnippet/994e3a0a-d9d1-ec11-a7b5-000d3a2ea2b7/__templates/all/L3Byb2ZpbGUv" data-editable-title="Mobile&#32;Header" data-editable-url="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/adx_contentsnippet/994e3a0a-d9d1-ec11-a7b5-000d3a2ea2b7/adx_value" data-encoded="false" data-filebrowser-dialog-url="~/xrm-adx/filebrowser.html" data-filebrowser-url="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/elFinder/connector" data-label="Mobile&#32;Header" data-languageContext="English" data-liquid="true" data-xrm-base="/xrm-adx/"><div class="xrm-attribute-value"><div></div>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script><img src="/se-logo.png" name="se-logo.png" style="width: 170px; height: auto; background-color: #fafafa;">
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script></div></div>
+            </div-->
+            <div class="visible-sm-block visible-md-block visible-lg-block visible-xs-block navbar-brand">
+                <div class="xrm-editable-html&#32;xrm-attribute" data-cmstemplate-render-url="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/adx_contentsnippet/994e3a0a-d9d1-ec11-a7b5-000d3a2ea2b7/__templates/live-preview/L3Byb2ZpbGUv" data-cmstemplate-url="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/adx_contentsnippet/994e3a0a-d9d1-ec11-a7b5-000d3a2ea2b7/__templates/all/L3Byb2ZpbGUv" data-editable-title="Mobile&#32;Header" data-editable-url="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/adx_contentsnippet/994e3a0a-d9d1-ec11-a7b5-000d3a2ea2b7/adx_value" data-encoded="false" data-filebrowser-dialog-url="~/xrm-adx/filebrowser.html" data-filebrowser-url="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/elFinder/connector" data-label="Mobile&#32;Header" data-languageContext="English" data-liquid="true" data-xrm-base="/xrm-adx/"><div class="xrm-attribute-value"><div></div>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script><img src="/se-logo.png" name="se-logo.png" style="width: 170px; height: auto; background-color: #fafafa;">
+<script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+<script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script></div></div>
+            </div>
+            <button type="button" class="navbar-toggle collapsed" title="Toggle navigation" data-toggle="collapse" data-target="#navbar" aria-expanded="false" onclick="setHeight();">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            
+            
+            <nav aria-label="Main Navigation" class="navbar-right menu-bar xrm-entity xrm-editable-adx_weblinkset" data-weblinks-maxdepth="2">
+                <ul class="nav navbar-nav weblinks">
+                    
+                    
+                    
+                    
+                    
+                    <li class="weblink ">
+                        <a aria-label="Home" href="/" title="Home" >
+                            Home
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    <li class="weblink ">
+                        <a aria-label="Company details" href="/viewaccount/" title="Company details" >
+                            Company details
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="divider-vertical" aria-hidden="true"></li>
+                    <li role="none" class="dropdown">
+                        <a id="search" class="navbar-icon" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Search">
+                            <span class="glyphicon glyphicon-search"></a>
+                        </a>
+                        <div class="dropdown-menu dropdown-search">
+                            
+
+
+
+
+
+<form method="GET" action="/search/" role="search" class="form-search">
+  <div class="input-group">
+
+    
+
+    <label for="q" class="sr-only">
+      Search
+    </label>
+    <input type="text" class="form-control" id="q" name="q"
+        placeholder="Search"
+        value=""
+        title="Search">
+    <div class="input-group-btn">
+      <button type="submit" class="btn btn-default"
+          title="Search"
+          aria-label="Search">
+        <span class="fa fa-search" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</form>
+
+
+                        </div>
+                    </li>
+                    
+                    <li class="divider-vertical" aria-hidden="true"></li>
+                    
+                    
+                    <li class="dropdown" role="none">
+                        
+                        <a href="#" class="dropdown-toggle" title="Krzysztof Owczarek (Test)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="username">Krzysztof Owczarek (Test)</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            
+                            
+                            
+                            
+                            
+                            <li role="none">
+                                <a aria-label="Profile" href="/profile/" title="Profile">Profile</a>
+                            </li>
+                            
+                            
+                            
+                            <li class="divider" role="separator" aria-hidden="true"></li>
+                            <li role="none">
+                                <a aria-label="Sign out" href="/Account/Login/LogOff?returnUrl=%2Fprofile%2F" title="Sign out">
+                                    Sign out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <a aria-hidden="true" class="xrm-entity-ref" href="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/adx_weblinkset/2f8186f9-fc81-4d04-8774-768ed4e7fe58" style="display:none;" title="Default"></a><a aria-hidden="true" class="xrm-entity-adx_weblinkset_weblink-ref" href="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/adx_weblinkset/2f8186f9-fc81-4d04-8774-768ed4e7fe58/__related/adx_weblinkset_weblink" style="display:none;"></a><a aria-hidden="true" class="xrm-entity-adx_weblinkset_weblink-update-ref" href="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/adx_weblinkset/2f8186f9-fc81-4d04-8774-768ed4e7fe58/__related/adx_weblinkset_weblink" style="display:none;"></a><a aria-hidden="true" class="xrm-uri-template&#32;xrm-entity-adx_weblink-delete-ref" href="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/adx_weblink/{Id}/__delete" style="display:none;"></a><a aria-hidden="true" class="xrm-entity-adx_webpage-ref" href="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/adx_webpage" style="display:none;"></a><a aria-hidden="true" class="xrm-entity-adx_publishingstate-ref" href="/_services/portal/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89/adx_publishingstate" style="display:none;"></a>
+            </nav>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  window.onload = function() {
+    if (window.navigator.appName == "Microsoft Internet Explorer" || window.navigator.userAgent.indexOf("Trident") > 0) {
+      var searchElement = document.getElementById("search");
+      if (searchElement != null) searchElement.setAttribute("href", "");
+    }
+  };
+  function setHeight() {
+    var windowHeight = window.innerHeight - 140;
+    var navbar = document.getElementById("navbar");
+    if (navbar) {
+      navbar.style.maxHeight = windowHeight + "px";
+    }
+  }
+  window.addEventListener('resize', function(event) {
+    setHeight();
+  });
+</script>
+
+	<!-- add anti-forgery token-->
+	<div id="antiforgerytoken" data-url="/_layout/tokenhtml"></div>
+	<script src="https://content.powerapps.com/resource/powerappsportal/dist/preform.bundle-2c5735c41a.js" type="text/javascript"></script>
+
+	
+	<script src="/js/pcf/prop-types.js"></script><script src="/js/pcf/fela.js"></script><script src="/js/pcf/fela-dom.js"></script>
+	<script src="https://content.powerapps.com/resource/powerappsportal/dist/pcf.bundle-d5fa514165.js" type="text/javascript"></script>
+
+	<script src="/js/pcf/react-fela.js"></script><script src="/js/pcf/fluentui-react.js"></script>
+	
+	<form method="post" action="/profile/" id="content_form">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['content_form'];
+if (!theForm) {
+    theForm = document.content_form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZE74hG4K8flPmddyW_LiRp1Q5zWUz1meqs6Md62YsNfMyFxK2jjxIbs89HCE_5On-g2&amp;t=637814653746327080" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvnU80vM87Nq-4PHnBxP6NYgWPmxzZ_-3L3mvx0LguKOnDovt8oAbxmAvSDX9cTMJudJOwZu-v7-yBcGG8-zAYhkuWJMxLTkZRHXsW7xzL0HlsHF4MpJ63ElC0rinetVDyyyX_igL4x_7JoBjNpXrqoM1&amp;t=49337fe8" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OGi5o-XehLAU70loZyuOckgdz053tDhpzRoITFWB0P7YOuzVfE-ZmXSLVYxz5_JKfWThyWBwOeKCutbk7pr37Oi5noIbKpTsAFV9QmohkneZ9CZ6W5-ASOXh_Yk7NUHwyGFutYBHdbAJMQ8LHHF4OwU1&amp;t=49337fe8" type="text/javascript"></script>
+<script src="../js/jquery.blockUI.js" type="text/javascript"></script>
+<script src="/xrm-adx/js/webform.js" type="text/javascript"></script>
+<script src="/xrm-adx/js/radcaptcha.js" type="text/javascript"></script>
+<script src="/xrm-adx/js/crmentityformview.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1003FE81" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="aYmgwXZZno/NYTJpt5ErMhCDh/2YAEOJM8uOAWcajPK9Kdn0ub82xiIy3N+sMnxb5R+CDAE2BjekqTowVxhtSc8qziLln0MttEwdDbGklLIXbFwPxczPVUnkHIW1dIzbLiWixggpzvuKH7TatIjRDXOz3J445AHpnqX3BtCz9lXE3TXoZYLCLMxB3l2wo397QyLE7pDXjEnEcRdwe+Fb/MDjsGUYZqwhNoUQbO3l3ph4VMS0dolelEDmSNc+rFwAwa49oJ4WkRxbGsn/SRu8UQ==" />
+</div>
+		<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ContentContainer$ctl00', 'content_form', [], [], [], 90, 'ctl00$ctl00$ctl00');
+//]]>
+</script>
+
+		
+		
+			<div class="page-heading">
+				<div class="container">
+					
+    
+		<ul class="breadcrumb"><li><a href="/">Home</a></li>
+<li class="active">Profile</li>
+</ul>
+	
+
+					
+					
+    
+		
+		<div class="page-header">
+			<h1>
+				<span class="xrm-attribute&#32;xrm-editable-text"><span class="xrm-attribute-value">Profile</span></span>
+			</h1>
+		</div>
+		<div class="notifications"></div>
+	
+
+				</div>
+			</div>
+		
+		
+		<div class="container">
+			
+    <div class="row">
+		<div class="col-md-4">
+			<div class="well profile-info">
+				
+							<img src="/xrm-adx/images/contact_photo.png" alt="Krzysztof Owczarek (Test) graphic/image" />
+							<div class="userFullName">Krzysztof Owczarek (Test)</div>
+					
+				</div>
+			<div><div class="weblinks-depth-1&#32;weblinks&#32;list-group" data-weblinks-depth="1"><a class="weblink&#32;list-group-item" href="/profile/" title="Profile"><span class="weblink-name">Profile</span></a></div></div>
+            
+	<div class="panel panel-default nav-profile">
+		<div class="panel-heading">
+			<div class="panel-title"><span class="fa fa-lock" aria-hidden="true"></span> <span class="xrm-editable-text&#32;xrm-attribute"><span class="xrm-attribute-value-encoded&#32;xrm-attribute-value">Security</span></span></div>
+		</div>
+		<div class="list-group nav-profile">
+			
+				<a class="list-group-item " href="/en-US/Account/Manage/ChangeLogin" title="Manage external authentication">
+					<span class="xrm-editable-text&#32;xrm-attribute"><span class="xrm-attribute-value-encoded&#32;xrm-attribute-value">Manage external authentication</span></span>
+				</a> 
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+        $(function () {
+			$('[data-toggle="tooltip"]').tooltip();
+		})
+		$(document).ready(function () {
+			$(document).on("keydown", function (e) {
+				if (e.which == 27) { // escape key
+					if ($(".list-group-item") != null && $(".list-group-item").children(".tooltip").length > 0) {
+						e.preventDefault();
+						$($(".list-group-item").children(".tooltip")[0]).remove();
+					}
+				}
+			});
+		});
+    </script>
+
+            
+		</div>
+		<div class="col-md-8" id="mainContent">
+			
+				<div class="xrm-editable-html&#32;xrm-attribute&#32;page-copy"><div class="xrm-attribute-value"><script>
+$(document).ready(function()
+{
+    document.getElementById('ContentContainer_MainContent_MainContent_ContentBottom_SubmitButton').style.display='none';
+    //document.getElementById('ContentContainer_MainContent_MainContent_ContentBottom_SubmitButton').style.visibility='hidden';
+});
+</script></div></div>
+				
+<script type="text/javascript">
+		$(document).ready(function () {
+			if ($('.alert.alert-success.profileMessages')) {
+				var successAlertDiv = $('.alert.alert-success.profileMessages');
+				if (successAlertDiv.find('span.xrm-attribute-value')) {
+					var alertAriaLabel = successAlertDiv.find('span.xrm-attribute-value').text();
+					successAlertDiv.attr("aria-label", alertAriaLabel);
+					successAlertDiv.attr("tabindex", "0");
+					window.setTimeout(function () {
+						$('.alert.alert-success.profileMessages').trigger("focus");
+					}, 100);
+				}
+			}
+		});
+</script>
+				
+					<script  type="text/javascript">
+						function entityFormClientValidate() {
+							// Custom client side validation. Method is called by the submit button's onclick event.
+							// Must return true or false. Returning false will prevent the form from submitting.
+							return true;
+						}
+						
+						function webFormClientValidate() {
+							// Custom client side validation. Method is called by the next/submit button's onclick event.
+							// Must return true or false. Returning false will prevent the form from submitting.
+							return true;
+						}
+    </script>
+                    <div id="WebFormControl">
+
+</div>
+                    <div id="EntityFormControl">
+
+</div>
+                    
+                
+                
+	
+		
+	
+
+	
+
+	
+	
+
+	<fieldset>
+		<legend role="heading" aria-level="2">
+			<span><span class="xrm-editable-text&#32;xrm-attribute"><span class="xrm-attribute-value">Your information</span></span></span>
+		</legend>
+
+		
+		<div id="ProfileFormView" class="entity-form&#32;crmEntityFormView">
+	<input type="hidden" name="ctl00$ctl00$ctl00$ContentContainer$MainContent$MainContent$ContentBottom$ProfileFormView$ProfileFormView_EntityName" id="ProfileFormView_EntityName" value="contact" /><input type="hidden" name="ctl00$ctl00$ctl00$ContentContainer$MainContent$MainContent$ContentBottom$ProfileFormView$ProfileFormView_EntityID" id="ProfileFormView_EntityID" value="9f96f35f-c801-ed11-82e5-000d3a210302" /><input type="hidden" name="ctl00$ctl00$ctl00$ContentContainer$MainContent$MainContent$ContentBottom$ProfileFormView$ProfileFormView_EntityState" id="ProfileFormView_EntityState" value="0" /><input type="hidden" name="ctl00$ctl00$ctl00$ContentContainer$MainContent$MainContent$ContentBottom$ProfileFormView$ProfileFormView_EntityStatus" id="ProfileFormView_EntityStatus" value="1" /><span id="ProfileFormView_EntityLayoutConfig"></span><div id="ValidationSummaryProfileFormView" class="alert&#32;alert-danger&#32;alert-block" role="alert" style="display:none;">
+
+	</div><div class="tab&#32;clearfix"><div class="tab-column" style="width:100%;"><div><fieldset aria-label="Name"><table role="presentation" class="section"><colgroup><col style="width:100%;" /><col /></colgroup><tr>
+		<td colspan="1" rowspan="1" class="clearfix&#32;cell&#32;text&#32;form-control-cell"><div class="info&#32;required"><label for="firstname" id="firstname_label" class="field-label">First Name</label></div><div class="control"><input name="ctl00$ctl00$ctl00$ContentContainer$MainContent$MainContent$ContentBottom$ProfileFormView$firstname" type="text" value="Krzysztof" maxlength="50" id="firstname" class="text&#32;form-control&#32;&#32;readonly" onchange="setIsDirty(this.id);" aria-required="true" title="First&#32;Name&#32;is&#32;a&#32;required&#32;field." aria-label="First&#32;Name" readonly="readonly" onkeypress="javascript:return&#32;LengthError(this,&#32;event);" /></div></td>
+		<td class="cell&#32;zero-cell"></td>
+	</tr>
+	<tr>
+		<td colspan="1" rowspan="1" class="clearfix&#32;cell&#32;text&#32;form-control-cell"><div class="info&#32;required"><label for="lastname" id="lastname_label" class="field-label">Last Name</label></div><div class="control"><input name="ctl00$ctl00$ctl00$ContentContainer$MainContent$MainContent$ContentBottom$ProfileFormView$lastname" type="text" value="Owczarek&#32;(Test)" maxlength="50" id="lastname" class="text&#32;form-control&#32;&#32;readonly" onchange="setIsDirty(this.id);" aria-required="true" title="Last&#32;Name&#32;is&#32;a&#32;required&#32;field." aria-label="Last&#32;Name" readonly="readonly" onkeypress="javascript:return&#32;LengthError(this,&#32;event);" /></div></td>
+		<td class="cell&#32;zero-cell"></td>
+	</tr>
+	<tr>
+		<td colspan="1" rowspan="1" class="clearfix&#32;cell&#32;text&#32;form-control-cell"><div class="info"><label for="emailaddress1" id="emailaddress1_label" class="field-label">E-mail</label></div><div class="control"><input name="ctl00$ctl00$ctl00$ContentContainer$MainContent$MainContent$ContentBottom$ProfileFormView$emailaddress1" value="ferara1782@runfons.com" maxlength="100" id="emailaddress1" class="text&#32;form-control&#32;&#32;readonly" type="email" ondblclick="launchEmail(this.value);" onchange="setIsDirty(this.id);" readonly="readonly" onkeypress="javascript:return&#32;LengthError(this,&#32;event);" style="text-decoration:underline;" /></div></td>
+		<td class="cell&#32;zero-cell"></td>
+	</tr>
+	<tr>
+		<td class="cell&#32;zero-cell"></td>
+	</tr>
+	<tr>
+		<td class="cell&#32;zero-cell"></td>
+	</tr>
+	<tr>
+		<td colspan="1" rowspan="1" class="clearfix&#32;cell"></td>
+		<td class="cell&#32;zero-cell"></td>
+	</tr>
+	</table></fieldset></div></div></div>
+			
+</div>
+	</fieldset>
+		
+	
+
+	
+	
+	<div>
+		<div class="actions">
+			<input type="button" name="ctl00$ctl00$ctl00$ContentContainer$MainContent$MainContent$ContentBottom$SubmitButton" value="Update" onclick="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$ContentContainer$MainContent$MainContent$ContentBottom$SubmitButton&#39;,&#39;&#39;)" id="ContentContainer_MainContent_MainContent_ContentBottom_SubmitButton" title="Update" class="btn&#32;btn-primary" />
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			if ($('.alert.alert-success.alert-block')) {
+				var successDiv = $('.alert.alert-success.alert-block');
+				if (successDiv.find('div.xrm-attribute-value')) {
+					var ariaLabel = successDiv.find('div.xrm-attribute-value').text();
+					successDiv.attr("aria-label", ariaLabel);
+					successDiv.attr("role", 'alert');
+					successDiv.attr("tabindex", '0');
+					successDiv.trigger("focus");
+				}
+			}
+
+			(function(panelId) {
+				$("#" + panelId + " input[type=checkbox]")
+					.each(function(idx, el) {
+						var $el = $(el);
+						var val=$("span.xrm-attribute-value",$el.parentsUntil("div.checkbox")).html();
+						$el.attr({ "title": val, "aria-label": val });
+						$el.parent().removeAttr("title");
+					});
+			})("ContentContainer_MainContent_MainContent_ContentBottom_MarketingOptionsPanel");
+
+			$("#ContentContainer_MainContent_MainContent_ContentBottom_SubmitButton").on('keypress click', function () {
+				if ($("#firstname").length != 0) { $("#firstname").val($("#firstname").val().trim()); }
+				if ($("#middlename").length != 0) { $("#middlename").val($("#middlename").val().trim()); }
+				if ($("#lastname").length != 0) { $("#lastname").val($("#lastname").val().trim()); }
+				if ($("#telephone1").length != 0) { $("#telephone1").val($("#telephone1").val().trim()); }
+				if ($("#jobtitle").length != 0) { $("#jobtitle").val($("#jobtitle").val().trim()); }
+				if ($("#nickname").length != 0) { $("#nickname").val($("#nickname").val().trim()); }
+				if ($("#adx_organizationname").length != 0) { $("#adx_organizationname").val($("#adx_organizationname").val().trim()); }
+				if ($("#adx_publicprofilecopy").length != 0) { $("#adx_publicprofilecopy").val($("#adx_publicprofilecopy").val().trim()); }
+				if ($("#ValidationSummaryProfileFormView").find('li').length > 0) {
+					$("#ValidationSummaryProfileFormView").addClass("validation-summary");
+					var validationSummary = $(".validation-summary");
+					if (validationSummary != null && validationSummary != undefined) {
+						if (portal) {
+							portal.setValidationSummaryFocus();
+						}
+						return false;
+					}
+				};
+			})
+		});
+
+		$(function () {
+			$("span.xrm-attribute-value", $("div.form-group", $("#ContentContainer_MainContent_MainContent_ContentBottom_MarketingOptionsPanel"))).on('DOMSubtreeModified', function () {
+				var changeText = $(this).html();
+				$("input[type=checkbox]", $(this).parentsUntil("div.checkbox")).attr({
+					"aria-label": changeText,
+					"title": changeText
+				});
+			});
+		});
+		$(window).bind('load', function () {
+			$("#ValidationSummaryProfileFormView").addClass("validation-summary");
+			if (portal) {
+				portal.setValidationSummaryFocus();
+			}
+		});
+	</script>
+
+			
+		</div>
+	</div>
+
+			
+		</div>
+	
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ValidationSummaryProfileFormView"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ValidationSummaryProfileFormView = document.all ? document.all["ValidationSummaryProfileFormView"] : document.getElementById("ValidationSummaryProfileFormView");
+ValidationSummaryProfileFormView.headertext = "<h2 class=\'validation-header\'><span role=\'presentation\' class=\'fa fa-info-circle\'></span> The form could not be submitted for the following reasons:</h2>";
+ValidationSummaryProfileFormView.validationGroup = "Profile";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+(function(id) {
+    var e = document.getElementById(id);
+    if (e) {
+        e.dispose = function() {
+            Array.remove(Page_ValidationSummaries, document.getElementById(id));
+        }
+        e = null;
+    }
+})('ValidationSummaryProfileFormView');
+//]]>
+</script>
+</form>
+
+
+	<script src="/js/pcf/loadPcfControls.js"></script>
+
+	
+		
+
+	
+		<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-12 footer__lower-content">
+                <div class="footer__links">
+                    <a class="footer__link" href="/help/accessibility/">Accessibility</a>
+                    <a class="footer__link" href="/help/cookie-policy/">Cookie policy</a>
+                    <a class="footer__link" href="/help/privacy-notice/">Privacy notice</a>
+                    <a class="footer__link" href="/help/terms-of-use/">Terms of use</a>
+                    <a class="footer__link" href="/help/beta">Beta: this is a new service</a>
+                </div>
+            </div>
+        </div>
+        <div class="row footer__copyright"><span>© Scottish Enterprise 2022. All rights reserved.</span></div>
+    </div>
+</footer>
+	
+	
+	
+	
+	
+	
+	
+	<script src="https://content.powerapps.com/resource/powerappsportal/dist/postpreform.bundle-f4f91a6eb4.js" type="text/javascript"></script>
+
+	<script src="https://content.powerapps.com/resource/powerappsportal/dist/app.bundle-63b32aa50b.js" type="text/javascript"></script>
+
+	<script src="https://content.powerapps.com/resource/powerappsportal/dist/default-1033.bundle-eda4e638fd.js" type="text/javascript"></script>
+
+	
+	
+	<script type="text/javascript" src="/js/profile.js"></script>
+    <script  type="text/javascript" >
+        function ConfirmEmail() {
+            $('#ConfirmEmailLoader').show();
+            $('#ConfirmEmail').remove();
+            shell.ajaxSafePost({
+                type: 'POST',
+                url: "/Account/Manage/PostConfirmEmailRequest",
+                global: false,
+                success: function () {
+                    window.location.href = "/Account/Manage/ConfirmEmailRequest";
+                }
+            }).fail(function (jqXhr) {
+                var contentType = jqXhr.getResponseHeader("content-type");
+                var error = contentType.indexOf("json") > -1 ? $.parseJSON(jqXhr.responseText) : { Message: jqXhr.status, InnerError: { Message: jqXhr.statusText } };
+                displayErrorAlert(error);
+            }).always(function () {
+                $('#ConfirmEmailLoader').hide();
+            });
+            return false;
+        }
+
+        function displayErrorAlert(error) {
+            if (typeof error !== typeof undefined && error !== false && error != null) {
+                var message;
+                if (typeof error.InnerError !== typeof undefined && error.InnerError !== false && error.InnerError != null) {
+                    message = error.InnerError.Message;
+                } else {
+                    message = error.Message;
+                }
+                var $alert = $('<div id="ConfirmEmail" class="alert alert-danger alert-block"><a class="close" data-dismiss="alert" role="button" data-toggle="tooltip" href="#" title="Close" aria-label="Close">×</a><span id="ConfirmEmailMessage">' + message + '</span></div>');
+                $('#ConfirmEmailLoader').before($alert);
+            }
+        }
+
+    </script>
+	
+
+
+	
+	
+	<script>
+		//this event will update the title of the page based on active breadcrumb
+		$('.breadcrumb').ready(function () {
+			if ($('.breadcrumb').is(':visible')) {
+				document.querySelector('title').innerHTML = ($('.breadcrumb > li.active').text() + "&nbsp;· Custom Portal");
+			}
+		});
+
+		function GoToNewEditor() {
+			var editCmsUrlSegment = "EditInCms";
+			var currentUrl = window.location.href;
+			if (currentUrl.indexOf('?') > -1) {
+				var urlSegments = currentUrl.split("?");
+				window.location.href = window.location.origin + '/' + editCmsUrlSegment + window.location.pathname + '?' + urlSegments[1];
+			}
+			else {
+				window.location.href = window.location.origin + '/' + editCmsUrlSegment + window.location.pathname;
+			}
+		}
+	</script>
+	
+		
+	
+	
+		
+			<script>
+				if ('serviceWorker' in navigator) {
+					navigator.serviceWorker.getRegistrations().then(function(registrations) {
+					for(let registration of registrations) {
+						registration.unregister();
+					}}).catch(function(err) {
+					console.log('Service Worker unregister action failed: ', err);
+					});
+				}
+			</script>
+		
+	
+		
+</body>
+</html>
+<!-- Generated at 7/13/2022 8:50:29 AM -->
+<!-- Page OK -->

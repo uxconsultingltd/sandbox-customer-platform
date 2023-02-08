@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-US" data-lang="en-US" crm-lang="en-US" dir="ltr" crm-lcid="1033" same-site-mode="None">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,&#32;initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <script type="text/javascript">
+
+  </script>
+  <title>Customer Portal </title>
+
+  <!--[if lt IE 9]>
+                      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+                  <![endif]-->
+  <!--[if lt IE 10]>
+                      <script src="~/js/formdata.js"></script>
+                  <![endif]-->
+  <link href="css/portal/bootstrap.min.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+
+  <link href="css/portal/theme.css" rel="stylesheet" />
+  <link href="css/portal/SEThemeV2.css" rel="stylesheet" />
+  <link href="css/portal/portalbasictheme.css" rel="stylesheet" />
+  <link href="css/portal/glyphicons-font-awesome-migrate.min.css" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <!-- <link href="/css/offlinenotification.css" rel="stylesheet" /> -->
+
+
+  <style>
+/* 
+    use this styling for custome contact us page */
+    /* .contact-us-form{
+  width: 100%;
+
+  @media screen and (max-width: 991px) {
+    width: 75%;
+
+    .form-control{
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  fieldset{
+    margin-top: 5rem;
+  }
+
+  legend{
+    margin-bottom: 0;
+    font-size: 1.9rem;
+    border-bottom: none;
+  }
+
+  .info.required label:after {
+    content: ' *';
+    color: $danger;
+  }
+
+}
+
+.trading-address{
+  margin-bottom: 2.5rem;
+}
+
+.contact-us-checkbox{
+  margin:2.5rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+
+  input[type=checkbox]{
+    margin:0 1rem 0 0;
+  }
+
+  label{
+    font-weight: 400;
+    margin-top: 0;
+  }
+}
+
+.contact-us-terms{
+  margin-bottom: 2.5rem;
+} */
+  </style>
+
+</head>
+
+<body data-sitemap-state="/" data-dateformat="M/d/yyyy" data-timeformat="h:mm tt" data-datetimeformat="M/d/yyyy h:mm tt"
+  data-app-path="/" data-ckeditor-basepath="/js/BaseHtmlContentDesigner/Libs/msdyncrm_/libs/ckeditor/"
+  data-case-deflection-url="/_services/search/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89">
+
+  <div class="header-with-banner">
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+
+      <div class="skip-to-content"><a href="#mainContent">Skip to main content</a></div>
+      <div class="container">
+        <div class="col-md-1"></div>
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle collapsed" title="Toggle
+            navigation" data-toggle="collapse" data-target="#navbar" aria-expanded="false" onclick="setHeight();">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+
+          <nav aria-label="Main Navigation" class="navbar-right menu-bar" data-weblinks-maxdepth="2">
+            <ul class="nav navbar-nav weblinks">
+
+              <li class="weblink">
+                <a aria-label="Home" href="/" title="Home">
+                  Home
+                </a>
+              </li>
+
+              <li class="divider-vertical" aria-hidden="true"></li>
+              <li role="none" class="dropdown">
+                <a id="search" class="navbar-icon" href="#" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false" aria-label="Search">
+                  <span class="glyphicon glyphicon-search"></a>
+                </a>
+                <div class="dropdown-menu dropdown-search"></div>
+              </li>
+
+              <li class="divider-vertical" aria-hidden="true"></li>
+
+              <li role="none">
+                <a aria-label="Sign in" href="/SignIn?returnUrl=%2F">
+                  Sign in
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div id="beta-banner" class="">
+      <div class="container">
+        <div class="col-md-1"></div>
+
+        <div class="beta-banner">
+          <div class="beta-tag">beta</div>
+          <p>This is a new beta site, you can give us feedback <a href="/" class="cta-link">here. </a></p>
+          <button id="close-beta-banner" class="icon__close" href="">X</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Default studio template. Please do not modify -->
+  <div id="mainContent" class="wrapper-body" role="main">
+
+    <div class="page-copy">
+
+      <div class="xrm-editable-html&#32;xrm-attribute">
+
+        <div class="xrm-attribute-value">
+
+          <!-- Hero-panel -->
+          <section class="panel">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                  <h1>Contact us</h1>
+                  <p>If you have any feedback about our site or if you’re having any issues, complete our contact form
+                    to let us know. You can also call us on <a href="tel:03000133385">0300 013 3385</a>.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Form -->
+          <section class="container">
+
+            <div class="row">
+
+              <div class="col-md-1"></div>
+
+              <div class="col-md-10">
+
+                <ul class="breadcrumb">
+                  <li>
+                    <a href="/" title="Home">Home</a>
+                  </li>
+                  <li class="active">Contact us</li>
+                </ul>
+
+                <div class="contact-us-form">
+
+                  <form name="contact-us-form" id="contactUsForm">
+
+                    <div class="form-group info required">
+                      <label for="contactUsTopic">Why are you contacting us today?</label>
+                      <select id="contactUsTopic" class="form-control" name="Contact us topic" required>
+                        <option value="Please select">Please select</option>
+                        <option value="Technical support">Technical support</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Something else">Something else</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group info required">
+                      <label for="se_feedbackmessage">Your feedback or message</label>
+                      <textarea id="se_feedbackmessage" class="form-control" name="Feedbackmessage" rows="88" cols="50"
+                        required></textarea>
+                    </div>
+                    <!-- <script>
+
+                      var feedbackArea = getElementById('feedbackMessage');
+                      // feedbackArea.setAttribute('rows', '5');
+                      feedbackArea.rows = "15";
+                    </script> -->
+
+                    <div class="form-group info required margin-top-xl">
+                      <label for="firstName">First name</label>
+                      <input id="firstName" class="form-control" type="text" name="First name" required>
+                    </div>
+
+                    <div class="form-group info required">
+                      <label for="lastName">Last name</label>
+                      <input id="lastName" class="form-control" type="text" name="Last name" required>
+                    </div>
+
+                    <div class="form-group info required">
+                      <label for="emailAddress">Email address</label>
+                      <input id="emailAddress" class="form-control" type="email" name="Email address" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="phoneNumber">Phone number</label>
+                      <input id="phoneNumber" class="form-control" type="tel" name="Phone number">
+                    </div>
+
+                    <fieldset aria-label="Trading address">
+
+                      <div class="trading-address">
+                        <legend class="section-title">Trading address</legend>
+                        <p>Your trading address is the address where you do business – it’s the address
+                          customers, suppliers and your bank will use.</p>
+                      </div>
+
+                      <div class="form-group info required">
+                        <label for="companyName">Company name</label>
+                        <input id="companyName" class="form-control" type="text" name="Company name"
+                          placeholder="Start typing your company name, trading address or postcode" required>
+                      </div>
+
+                      <div class="form-group info required">
+                        <label for="addressLine1">Address line 1</label>
+                        <input id="addressLine1" class="form-control" type="text" name="Address line1" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="addressLine2">Address line 2</label>
+                        <input id="addressLine2" class="form-control" type="text" name="Address line2">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="addressLine3">Address line 3</label>
+                        <input id="addressLine3" class="form-control" type="text" name="Address line3">
+                      </div>
+
+                      <div class="form-group info required">
+                        <label for="lblTowncity">Town/City</label>
+                        <input id="txtTownCity" class="form-control" type="text" name="Towncity" required>
+                      </div>
+
+                      <div class="form-group info required">
+                        <label for="postcode">Postcode</label>
+                        <input id="postcode" class="form-control" type="text" name="Postcode" required>
+                      </div>
+                    </fieldset>
+
+                    <div class="contact-us-checkbox info required">
+                      <input id="TermsOfPrivacyNotice" type="checkbox" name="Terms of privcy notice" required>
+                      <label for="TermsOfPrivacyNotice">I accept the terms of the privacy notice</label>
+                    </div>
+
+                    <div class="contact-us-terms">
+                      <p>You must review and accept the terms of the privacy policy to continue</p>
+                      <p>The personal details and information provided will be used to answer your enquiry and keep you
+                        updated on its progress.</p>
+                      <p>They will be stored on our system which is shared with other public sector bodies.</p>
+                      <p>By ticking the box and clicking submit you confirm that you have read and agreed to the terms
+                        of our privacy notice.</p>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Submit</button>
+
+                  </form>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="cookies" class="">
+    <div class="container">
+      <div class="cookies">
+        <h4>Cookies</h4>
+        <p>We use cookies to give you the best experience when you browse our website. You can change your cookie
+          settings in your browser at any time. <a href="cookie-policy.html" class="cta-link">Find out more </a> about
+          the cookies that we use and what they do.</p>
+        <button class="btn btn-primary" id="cookies-btn">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <nav aria-label="Footer navigation links" class="col-sm-8 col-md-12 footer__lower-content">
+          <ul class="footer__links">
+            <li><a class="footer__link" href="/Accessibility">Accessibility</a></li>
+            <li><a class="footer__link" href="/cookie-policy">Cookie policy</a></li>
+            <li><a class="footer__link" href="https://www.scottish-enterprise.com/help/privacy-notice">Privacy
+                notice</a></li>
+            <li><a class="footer__link" href="/terms-and-conditions">Terms and conditions</a></li>
+            <li><a class="footer__link" href="/contact-us">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="row footer__copyright"><span>© Scottish Enterprise 2022. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <script src="js/SECookie.js"></script>
+  <script src="js/SEBetaBanner.js"></script>
+</body>
+
+</html>
