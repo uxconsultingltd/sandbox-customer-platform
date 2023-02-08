@@ -90,7 +90,6 @@ marketingCookies.addEventListener('click', () => {
 saveCookiePreferences.addEventListener("click", () => {
     setCookie("SE_Necessary_Cookies", true, 365);
     cookieModal.classList.add("hide"); 
-    console.log('Cookies preferences saved');
 })
 
 cookieMessage = () => {
@@ -102,10 +101,10 @@ cookieMessage = () => {
 }
 
 agreeToAllCookies = () => {
+    setCookie("SE_Necessary_Cookies", true, 365);
     setCookie("SE_Performance_Cookies", true, 365);
     setCookie("SE_Functional_Cookies", true, 365);
     setCookie("SE_Marketing_Cookies", true, 365);
-    setCookie("SE_Necessary_Cookies", true, 365);
     cookieModal.classList.add("hide");
 }
 
