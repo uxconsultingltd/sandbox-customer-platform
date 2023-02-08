@@ -59,9 +59,11 @@ performanceCookies.addEventListener('click', () => {
     if (performanceCookies.checked == true) {
         setCookie("SE_Performance_Cookies", true, 365);
         performanceCookiesLabel.innerText = 'On';
+        enableGA();
     } else {
         deleteCookie("SE_Performance_Cookies");
         performanceCookiesLabel.innerText = 'Off';
+        disableGA();
     }
 });
 
