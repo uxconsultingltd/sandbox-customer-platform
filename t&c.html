@@ -230,6 +230,202 @@
 	<script src="/js/pcf/loadPcfControls.js"></script>
 
 
+<section id="cookies" class="hide">
+
+	<div class="cookies-management">
+
+		<div class="" id="cookies-overview">
+			<h2>Cookie Permissions</h2>
+			<p>We use cookies and need you to say that’s okay…</p>
+			<p>For details, see our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+			<button class="btn btn-primary" id="accept-all-cookies-overview">I'm fine with that</button>
+			<button class="btn btn-secondary" id="edit-cookie-settings">Edit cookie settings</button>
+		</div>
+
+		<div class="hide" id="cookies-advanced-settings">
+
+			<h2>Manage cookie settings</h2>
+			<p>This website uses cookies to distinguish you from other users of this website. A cookie is a small file
+				of letters and numbers that we store on your browser or the hard drive of your computer, if you agree.
+			</p>
+			<p class="bold">We use cookies to:</p>
+			<ul>
+				<li>
+					<p>Enable functionality on our website</p>
+				</li>
+				<li>
+					<p>Help us understand how you and other visitors use our website to help us improve the experience
+						from
+						everyone</p>
+				</li>
+				<li>
+					<p>Allow our websites to integrate with third-party services</p>
+				</li>
+			</ul>
+
+			<button class="btn btn-primary" id="accept-all-cookies">Accept all cookies</button>
+
+			<p>Or you can select which cookies you want to turn on below.</p>
+			<hr>
+
+
+			<div class="strictly-necessary-cookies">
+				<h3>Strictly necessary cookies</h3>
+				<div class="row">
+					<div class="col-sm-3">
+
+
+
+						<label class="switch switch-disabled">
+							<input type="checkbox" id="necessary-cookies" checked>
+							<span class="tick">
+								<svg width="35" height="35" viewBox="0 0 16 16">
+									<path
+										d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+								</svg>
+							</span>
+						</label>
+
+
+					</div>
+					<div class="col-sm-9">
+						<p class="bold">These are cookies that are required for our website to function properly. These
+							include
+							things like:</p>
+						<ul>
+							<li>
+								<p>Cookies that allow you to log into secure areas of our website</p>
+							</li>
+							<li>
+								<p>Cookies that help distribute visitors across different servers to improve page load
+									time</p>
+							</li>
+							<li>
+								<p>Cookies that store information about your cookie preferences</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+			</div>
+
+			<div class="performance-cookies">
+				<h3>Performance cookies</h3>
+				<div class="row">
+
+					<div class="col-sm-3">
+						<label class="switch">
+							<input type="checkbox" id="performance-cookies" value="false">
+							<span class="slider round"></span>
+							<span class="switch-label" id="performance-cookies-label">Off</span>
+						</label>
+					</div>
+
+					<div class="col-sm-9">
+						<p>These cookies allow us to aggregate anonymised data from you and other visitors to see how
+							people
+							visit the site, how they're using the site, and what their experience is like. This helps is
+							identify
+							and fix problems on the website. We do not allow Google to use or share the data about how
+							you use
+							this site.</p>
+
+						<p class="bold">Performance cookies include:</p>
+						<ul>
+							<li>
+								<p>Google Analytics helps us understand more about visitors so we can improve the site
+									for everyone
+								</p>
+							</li>
+							<li>
+								<p>Google Optimize helps us run two different versions of the page at once, to see which
+									one
+									visitors prefer</p>
+							</li>
+							<li>
+								<p>Hotjar helps us to collect feeback through polls and surveys, and provides heatmaps
+									of pages on
+									our website so we can see how visitors interact with them, helping us to improve
+									those pages</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+			</div>
+
+			<div class="functional-cookies">
+				<h3>Functional cookies</h3>
+				<div class="row">
+
+					<div class="col-sm-3">
+						<label class="switch">
+							<input type="checkbox" id="functional-cookies" value="false">
+							<span class="slider round"></span>
+							<span class="switch-label" id="functional-cookies-label">Off</span>
+						</label>
+					</div>
+
+					<div class="col-sm-9">
+						<p class="bold">These are used to recognise you when you return to our website. These cookies
+							allow us
+							to:</p>
+						<ul>
+							<li>
+								<p>Personalise our content for you</p>
+							</li>
+							<li>
+								<p>Remember your preferences (for example, your choice of language or region)</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+			</div>
+
+			<div class="marketing-cookies">
+				<h3>Marketing cookies</h3>
+				<div class="row">
+					<div class="col-sm-3">
+						<label class="switch">
+							<input type="checkbox" id="marketing-cookies" value="false">
+							<span class="slider round"></span>
+							<span class="switch-label" id="marketing-cookies-label">Off</span>
+						</label>
+					</div>
+					<div class="col-sm-9">
+						<p class="bold">These cookies record your visit to our website, the pages you have visited and
+							the links
+							you have followed. We use them to:</p>
+						<ul>
+							<li>
+								<p>Help you share content on social media platforms</p>
+							</li>
+							<li>
+								<p>Help us track visitors coming from advertisements on search engines and social media
+								</p>
+							</li>
+							<li>
+								<p>To allow us to target advertisements and promote content on LinkedIn, Twitter,
+									Facebook and
+									Google to people who have
+									visited our site.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+
+				<button class="btn btn-primary" id="save-cookie-preferences">Save cookie preferences</button>
+			</div>
+
+		</div>
+	</div>
+
+</section>
+
+
+
 
 	<footer>
 		<div class="container">
@@ -250,7 +446,7 @@
 
 	<script src="js/SECookieModal.js"></script>
 	<script src="js/SEBetaBanner.js"></script>
-	
+
 </body>
 
 </html>
