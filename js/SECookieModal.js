@@ -67,14 +67,6 @@ performanceCookies.addEventListener('click', () => {
     }
 });
 
-//TBC
-disableGA = () => {
-    window['ga-disable-G-R0VW66LFWP'] = true;
-};
-
-enableGA = () => {
-    window['ga-disable-G-R0VW66LFWP'] = false;
-};
 
 //Add/remove functional cookies
 functionalCookies.addEventListener('click', () => {
@@ -112,6 +104,25 @@ cookieMessage = () => {
     }
 }
 
+//enable/disable GA on page load from tracking GA
+setTracking = () => {
+    if(getCookie("SE_Performance_Cookies")) {
+        enableGA();
+    } else {
+        disableGA();
+    }
+}
+
+//TBC
+disableGA = () => {
+    window['ga-disable-G-R0VW66LFWP'] = true;
+};
+
+enableGA = () => {
+    window['ga-disable-G-R0VW66LFWP'] = false;
+};
+
+
 agreeToAllCookies = () => {
     setCookie("SE_Necessary_Cookies", true, 365);
     setCookie("SE_Performance_Cookies", true, 365);
@@ -121,6 +132,7 @@ agreeToAllCookies = () => {
 }
 
 window.addEventListener("load", cookieMessage);
+window.addEventListener("load", setTracking);
 
 
 //Checks if cookies exists and show/hide cookie banner
