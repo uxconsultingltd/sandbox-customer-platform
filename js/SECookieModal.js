@@ -65,6 +65,15 @@ performanceCookies.addEventListener('click', () => {
     }
 });
 
+//TBC
+disableGA = () => {
+    window['ga-disable-G-R0VW66LFWP'] = true;
+};
+
+enableGA = () => {
+    window['ga-disable-G-R0VW66LFWP'] = false;
+};
+
 //Add/remove functional cookies
 functionalCookies.addEventListener('click', () => {
     if (functionalCookies.checked == true) {
@@ -91,6 +100,7 @@ saveCookiePreferences.addEventListener("click", () => {
     setCookie("SE_Necessary_Cookies", true, 365);
     cookieModal.classList.add("hide"); 
 })
+
 
 cookieMessage = () => {
     if(getCookie("SE_Necessary_Cookies")) {
