@@ -57,7 +57,6 @@ window.addEventListener("load",
         const cookieModal = document.getElementById('cookies');
         const acceptAllCookiesOverview = document.getElementById('accept-all-cookies-overview');
         const editCookies = document.getElementById('edit-cookie-settings');
-        const editCookiesPolicy = document.getElementById('edit-cookie-settings-policy-view');
         const acceptAllCookies = document.getElementById('accept-all-cookies');
         const saveCookiePreferences = document.getElementById('save-cookie-preferences');
         const cookiesOverview = document.getElementById('cookies-overview');
@@ -65,11 +64,7 @@ window.addEventListener("load",
 
         const performanceCookies = document.getElementById('performance-cookies');
         const performanceCookiesLabel = document.getElementById('performance-cookies-label');
-        
-        const ctaCookiePolicy = document.getElementById('cta-cookie-policy');
-        const cookiesPolicyBanner = document.getElementById('policy');
-        
-        const editCookiesFooterLink = document.getElementById('edit-cookies-footer-link');
+
 
     setCookie = (cName, cValue, expDays) => {
         let date = new Date();
@@ -82,36 +77,14 @@ window.addEventListener("load",
         setCookie(cName, '', -1);
     };
 
-    //Overview 
     editCookies.addEventListener('click', () => {
         cookiesOverview.classList.add('hide');
         cookiesAdvancedSettings.classList.remove('hide');         
     });
 
-    //Edit cookies CTA in the footer (show cookies banner and display saved preferences)
-    editCookiesFooterLink.addEventListener('click', () => {
-        cookieModal.classList.remove('hide');
-        
-        savedCookiesPreferences();
-    });
-
-    ctaCookiePolicy.addEventListener('click', () => {
-        cookiesOverview.classList.add('hide');
-        cookiesPolicyBanner.classList.remove('hide');  
-        cookiesAdvancedSettings.classList.add('hide');         
-    });
-
     // Accept all cookies (overview)
     acceptAllCookiesOverview.addEventListener("click", () => {
         agreeToAllCookies();
-    });
-
-    //Cookie policy 
-    editCookiesPolicy.addEventListener('click', () => {
-        cookiesOverview.classList.add('hide');
-        cookiesPolicyBanner.classList.add('hide');
-        cookiesAdvancedSettings.classList.remove('hide');         
-         
     });
 
     //Accept all cookies (edit)
@@ -140,30 +113,14 @@ window.addEventListener("load",
             disableGtag();
         }
 
-        //sets to a default view
-        cookiesOverview.classList.remove('hide');
-        cookiesAdvancedSettings.classList.add('hide');  
-        //hides modal
-        cookieModal.classList.add("hide");
-        setOverflow();
+        cookieModal.classList.add("hide"); 
     });
-
-    savedCookiesPreferences = () => {
-        if(getCookie("SE_Performance_Cookies")) {
-            performanceCookies.checked = true;
-            performanceCookiesLabel.innerText = 'On';
-        } else {
-            performanceCookies.checked = false;
-            performanceCookiesLabel.innerText = 'Off';
-        }
-    }
     
     agreeToAllCookies = () => {
         setCookie("SE_Necessary_Cookies", true, 365);
         setCookie("SE_Performance_Cookies", true, 365);
         enableGtag();
         cookieModal.classList.add("hide");
-        setOverflow();
     };
 
     toggleCookieBanner = () => {
@@ -171,18 +128,7 @@ window.addEventListener("load",
             cookieModal.classList.add("hide");
         } else {
             cookieModal.classList.remove("hide");
-            setOverflow();
-
         }
-    }
-
-
-    setOverflow = () => {
-      if(!cookieModal.classList.contains("hide")){
-        body.style.overflow = "hidden";
-      } else {
-        body.style.overflow = "auto";
-      }
     }
 
     toggleCookieBanner();

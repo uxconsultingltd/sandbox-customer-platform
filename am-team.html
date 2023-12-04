@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en-US" data-lang="en-US" crm-lang="en-US" dir="ltr" crm-lcid="1033" same-site-mode="None">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,&#32;initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <script type="text/javascript">
+
+  </script>
+  <title>Customer Portal </title>
+
+  <!--[if lt IE 9]>
+                      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+                  <![endif]-->
+  <!--[if lt IE 10]>
+                      <script src="~/js/formdata.js"></script>
+                  <![endif]-->
+  <link href="css/portal/bootstrap.min.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+
+  <link href="css/portal/theme.css" rel="stylesheet" />
+  <link href="css/portal/SEThemeV2.css" rel="stylesheet" />
+  <link href="css/portal/portalbasictheme.css" rel="stylesheet" />
+  <link href="css/portal/glyphicons-font-awesome-migrate.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <!-- <link href="/css/offlinenotification.css" rel="stylesheet" /> -->
+</head>
+
+<body data-sitemap-state="/" data-dateformat="M/d/yyyy" data-timeformat="h:mm tt" data-datetimeformat="M/d/yyyy h:mm tt"
+  data-app-path="/" data-ckeditor-basepath="/js/BaseHtmlContentDesigner/Libs/msdyncrm_/libs/ckeditor/"
+  data-case-deflection-url="/_services/search/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89">
+  <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="skip-to-content"><a href="#mainContent">Skip to main content</a></div>
+    <div class="container">
+      <div class="navbar-header">
+
+
+        <div class="visible-sm-block visible-md-block visible-lg-block
+            visible-xs-block navbar-brand">
+          <div class="xrm-editable-html&#32;xrm-attribute" data-languageContext="English">
+            <div class="xrm-attribute-value">
+              <div></div>
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script><img src="/se-logo.png"
+                name="se-logo.png" style="width: 170px; height: auto;
+                  background-color: #fafafa;">
+              <script src="/dist/preform.bundle-65c2f02651.js" type="text/javascript"></script>
+              <script src="/dist/app.bundle-7a34594662.js" type="text/javascript"></script>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="navbar-toggle collapsed" title="Toggle
+            navigation" data-toggle="collapse" data-target="#navbar" aria-expanded="false" onclick="setHeight();">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+
+
+      <div id="navbar" class="navbar-collapse collapse">
+
+
+        <nav aria-label="Main Navigation" class="navbar-right menu-bar" data-weblinks-maxdepth="2">
+          <ul class="nav navbar-nav weblinks">
+
+
+            <li class="weblink">
+              <a aria-label="Home" href="/" title="Home">
+                Home
+              </a>
+
+            </li>
+
+
+            <li class="divider-vertical" aria-hidden="true"></li>
+            <li role="none" class="dropdown">
+              <a id="search" class="navbar-icon" href="#" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false" aria-label="Search">
+                <span class="glyphicon glyphicon-search"></a>
+              </a>
+              <div class="dropdown-menu dropdown-search">
+
+
+
+
+              </div>
+            </li>
+
+            <li class="divider-vertical" aria-hidden="true"></li>
+
+
+            <li role="none">
+              <a aria-label="Sign in" href="/SignIn?returnUrl=%2F">
+                Sign in
+              </a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- add anti-forgery token-->
+  <div id="antiforgerytoken" data-url="/_layout/tokenhtml"></div>
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/preform.bundle-2c5735c41a.js"
+    type="text/javascript"></script>
+
+
+  <script src="/js/pcf/prop-types.js"></script>
+  <script src="/js/pcf/fela.js"></script>
+  <script src="/js/pcf/fela-dom.js"></script>
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/pcf.bundle-d5fa514165.js"
+    type="text/javascript"></script>
+
+  <script src="/js/pcf/react-fela.js"></script>
+  <script src="/js/pcf/fluentui-react.js"></script>
+
+
+
+
+  <!-- Default studio template. Please do not modify -->
+  <div id="mainContent" class="wrapper-body" role="main">
+
+    <script>
+      $(document).ready(function () {
+        const regConfirmation = document.querySelector("#registration-confirmation");
+        const homePage = document.querySelector("#home-page");
+        if (window.location.href.includes("#id_token=")) {
+          regConfirmation.classList.remove("hide");
+          homePage.classList.add("hide");
+        } else {
+          regConfirmation.classList.add("hide");
+          homePage.classList.remove("hide");
+        }
+      });
+    </script>
+    <section id="registration-confirmation" class="container hide">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-7">
+          <section class="registration-confirmation">
+            <div class="confirmation-panel">
+              <h1>You've successfully created your account</h1>
+            </div>
+            <p>The first time you access your account, you’ll need to read and agree to our terms and conditions. We’ll
+              be
+              in touch soon with your next steps.</p>
+            <a href="/Account/Login/ExternalLogin?returnUrl=/&amp;provider=https://sedevadb2c.b2clogin.com/tfp/a8dc3e1c-6059-4178-83a5-2b6d7d732a6c/b2c_1_customerportal_signup/v2.0/"
+              class="cta__link">Continue to terms and conditions</a>
+            <p>If there are any issues with your account, just get in touch with your Scottish Enterprise contact, or <a
+                href="/contact-us">submit an enquiry</a>.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+    <div id="home-page" class="">
+
+      <div class="panel">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <h1>Welcome to your Scottish Enterprise account</h1>
+              <p>Thanks for creating an account and taking part in our test phase.</p>
+              <p>Here you’ll find the information we’ve saved about you and your business. We’ll be adding more
+                functionality over the coming months to help you access our services and manage ongoing interactions
+                with
+                us.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- New requests and engagements -->
+
+
+
+
+      <section class="new-requests">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <h2 class="text-center">New requests and engagements</h2>
+              <table id="new-requests">
+
+                <tbody>
+                  <tr>
+                    <th style="width: 40%;">Early stage high growth company support</th>
+                    <th>
+                    </th>
+                    <th style="width: 20%; padding: 0 15px 0 15px;">25/09/2023</th>
+                    <th style="width: 40%;"><a
+                        href="https://crm2devportal.powerappsportals.com/en-GB/onboarding/?id=94738fd6-b95b-ee11-be6e-6045bd9059cc&amp;relatedid=7c32a582-ca14-ee11-a81b-000d3a23a042">Review
+                        your details</a></th>
+                  </tr>
+
+                  <tr>
+                    <th style="width: 40%;">Early stage high growth company support</th>
+                    <th>
+                    </th>
+                    <th style="width: 20%; padding: 0 15px 0 15px;">26/09/2023</th>
+                    <th style="width: 40%;"><a
+                        href="https://crm2devportal.powerappsportals.com/en-GB/onboarding/?id=2bb5fa37-3e5c-ee11-be6e-6045bd905f2d&amp;relatedid=7c32a582-ca14-ee11-a81b-000d3a23a042">Review
+                        your details</a></th>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End 'New requests and engagements' -->
+      <!-- Ajith -->
+      <!-- Start - Your Account Manager -->
+
+
+      <section class="account-manager panel">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-2 col-sm-1"></div>
+            <div class="col-lg-6 col-md-8 col-sm-10">
+
+              <div class="am-card">
+                <div class="am-card__title">
+                  <h2>Your account manager</h2>
+                </div>
+
+                <div class="am-card__content">
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <div class="am-card__photo">
+                        <!-- <img
+                          src="https://files.axshare.com/gsc/EUIZBT/c5/16/57/c5165707a50e4943ae58560abde09cc1/images/home__your-account-team_v7/u106.png?pageId=8e4f1916-3a60-41e3-b4ca-81cf9b497b10"
+                          alt="..."> -->
+                        <img class="img-fluid"
+                          src="https://files.axshare.com/gsc/EUIZBT/c5/16/57/c5165707a50e4943ae58560abde09cc1/images/home__your-account-team_v6/u127.svg?pageId=23a0bc28-9db4-48f8-bbdf-82f2614231ce"
+                          alt="Profile photo">
+                      </div>
+                    </div>
+                    <div class="col-sm-7">
+                      <div class="am-card__description">
+
+                        <p>Your account manager is your key contact. </p>
+                        <a href="#" class="btn btn-secondary">Book an appointment</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="am-card__footer">
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <div class="am__name">
+                        <h3 class="text-center">John Doe</h3>
+                      </div>
+                    </div>
+                    <div class="col-sm-7">
+                      <div class="am__contact-details">
+                        <div class="am__phone-number">
+                          <a href="tel:0141 111 2233">0141 111 2233</a>
+                        </div>
+                        <div class="am__email">
+                          <a href="mailto:John.Doe@scotent.co.uk" target="_blank">John.DoeJohn.Doe@scotent.co.uk</a>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="your-account-team">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <h2 class="text-center">Your account team</h2>
+              <p>Need to get in touch? Your account team are here to help. Find out more about the people you're working
+                with and how to
+                contact them.</p>
+
+              <div class="account-team-members">
+                <div class="container-fluid">
+                  <div class="row">
+
+                    <div class="col-md-4 col-sm-6 ">
+                      <div class="atm-card">
+
+                        <div class="atm-name">
+                          <h4>John Doe</h4>
+                        </div>
+
+                        <p class="atm-team">Service Design</p>
+                        <p class="atm-email">
+                          <a href="mailto:John.Doe@scotent.co.uk">John.Doe@scotent.co.uk</a>
+                        </p>
+
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <br>
+      <h2>Your account manager</h2>
+      <br>
+      Iain Trotter
+      <br>
+      Phone: +44 141 468 5272
+      <br>
+      Email: Iain.Trotter@scotent.co.uk
+      <br>
+      <!-- End - Your Account Manager -->
+
+      <!-- Start - Related Account Managers -->
+
+
+
+      <h2>Your account team</h2>
+      Need to get in touch? Your account team are here to help. Find out more about the people you're working with and
+      how
+      to contact them.
+      <br>
+      <br>
+      <table>
+
+        <tbody>
+          <tr>
+            <th>Alex Guidori</th>
+            <th>&nbsp;&nbsp;</th>
+            <th>alex.guidori@scotent.co.uk</th>
+          </tr>
+
+          <tr>
+            <th>Katie Chambers</th>
+            <th>&nbsp;&nbsp;</th>
+            <th>katie.chambers@scotent.co.uk</th>
+          </tr>
+
+          <tr>
+            <th>Vijaya Doddaka</th>
+            <th>&nbsp;&nbsp;</th>
+            <th>vijaya.doddaka@scotent.co.uk</th>
+          </tr>
+
+          <tr>
+            <th>Ajith Madathil</th>
+            <th>&nbsp;&nbsp;</th>
+            <th>ajith.madathil@scotent.co.uk</th>
+          </tr>
+
+          <tr>
+            <th>Claire Shanks</th>
+            <th>&nbsp;&nbsp;</th>
+            <th>Claire.Shanks@scotent.co.uk</th>
+          </tr>
+
+          <tr>
+            <th>Claire Partridge</th>
+            <th>&nbsp;&nbsp;</th>
+            <th>claire.partridge@scotent.co.uk</th>
+          </tr>
+
+          <tr>
+            <th>David O'Brien</th>
+            <th>&nbsp;&nbsp;</th>
+            <th>david.obrien@scotent.co.uk</th>
+          </tr>
+
+          <tr>
+            <th>Richard Hamill</th>
+            <th>&nbsp;&nbsp;</th>
+            <th>richard.hamill@scotent.co.uk</th>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+      <!-- End - Related Account Managers -->
+      <!-- Ajith -->
+      <!-- What you can expect in the future -->
+      <section class="account-features panel">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <h2 class="text-center">What you can expect in the future</h2>
+              <p class="">For now, this is a basic account that lets you sign in and see your company and personal data.
+                Here’s a taste of what we’re hoping to add to the account space in the future.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="card">
+                <div class="card__icon"><img alt="Icon" role="presentation" src="/icon1.svg"></div>
+                <h3 class="card__title">Save the things that interest you</h3>
+                <p>Search for and save information, support and resources to come back to later</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="card">
+                <div class="card__icon"><img alt="Icon" role="presentation" src="/icon5.svg"></div>
+                <h3 class="card__title">A personalised experience</h3>
+                <p>Based on the support you’ve already accessed, we can match you with other services that might be
+                  helpful to you</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="card">
+                <div class="card__icon"><img alt="Icon" role="presentation" src="/icon__3.svg"></div>
+                <h3 class="card__title">Complete forms quicker</h3>
+                <p>We’ll store the information you give us to save you time when you next fill out a form or application
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="card">
+                <div class="card__icon"><img alt="Icon" role="presentation" src="/icon__4.svg"></div>
+                <h3 class="card__title">Keep track of your interactions with us</h3>
+                <p>Track the progress of applications and other interactions with us from your account space</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Markup visible for NOT Signed in users -->
+
+    </div>
+    <div class="row sectionBlockLayout text-left"
+      style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+      <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+        <div class="col-md-12 columnBlockLayout"
+          style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"></div>
+      </div>
+    </div>
+
+    <div class="container adx-form">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/pcf/loadPcfControls.js"></script>
+
+
+
+  <section id="cookies" class="hide">
+
+    <div class="cookies-management">
+
+      <div class="" id="cookies-overview">
+        <h2>Cookie Permissions</h2>
+        <p>We use cookies and need you to say that’s okay…</p>
+        <p>For details, see our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+        <button class="btn btn-primary" id="accept-all-cookies-overview">I'm fine with that</button>
+        <button class="btn btn-secondary" id="edit-cookie-settings">Edit cookie settings</button>
+      </div>
+
+      <div class="hide" id="cookies-advanced-settings">
+
+        <h2>Manage cookie settings</h2>
+        <p>This website uses cookies to distinguish you from other users of this website. A cookie is a small file
+          of letters and numbers that we store on your browser or the hard drive of your computer, if you agree.</p>
+        <p class="bold">We use cookies to:</p>
+        <ul>
+          <li>
+            <p>Enable functionality on our website</p>
+          </li>
+          <li>
+            <p>Help us understand how you and other visitors use our website to help us improve the experience from
+              everyone</p>
+          </li>
+          <li>
+            <p>Allow our websites to integrate with third-party services</p>
+          </li>
+        </ul>
+
+        <button class="btn btn-primary" id="accept-all-cookies">Accept all cookies</button>
+
+        <p>Or you can select which cookies you want to turn on below.</p>
+        <hr>
+
+
+        <div class="strictly-necessary-cookies">
+          <h3>Strictly necessary cookies</h3>
+          <div class="row">
+            <div class="col-sm-3">
+
+
+
+              <label class="switch switch-disabled">
+                <input type="checkbox" id="necessary-cookies" checked>
+                <span class="tick">
+                  <svg width="35" height="35" viewBox="0 0 16 16">
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                  </svg>
+                </span>
+              </label>
+
+
+            </div>
+            <div class="col-sm-9">
+              <p class="bold">These are cookies that are required for our website to function properly. These include
+                things like:</p>
+              <ul>
+                <li>
+                  <p>Cookies that allow you to log into secure areas of our website</p>
+                </li>
+                <li>
+                  <p>Cookies that help distribute visitors across different servers to improve page load time</p>
+                </li>
+                <li>
+                  <p>Cookies that store information about your cookie preferences</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="performance-cookies">
+          <h3>Performance cookies</h3>
+          <div class="row">
+
+            <div class="col-sm-3">
+              <label class="switch">
+                <input type="checkbox" id="performance-cookies" value="false">
+                <span class="slider round"></span>
+                <span class="switch-label" id="performance-cookies-label">Off</span>
+              </label>
+            </div>
+
+            <div class="col-sm-9">
+              <p>These cookies allow us to aggregate anonymised data from you and other visitors to see how people
+                visit the site, how they're using the site, and what their experience is like. This helps is identify
+                and fix problems on the website. We do not allow Google to use or share the data about how you use
+                this site.</p>
+
+              <p class="bold">Performance cookies include:</p>
+              <ul>
+                <li>
+                  <p>Google Analytics helps us understand more about visitors so we can improve the site for everyone
+                  </p>
+                </li>
+                <li>
+                  <p>Google Optimize helps us run two different versions of the page at once, to see which one
+                    visitors prefer</p>
+                </li>
+                <li>
+                  <p>Hotjar helps us to collect feeback through polls and surveys, and provides heatmaps of pages on
+                    our website so we can see how visitors interact with them, helping us to improve those pages</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="functional-cookies">
+          <h3>Functional cookies</h3>
+          <div class="row">
+
+            <div class="col-sm-3">
+              <label class="switch">
+                <input type="checkbox" id="functional-cookies" value="false">
+                <span class="slider round"></span>
+                <span class="switch-label" id="functional-cookies-label">Off</span>
+              </label>
+            </div>
+
+            <div class="col-sm-9">
+              <p class="bold">These are used to recognise you when you return to our website. These cookies allow us
+                to:</p>
+              <ul>
+                <li>
+                  <p>Personalise our content for you</p>
+                </li>
+                <li>
+                  <p>Remember your preferences (for example, your choice of language or region)</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="marketing-cookies">
+          <h3>Marketing cookies</h3>
+          <div class="row">
+            <div class="col-sm-3">
+              <label class="switch">
+                <input type="checkbox" id="marketing-cookies" value="false">
+                <span class="slider round"></span>
+                <span class="switch-label" id="marketing-cookies-label">Off</span>
+              </label>
+            </div>
+            <div class="col-sm-9">
+              <p class="bold">These cookies record your visit to our website, the pages you have visited and the links
+                you have followed. We use them to:</p>
+              <ul>
+                <li>
+                  <p>Help you share content on social media platforms</p>
+                </li>
+                <li>
+                  <p>Help us track visitors coming from advertisements on search engines and social media</p>
+                </li>
+                <li>
+                  <p>To allow us to target advertisements and promote content on LinkedIn, Twitter, Facebook and
+                    Google to people who have
+                    visited our site.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+
+          <button class="btn btn-primary" id="save-cookie-preferences">Save cookie preferences</button>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-12 footer__lower-content">
+          <div class="footer__links">
+            <a class="footer__link" href="/help/accessibility/">Accessibility</a>
+            <a class="footer__link" href="/help/cookie-policy/">Cookie policy</a>
+            <a class="footer__link" href="/help/privacy-notice/">Privacy
+              notice</a>
+            <a class="footer__link" href="/help/terms-of-use/">Terms of use</a>
+            <a class="footer__link" href="/help/beta">Beta: this is a new
+              service</a>
+          </div>
+        </div>
+      </div>
+      <div class="row footer__copyright"><span>© Scottish Enterprise 2022. All
+          rights reserved.</span></div>
+    </div>
+  </footer>
+
+
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/postpreform.bundle-f4f91a6eb4.js"
+    type="text/javascript"></script>
+
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/app.bundle-63b32aa50b.js"
+    type="text/javascript"></script>
+
+  <script src="https://content.powerapps.com/resource/powerappsportal/dist/default-1033.bundle-eda4e638fd.js"
+    type="text/javascript"></script>
+
+  <script src="js/SECookieModal.js"></script>
+  <script src="js/SEBetaBanner.js"></script>
+
+</body>
+
+</html>
+<!-- Generated at 7/13/2022 1:37:07 PM -->
+<!-- Page OK -->

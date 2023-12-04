@@ -1,11 +1,15 @@
 //Variables
 // Color pallete
-$primary: #09759d;
+$primary: #1E7BB8;
 $secondary: #134F76;
 $danger: #af000f;
 $warning: #FFBF47;
 $success: #00703C;
 $grey: #EEEEEE;
+$grey-help-text:#4e4e4e;
+$black: #000;
+$primary-background: white;
+
 $main-font: 'Poppins', Arial, Helvetica, sans-serif!important;
 $cookies-font-size: 1.8rem;
 
@@ -25,7 +29,7 @@ $bold:600;
 body {  
     font-family: $main-font;
     height: 100%;
-    margin-bottom:8rem!important;
+    // margin-bottom: 14rem!important;
 }
 
 /* Typography */
@@ -56,7 +60,7 @@ h3 {
   margin-top: $size-l;
 }
 
-h4 {
+h4, .h4 {
   font-family: $main-font;
   font-size: $size-m;
   font-weight: $bold;
@@ -76,12 +80,12 @@ a{
   text-decoration: underline!important;
 
     &:focus{   
-      color: $secondary;
+      color: $black!important;
       outline: 3px solid $warning;
     }
 
     &:hover{   
-      color: $secondary!important;
+      color: $black!important;
     }
 }
 
@@ -110,23 +114,38 @@ a{
 
 .cta__go-back{
   margin-top: $size-xl;
+
+  &:focus {
+    color: #000;
+    outline: 3px solid #FFBF47;
+  }
+  &:hover {
+    color: #000 !important;
+  }
 }
 
 .cta__link{
   margin-bottom:$size-l;
   width:fit-content;
+
+  &:focus {
+    color: #000;
+    outline: 3px solid #FFBF47;
+  }
+  &:hover {
+    color: #000 !important;
+  }
 }
 
-/* Link - edit company details */
-#edit-company-details{
-  padding-top: $size-l;
+/* Link - edit details */
+.edit-details{
+  padding-top: $size-xl;
 }
 
 /* Buttons styling */
 .btn {
   padding: 1rem $size-l;
   border-radius: 5px;
-  // border: 3px solid;
   font-family: $main-font;
   font-size: 1.9rem;
   font-weight: 400;
@@ -139,7 +158,7 @@ a.btn-primary{
   }
 }
 
-.btn-primary{
+.btn-primary, #nextButton{
     color: white!important;
     background-color:$primary!important;
     border:2px solid $primary!important;
@@ -149,6 +168,13 @@ a.btn-primary{
       background-color:$secondary!important;
       border:2px solid $secondary!important;
     }
+
+    &:active{
+      outline: 3px solid $warning;
+      background-color:$secondary!important;
+      border:2px solid $secondary!important;
+    }
+
     &:hover{
       background-color:$secondary!important;
       border:2px solid $secondary!important;
@@ -156,16 +182,23 @@ a.btn-primary{
 }
 
 
-.btn-secondary{
+.btn-secondary, .previous-btn{
     color: $primary!important;
     background-color:white!important;
     border:2px solid $primary!important;
 
     &:focus{
-      outline: 3px solid $warning;
       color:$secondary!important;
       border:2px solid $secondary!important;
+      outline: 3px solid $warning;
     }
+    
+    &:active{
+      color:$secondary!important;
+      border:2px solid $secondary!important;
+      outline: 3px solid $warning;
+    }
+
     &:hover{
       color:$secondary!important;
       border:2px solid $secondary!important;
@@ -189,28 +222,77 @@ a.btn-primary{
   }
 }
 
-.crmEntityFormView .actions {
-  border-top: none;
-  margin: $size-m 0;
-  padding: 0;
-}
-
 
 /* Individual pages styling */
 /* Company details page */
-.company-details{
-  h4{
-    font-weight: $bold;
-    font-family: $main-font;
-    font-size: $size-m;
-    margin-bottom: 0.5rem;
+// .company-details{
+//   h4{
+  //     font-weight: $bold;
+//     font-family: $main-font;
+//     font-size: $size-m;
+//     margin-bottom: 0.5rem;
+//   }
+
+//   h4:not(:first-child) {
+  //     margin-top: 3.5rem;
+  //   }
+  
+  // }
+  
+/* Edit business details page (out of the box form fixes)*/
+
+.edit-business-details{
+
+  section.container{
+    padding-bottom:$size-l;
   }
 
-  h4:not(:first-child) {
-    margin-top: 3.5rem;
+  .crmEntityFormView{
+    fieldset{
+      margin-bottom: $size-l;
+    }
   }
 
+  .actions{
+    margin-top:0;
+  }
+
+  .crmEntityFormView .actions:empty {
+      display: block;
+  }
+
+  @media screen and (max-width: 767px) {
+    
+    .cta__cancel-changes{
+      display:block;
+      margin-left: 0!important;
+      margin-top: $size-xl!important;
+    }
+
+    .crmEntityFormView {
+
+      .cell{
+        padding:0!important;
+      }
+
+      .registered-address-fieldset{
+        td{
+          margin-bottom: $size-l;
+        }
+      }
+
+      .tab{
+        margin-bottom: $size-xl;
+      }
+    }
+
+    .crmEntityFormView .actions:empty {
+      display: none;
+    }
+  }
 }
+
+
 
 /* Registration confirmation page */
 .registration-confirmation{
@@ -230,7 +312,7 @@ a.btn-primary{
 
 /* Accessibility page */
 .accessibility-statement{
-  padding-top: 0;
+  padding-top: $size-xl;
 
   h2{
     margin: $size-xl 0 $size-l 0;
@@ -245,13 +327,15 @@ a.btn-primary{
 }
 
 /* Company details page */
-section.company-details{
-  padding-top:$size-sm!important;
-  padding-bottom: 0;
-}
+// section.company-details{
+//   padding-top:$size-sm!important;
+//   padding-bottom: 0;
+// }
 
 /* Terms and conditions page */
 .terms-and-conditions{
+  padding-top: $size-xl;
+
   h2{
     margin-top: $size-xl;
     margin-bottom: $size-l;
@@ -260,6 +344,7 @@ section.company-details{
   p{
     margin-bottom: $size-sm;
   }
+
 }
 
 /* Styling for the T&C's out-of-the-box template with the checkbox */
@@ -276,15 +361,33 @@ section.company-details{
     padding-left: 11rem;
   }
 
+  /* "I agree ..." label position fix */
+  span.xrm-attribute-value-encoded.xrm-attribute-value {
+    margin-left: 25px!important;
+    // position: absolute;
+    // top: 3px;
+  }
+
+  /* Continue button width fix for desktop */
+  #submit-agreement{
+    width: 200px;
+  }
+
   @media screen and (max-width: 991px) {
 
     h1{
       padding-left: 3rem;
     }
+
     .form-group{
       padding-left: 3rem;
       padding-right: 3rem;
     }
+
+    #submit-agreement{
+      width: 100%;
+    }
+
   }
 }
 
@@ -304,6 +407,7 @@ section.company-details{
 
 /* Cookie policy page */
 .cookie-policy-cp{
+  padding-top: $size-xl;
 
   li{
     font-size: 1.9rem;
@@ -317,11 +421,15 @@ section.company-details{
 
 /* Contact us page*/
 .contact-us-form{
+  margin-top: $size-l;
 
   input[type="email"]{
     width: 100%;
   }
 
+  .cell.checkbox-cell div.info {
+    padding-left: 45px!important;
+  } 
 }
 
 #se_accepttermsandconditions{
@@ -332,6 +440,195 @@ section.company-details{
   font-weight: 400;
   font-size: 1.6rem;
 }
+
+/* Confirm engagement details page */
+.confirm-engagement-details{
+  
+  h2{
+    margin-bottom:0;
+  }
+
+  form{
+    margin-top: $size-l;
+
+    div{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .engagement-details-checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding-top:$size-m;
+  }
+
+  input[type="checkbox"]{
+    height: 25px;
+    width: 25px;
+    margin: 5px 15px 5px 0;
+  }
+
+  label {
+    font-weight: 400;
+    margin:0;
+  }
+
+  ul {
+    margin-bottom: $size-sm;
+  }
+}
+
+.cta-form-submit{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $size-l;
+  margin-top: $size-xl;
+}
+
+.paragraph-with-bullets{
+  display: list-item;
+  margin-left: $size-xl;
+}
+
+
+/* Account manager and account team panels (am - account manager; atm - account team member) */
+
+.am-card{
+  border: 3px solid $primary;
+  border-radius: 5px;
+  background-color: $primary-background;
+}
+
+.am-card__title{
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid $primary;
+  margin: $size-l 25px;
+  
+  h2{
+    font-size: $size-l;
+    margin-bottom: $size-m;
+  }
+}
+
+.am-card__content{
+  margin: 0 $size-l $size-l $size-l;
+  
+  .am-card__photo{
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    
+    img{
+      max-width: 140px;
+    }
+
+  }
+  
+  .am-card__description{
+    
+    p{
+      padding-bottom: 15px;
+    }
+
+  }
+}
+
+.am-card__footer{
+  background-color: $primary;
+  color:white;
+  padding: $size-l $size-l $size-l $size-l;
+
+  .am__name{
+    padding-top: $size-sm;
+    width: 100%;
+
+    h3{
+      color:white;
+      margin:0;
+    }
+  }
+
+  .am__contact-details{
+    overflow-wrap: break-word;
+    
+    a{
+      color:white;
+    }
+  }
+}
+
+.your-account-team{
+  h2{
+    margin-bottom: $size-m;
+  }
+}
+
+.account-team-members{
+  width: 100%;
+  margin: 0 -15px;
+  padding-top: $size-l;
+
+  .atm-card{
+    border: 3px solid $primary;
+    border-radius: 5px;
+    background-color: $primary-background;
+    padding:$size-sm;
+    margin-bottom: $size-l;
+    min-height: 265px;
+  }
+}
+
+.atm-name{
+  h4{
+    padding-bottom: 15px;
+    border-bottom: 2px solid $primary;
+  }
+}
+
+.atm-team{
+  padding: $size-sm 0;
+  overflow-wrap: break-word;
+}
+
+.atm-email{
+  overflow-wrap: break-word;
+}
+
+
+@media screen and (max-width: 991px) {
+
+  .account-team-members{
+    margin: 0;
+}
+
+  .am-card__title{
+      margin: $size-l 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .am-card__description{
+    p{
+      padding-top: $size-l;
+    }
+  }
+
+  .am__contact-details{
+    text-align: center;
+  }
+
+  .am__phone-number{
+    padding-top: $size-l;
+    padding-bottom: $size-m
+  }
+}
+
 
 
 /*Form elements*/
@@ -411,7 +708,7 @@ input::placeholder {
 
 .navbar-static-top.navbar .menu-bar > .navbar-nav > li > a {
   font-family: Poppins, Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
@@ -492,7 +789,7 @@ a.dropdown-toggle {
 .breadcrumb {
     font-size: $size-m;
     padding: 0 0;
-    margin-bottom: $size-l;
+    margin-bottom: 0;
     list-style: none;
     background-color: #fff;
     border-radius: 0;
@@ -519,6 +816,11 @@ img{
 legend.section-title {
     font-size: 2.5rem;
     font-weight: $bold;
+
+    h3 {
+      margin-top: $size-sm;
+      margin-bottom: $size-sm;
+    }
 }
 
 table.section {
@@ -528,12 +830,124 @@ table.section {
 
 /* Edit company details form - heading spacing */
 .crmEntityFormView .section-title {
-    padding-top: $size-sm!important;
+    padding-top: 0!important;
     margin-bottom: 0.5rem;
 }
 
 #websiteurl{
   width:100%;
+}
+
+
+/* Onboarding form styling */
+.crmEntityFormView .actions {
+  display:flex;
+  border-top: none;
+  margin: -15px;
+  padding: 0;
+  margin-bottom: $size-xl;
+  margin-top: $size-l;
+  /*fix for the processing button onboarding form*/
+  @media screen and (min-width: 991px) {
+    width: 800px;
+  }
+
+}
+
+/* Spacing between the forms buttons */
+.btn-group{
+  margin-right:$size-sm;
+}
+
+.crmEntityFormView fieldset {
+    margin: 0;
+    margin-bottom: 0;
+    padding: 0;
+    border: 0 none;
+}
+.crmEntityFormView td {
+    padding-bottom: 25px!important;
+}
+
+.list-group-item {
+    border-top: none!important;
+}
+
+#WebFormPanel{
+
+  padding-left: 95px;
+
+  h2.tab-title{
+    font-size:3.5rem;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: white;
+      color: black!important;
+    }
+
+  }
+
+  @media only screen and (max-width: 991px) {
+    padding: 0px;
+  }
+
+}
+
+/* Onboarding - your business*/
+/*js controls adding extra padding-top when conditional logic for radio btns is applied*/
+div#WebFormPanel.onboarding-your-business {
+  .actions{
+    position:relative;
+    top:-110px;
+    margin-top:0;
+    margin-bottom:0;
+  }
+}
+
+//radio btns styling for your business and financial information
+#se_business_ispartofgroup, #se_businessisnotyetearningrevenue{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+
+  input, label {
+    margin:0;
+  }
+
+  label{
+    margin-left:10px;
+    margin-right:30px;
+  }
+
+}
+
+.your-business {
+  margin: -15px 0 $size-l 0;
+}
+
+.onboarding-no-access{
+  p {
+    margin-bottom: $size-l;
+  }
+}
+
+/* Onboarding - financial information*/
+div#WebFormPanel.onboarding-financial-info{
+
+  h2 {
+    margin-bottom:$size-xl;
+  }
+
+  h3{
+    margin:25px 0 0 0;
+    padding-top:25px;
+  }
 }
 
 /* Input fields */
@@ -564,14 +978,23 @@ input.form-control, .form-control {
 /* Radio's & checkboxes styling */
 input[type="radio"], input[type="checkbox"]{
     border: 2px solid black;
-    width: 1.5rem;
-    height: 1.9rem;
+    // width: 1.5rem;
+    // height: 1.9rem;
+    width: 25px;
+    height: 25px;
     padding: 0.5rem;
        
     &:focus{   
       color: $secondary;
       outline: 3px solid $warning;
-      border-color: black;
+      border-color:  $secondary;
+      outline-offset: 1px;
+    }
+
+    &:active{   
+      color: $secondary;
+      outline: 3px solid $warning;
+      border-color:  $secondary;
       outline-offset: 1px;
     }
 }
@@ -583,6 +1006,11 @@ input[type="radio"], input[type="checkbox"]{
     font-weight: normal;
     cursor: pointer;
     font-size: 1.9rem;
+}
+
+label{
+  font-size: 1.9rem!important;
+  font-weight: 500;
 }
 
 /* Form view out-of-the-box overwrite */
@@ -606,7 +1034,9 @@ border: none!important;
 
 
 /* Section */  
-section{
+section {
+  display: flex;
+  flex-direction: column;
   padding: 5rem 0;
 }
 
@@ -670,6 +1100,10 @@ section h2{
   width:100%;
   padding:$size-sm $size-xl;
   margin-bottom: $size-xl;
+
+  h1{
+    color:white;
+  }
 }
 
 .info-panel{
@@ -737,17 +1171,51 @@ section h2{
   }
 }
 
+/* New requests and engagements panel with a table*/
+.new-requests{
+
+  table {
+    width: 100%;
+  }
+
+  tr {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  th {
+    padding: $size-m 0 $size-m 0;
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 1.9rem;
+    
+    @media screen and (max-width: 991px) {
+      font-size: 1.6rem;
+    }
+  }
+  
+  .th-set-width{
+    width: 150px;
+    text-align: center;
+
+    @media screen and (max-width: 991px) {
+      width: 120px;
+    }
+  }
+}
+
 
 /* Footer */
 footer{
   display:flex;
   flex-direction: row;
-  position:fixed;
+  position:relative;
   bottom: 0;
   background:#E5E5E5;
   padding: 1rem;
   width: 100%;
   min-height: 8rem;
+  // z-index: 1000;
 }
 
 .footer__lower-content {
@@ -761,18 +1229,26 @@ footer{
   justify-content: center;
   list-style:none;
   padding: $size-sm;
+  margin-bottom:0;
 }
-
-// html[dir=ltr] li a {
-//     margin-left: 1.5rem;
-// }
 
 .footer__link{
   font-weight: 400;
   color: #666;
-  margin: $size-sm $size-l;
+  margin: $size-sm $size-sm;
   text-decoration: none;
   padding-bottom: 0;
+
+  &:focus{   
+    color: $primary!important;
+    outline: 3px solid $warning;
+  }
+
+  &:hover{   
+    color: $primary!important;
+  }
+
+  
 }
 
 .footer__copyright {
@@ -793,6 +1269,15 @@ footer{
   border-bottom: 1px solid #707070;
   border-left: none;
   border-right: none;
+}
+
+//List styling
+ul {
+  margin-bottom: $size-xl;
+}
+
+li{
+  font-size:1.9rem;
 }
 
 
@@ -817,6 +1302,181 @@ footer{
     width: 100px!important;
   }
 }
+
+
+// Out-of-the box advance form styling
+#WebFormPanel{
+  table.section{
+    max-width: 80%!important;
+  }
+}
+
+ol.progress.left, ol.progress.right {
+    margin-top: 0px;
+    margin-bottom: $size-xl;
+    width: 150px;
+}
+
+.list-group-item{
+  background-color: white!important;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    color: white;
+    background-color:$primary!important;
+    border: none;
+}
+
+ol.progress li.incomplete {
+    background-color:white;
+    border: none;
+}
+
+
+// Form 'Cancel changes' cta added to the form via js
+.form-action-container-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cta__cancel-changes{
+  margin-left: 25px!important;
+}
+
+// Sidenav styling
+.tabs-container{
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: flex-start;
+gap: $size-l;
+margin-top: $size-xl;
+}
+
+.tabs{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 35%;
+}
+
+@media screen and (max-width: 767px) {
+
+  .tabs-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabs{
+    width: 100%;
+  }
+}
+
+.tab-title{
+  text-align: left;
+  border:none;
+  background-color: white;
+  font-size: 1.9rem;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+  color: $black;
+  text-decoration: none!important;
+
+  &:focus {
+      outline: 3px solid orange;
+  }
+
+  &:hover {
+    background-color: $primary;
+    color: white!important;
+  }
+}
+
+
+.tab-title.active {
+  color: white;
+  background-color: $primary;
+}
+
+.tab-content{
+  padding-bottom: $size-xl;
+  width: 100%;
+
+  .h4{
+    font-weight: $bold;
+    font-family: $main-font;
+    font-size: $size-m;
+    margin-bottom: 0.5rem;
+  }
+
+  .h4:not(:first-child) {
+    margin-top: 3.5rem;
+  }
+
+  &:focus{
+    outline: 3px solid orange;
+  }
+}
+
+.help-text{
+  font-family: $main-font;
+  font-size: 1.6rem;
+  color: $grey-help-text;
+}
+
+/* Tabs styling */
+// .tabs{
+//   border-bottom:2px solid $primary;
+// }
+
+// .tab-title{
+//   border:none;
+//   background-color: white;
+//   font-size: 1.9rem;
+//   padding: 5px 100px 5px 15px;
+
+//   &:focus {
+//       outline: 3px solid orange;
+//   }
+
+//   &:hover {
+//     background-color: $primary;
+//     color: white;
+//   }
+// }
+
+// .tab-title.active {
+//   background-color: $primary;
+//   color: white;
+// }
+
+// .tab-content{
+//   padding-top:$size-xl!important;
+//   padding-bottom: $size-xl;
+//   width: 100%;
+
+//   .h4{
+//     font-weight: $bold;
+//     font-family: $main-font;
+//     font-size: $size-m;
+//     margin-bottom: 0.5rem;
+//   }
+
+//   .h4:not(:first-child) {
+//     margin-top: 3.5rem;
+//   }
+
+//   &:focus{
+//     outline: 3px solid orange;
+//   }
+// }
+
+// .help-text{
+//   font-family: $main-font;
+//   font-size: 1.6rem;
+//   color: $grey-help-text;
+// }
 
 
 /* Helpers, Utilities */ 
@@ -899,17 +1559,10 @@ footer{
     font-size: $size-m;
   }
 
-  p{
+  p, a, .btn, li, label>span{
     font-size: 1.6rem;
   }
 
-  a{
-    font-size: 1.6rem;
-  }
-
-  .btn{
-    font-size: 1.6rem;
-  }
 
   /* Fix for the horizontal scrollbar on mobile view .row, .container overwrite */
   .row{
@@ -919,6 +1572,13 @@ footer{
 
   .container {
       width: 100%;
+  }
+
+  .breadcrumb {
+
+    .active{
+      font-size: 1.6rem;
+    }
   }
 
   .panel {
@@ -962,8 +1622,13 @@ footer{
   
   }
 
+  .edit-details{
+    padding-top: $size-l;
+  }
+
   footer{
     position: relative!important;
+    margin-top: $size-xl;
   }
 
   .footer__links{
@@ -993,19 +1658,31 @@ footer{
   table.section {
       padding: 0px;
   }
+
+  .tab-title{
+    padding: 5px 10px;
+  }
+
+  .tab-content {
+    padding-bottom: 0;
+  }
 }
 
 /* Offline banner styling */
+#web{
+    display:none;
+}
+
 #offlineNotificationBar {
     display: flex;
     flex-direction: row;
     justify-content: center;
     font-size: 1.6rem;
-    background-color: $primary!important;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid black;
 
     a{
       font-size: 1.6rem;
-      color: white;
     }
 }
 
@@ -1013,9 +1690,38 @@ footer{
     font-family: $main-font;
     font-weight: 400!important;
     font-size: 1.6rem!important;
-    color: white!important;
+    color: black!important;
 }
 
+
+/*Notification banners*/
+/* Success */
+.notification-banner--success {
+  border: 3px solid $success!important;
+  background-color: $success;
+  padding: $size-l $size-xl;
+  width: 100%;
+
+  p {
+    font-size: $size-m;
+    margin:0;
+    padding:0;
+    color: white;
+  }
+}
+
+/* Info */
+.notification-banner--info {
+  border: 3px solid $primary!important;
+  padding: $size-l $size-xl;
+  width: 100%;
+
+  p {
+    font-size: $size-m;
+    margin:0;
+    padding:0;
+  }
+}
 
 
 /* Cookies */
@@ -1049,6 +1755,7 @@ footer{
 
 .cookies-management{
   display: flex;
+  flex-direction: column;
   max-height: inherit;
   padding: $size-xl $size-xl 0 $size-xl;
   border-radius: 5px;
@@ -1094,6 +1801,24 @@ footer{
 }
 
 
+//button styling for cookie policy
+#cta-cookie-policy{
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 1.9rem;
+  color: $primary;
+  text-decoration: underline;
+
+  &:hover{
+    color: $secondary;
+  }
+
+  &:focus {
+    outline: 3px solid $warning;
+  }
+}
+
 
 // Toggle switch styling
 .switch {
@@ -1128,11 +1853,14 @@ footer{
 
 .tick{
   position:absolute;
+  left: 0;
 
   svg {
     fill: $success;
   }
 }
+
+
 
 
 //enable it & comment out .switch input above to see the checkbox

@@ -1,548 +1,562 @@
-
 <!DOCTYPE html>
-<html lang="en-US" data-lang="en-US" crm-lang="en-US" dir="ltr" crm-lcid="1033"
-  same-site-mode="None">
-  <head>
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,&#32;initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <script type="text/javascript">
-      
-        </script>
-    <title>Customer Portal </title>
-
-    <!--[if lt IE 9]>
-                      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-                  <![endif]-->
-    <!--[if lt IE 10]>
-                      <script src="~/js/formdata.js"></script>
-                  <![endif]-->
-    <link href="css/portal/bootstrap.min.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-
-    <link href="css/portal/theme.css" rel="stylesheet" />
-    <link href="css/portal/portalbasictheme.css" rel="stylesheet" />
-    <link href="css/portal/glyphicons-font-awesome-migrate.min.css" rel="stylesheet" />
-    
-    <link href="https://content.powerapps.com/resource/powerappsportal/dist/preform.bundle-44b958182c.css" rel="stylesheet" />
-    <link href="css/portal/SEThemeV2.css" rel="stylesheet" />
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
-      <!-- <link href="/css/offlinenotification.css" rel="stylesheet" /> -->
-  </head>
-
-  <body data-sitemap-state="/"
-    data-dateformat="M/d/yyyy"
-    data-timeformat="h:mm tt"
-    data-datetimeformat="M/d/yyyy h:mm tt"
-    data-app-path="/"
-    data-ckeditor-basepath="/js/BaseHtmlContentDesigner/Libs/msdyncrm_/libs/ckeditor/"
-    data-case-deflection-url="/_services/search/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89">
-    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-      <div class="skip-to-content"><a href="#mainContent">Skip to main content</a></div>
-      <div class="container">
-        <div class="navbar-header">
-
-
-          <div class="visible-sm-block visible-md-block visible-lg-block
-            visible-xs-block navbar-brand">
-            <div class="xrm-editable-html&#32;xrm-attribute"
-              data-languageContext="English"><div class="xrm-attribute-value"><div></div>
-                <script src="/dist/preform.bundle-65c2f02651.js"
-                  type="text/javascript"></script>
-                <script src="/dist/app.bundle-7a34594662.js"
-                  type="text/javascript"></script>
-                <script src="/dist/preform.bundle-65c2f02651.js"
-                  type="text/javascript"></script>
-                <script src="/dist/app.bundle-7a34594662.js"
-                  type="text/javascript"></script>
-                <script src="/dist/preform.bundle-65c2f02651.js"
-                  type="text/javascript"></script>
-                <script src="/dist/app.bundle-7a34594662.js"
-                  type="text/javascript"></script>
-                <script src="/dist/preform.bundle-65c2f02651.js"
-                  type="text/javascript"></script>
-                <script src="/dist/app.bundle-7a34594662.js"
-                  type="text/javascript"></script><img src="/se-logo-transparent.png"
-                  name="se-logo-transparent.png" style="width: 170px; height: auto;
-                  background-color: #fafafa;">
-                <script src="/dist/preform.bundle-65c2f02651.js"
-                  type="text/javascript"></script>
-                <script src="/dist/app.bundle-7a34594662.js"
-                  type="text/javascript"></script></div></div>
-          </div>
-          <button type="button" class="navbar-toggle collapsed" title="Toggle
-            navigation" data-toggle="collapse" data-target="#navbar"
-            aria-expanded="false" onclick="setHeight();">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-
-
-
-        <div id="navbar" class="navbar-collapse collapse">
-
-
-          <nav aria-label="Main Navigation" class="navbar-right menu-bar"data-weblinks-maxdepth="2">
-            <ul class="nav navbar-nav weblinks">
-
-
-              <li class="weblink">
-                <a aria-label="Home" href="/" title="Home">
-                  Home
-                </a>
-
-              </li>
-
-
-              <li class="divider-vertical" aria-hidden="true"></li>
-              <li role="none" class="dropdown">
-                <a id="search" class="navbar-icon" href="#"
-                  data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false" aria-label="Search">
-                  <span class="glyphicon glyphicon-search"></a>
-                </a>
-                <div class="dropdown-menu dropdown-search">
-
-
-
-
-                </div>
-              </li>
-
-              <li class="divider-vertical" aria-hidden="true"></li>
-
-
-              <li role="none">
-                <a aria-label="Sign in" href="/SignIn?returnUrl=%2F">
-                  Sign in
-                </a>
-              </li>
-
-            </ul>
-
-          </nav>
-
-        </div>
-      </div>
-    </div>
-
-
-    <!-- add anti-forgery token-->
-    <div id="antiforgerytoken" data-url="/_layout/tokenhtml"></div>
-    <script
-      src="https://content.powerapps.com/resource/powerappsportal/dist/preform.bundle-2c5735c41a.js"
-      type="text/javascript"></script>
-
-
-    <script src="/js/pcf/prop-types.js"></script><script src="/js/pcf/fela.js"></script><script
-      src="/js/pcf/fela-dom.js"></script>
-    <script
-      src="https://content.powerapps.com/resource/powerappsportal/dist/pcf.bundle-d5fa514165.js"
-      type="text/javascript"></script>
-
-    <script src="/js/pcf/react-fela.js"></script><script
-      src="/js/pcf/fluentui-react.js"></script>
-
-
-
-
-    <!-- Default studio template. Please do not modify -->
-    <div id="mainContent" class="wrapper-body" role="main">
-      <div class="page-copy">
-        <div class="xrm-editable-html&#32;xrm-attribute">
-          <div class="xrm-attribute-value">
-
-<!-- Copy custom markup from here -->
-
-            <!-- Hero-panel -->
-            <section class="panel">
-              <div class="container ">
-                  <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-10">
-                      <h1>Edit company details</h1>
-                    </div>
-                  </div>
-              </div>
-            </section>
-
-            <section class="container">
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-
-<ul class="breadcrumb">
- 
- <li>
-  <a href="/" title="Home">Home</a>
- </li>
- 
- <li class="active">Edit company details</li>
-</ul><div><div id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470">
-	<span><script type="text/javascript">var head  = document.getElementsByTagName('head')[0];
-var link  = document.createElement('link');
-link.rel  = 'stylesheet';
-link.type = 'text/css';
-link.href = 'https://webservices.data-8.co.uk/content/predictiveaddress.css';
-link.media = 'all';
-head.appendChild(link);
-
-var data8JsScript = document.createElement('script');
-data8JsScript.onload = function () {
-    var txt = document.getElementById('address2_line1');
-    new data8.predictiveaddressui(txt, {
-        // Change this to your own API Key
-        ajaxKey: 'VDVE-XI8Q-V35J-MD3I',
-        fields: [        
-            { element: 'address2_line1', field: 'line1' },
-            { element: 'address2_line2', field: 'line2' },
-            { element: 'address2_line3', field: 'line3' },
-            { element: 'address2_city', field: 'town' },
-            { element: 'address2_stateorprovince', field: 'county' },
-            { element: 'address2_postalcode', field: 'postcode' }
-        ]
-    });
-
-
-    var txt = document.getElementById('address1_line1');
-    new data8.predictiveaddressui(txt, {
-        // Change this to your own API Key
-        ajaxKey: 'VDVE-XI8Q-V35J-MD3I',
-        fields: [        
-            { element: 'address1_line1', field: 'line1' },
-            { element: 'address1_line2', field: 'line2' },
-            { element: 'address1_line3', field: 'line3' },
-            { element: 'address1_city', field: 'town' },
-            { element: 'address1_stateorprovince', field: 'county' },
-            { element: 'address1_postalcode', field: 'postcode' }
-        ]
-    });
-};
-data8JsScript.src = 'https://webservices.data-8.co.uk/javascript/predictiveaddress.js';
-document.head.appendChild(data8JsScript);
-
-
-$(document).ready(function () {
- 
-$("#new_copytradingaddresstoregaddr_1").change(copyTradingAddress);
-$("#new_copytradingaddresstoregaddr_0").change(clearRegisteredAddress);
-
-});
-
-function copyTradingAddress() {
-    var result = $('#new_copytradingaddresstoregaddr_1').val();
- 
-    $('#address1_line1').val($('#address2_line1').val());
-    $('#address1_line2').val($('#address2_line2').val());
-    $('#address1_line3').val($('#address2_line3').val());
-    $('#address1_city').val($('#address2_city').val());
-    $('#address1_postalcode').val($('#address2_postalcode').val());
-}
-
-function clearRegisteredAddress()
-{
-    $('#address1_line1').val('');
-    $('#address1_line2').val('');
-    $('#address1_line3').val('');
-    $('#address1_city').val('');
-    $('#address1_postalcode').val('');
-}</script></span><div id="EntityFormPanel" class="crmEntityFormView" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'UpdateButton')" role="main" aria-label="Basic Form">
-		<div id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView" class="entity-form">
-			<input type="hidden" name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityName" id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityName" value="account"><input type="hidden" name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityID" id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityID" value="cc76443c-09a5-4d27-9d2d-f1c6fb6a5138"><input type="hidden" name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityState" id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityState" value="0"><input type="hidden" name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityStatus" id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityStatus" value="134460000"><span id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityLayoutConfig" data-form-layout="{&quot;EntityName&quot;:&quot;account&quot;,&quot;Id&quot;:&quot;00000000-0000-0000-0000-000000000000&quot;,&quot;SubmitActionLink&quot;:{&quot;Modal&quot;:{},&quot;Type&quot;:0,&quot;Enabled&quot;:false,&quot;ShowModal&quot;:0,&quot;FilterCriteriaId&quot;:&quot;0a48cf7f-7db5-4a6a-b957-1af35a7ff4a8&quot;},&quot;PreviousActionLink&quot;:{&quot;Type&quot;:0,&quot;Enabled&quot;:false,&quot;ShowModal&quot;:0,&quot;FilterCriteriaId&quot;:&quot;05bdf2fa-56c8-4818-9fad-5fb807a08bb1&quot;},&quot;NextActionLink&quot;:{&quot;Type&quot;:0,&quot;Enabled&quot;:false,&quot;ShowModal&quot;:0,&quot;FilterCriteriaId&quot;:&quot;b0d5aa56-de6b-482c-b729-4d44735a9fa4&quot;},&quot;CreateRelatedRecordActionLink&quot;:{&quot;Modal&quot;:{},&quot;Type&quot;:0,&quot;Enabled&quot;:false,&quot;ShowModal&quot;:0,&quot;FilterCriteriaId&quot;:&quot;eeedaf67-dfdb-4bd0-a4d0-2851fec82e06&quot;},&quot;EnableEntityPermissions&quot;:false,&quot;LanguageCode&quot;:0,&quot;EnableActions&quot;:false,&quot;ShowActionButtonContainer&quot;:0,&quot;AutoGenerateSteps&quot;:false}"></span><div id="ValidationSummaryEntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView" class="validation-summary alert alert-error alert-danger alert-block" style="" tabindex="0"><h2 class="validation-header" role="none"><span role="presentation" class="fa fa-info-circle"></span> The form could not be submitted for the following reasons:</h2><ul role="presentation"><li><a href="#name_label" onclick="javascript:scrollToAndFocus(&quot;name_label&quot;,&quot;name&quot;);return false;" referencecontrolid="name">Account Name is a required field. </a></li></ul></div><div data-name="general" class="tab clearfix"><div class="tab-column" style="width:100%;"><div><fieldset aria-label="Account Information"><legend class="section-title">Account Information</legend><table role="presentation" data-name="account information" class="section"><colgroup></colgroup><tbody><tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info required"><label for="name" id="name_label" class="field-label">Account Name</label><div class="validators"><span id="RequiredFieldValidatorname" style="display: inline;">*</span><span id="MaximumLengthValidatorname" style="visibility:hidden;">*</span></div></div><div class="control"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$name" type="text" value="Krzysztof Owczarek Ltd" maxlength="160" id="name" class="text form-control  dirty" onchange="setIsDirty(this.id);" aria-required="true" title="Account Name is a required field." aria-label="Account Name" onkeypress="javascript:return LengthError(this, event);" aria-invalid="true"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			<tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info"><label for="telephone1" id="telephone1_label" class="field-label">Main Phone</label><div class="validators"><span id="MaximumLengthValidatortelephone1" style="visibility:hidden;">*</span></div></div><div class="control"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$telephone1" type="text" value="+44 (0) 141 587 2630" maxlength="50" id="telephone1" class="text form-control " onchange="setIsDirty(this.id);" placeholder="Provide a telephone number" onkeypress="javascript:return LengthError(this, event);"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			<tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info"><label for="websiteurl" id="websiteurl_label" class="field-label">Website</label><div class="validators"><span id="MaximumLengthValidatorwebsiteurl" style="visibility:hidden;">*</span></div></div><div class="control"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$websiteurl" value="https://test@test.com" maxlength="200" id="websiteurl" class="text form-control " type="url" ondblclick="launchUrl(this.value);" onchange="setIsDirty(this.id);validateUrlInput(this,200);" onkeypress="javascript:return LengthError(this, event);" style="text-decoration:underline;"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			</tbody></table></fieldset><fieldset aria-label="Trading Address"><legend class="section-title">Trading Address</legend><table role="presentation" data-name="Trading_Address" class="section"><colgroup><col style="width:100%;"><col></colgroup><tbody><tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info required"><label for="address2_line1" id="address2_line1_label" class="field-label">Address Line 1</label><div class="validators"><span id="RequiredFieldValidatoraddress2_line1" style="display:none;">*</span><span id="MaximumLengthValidatoraddress2_line1" style="visibility:hidden;">*</span></div></div><div class="control data8-pa-container"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address2_line1" type="text" value="Scottish Enterprise" maxlength="250" id="address2_line1" class="text form-control data8-predictiveaddress" onchange="setIsDirty(this.id);" aria-required="true" title="Address Line 1 is a required field." aria-label="Address Line 1" onkeypress="javascript:return LengthError(this, event);" aria-autocomplete="list" placeholder="Type an address" autocomplete="nope"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			<tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info"><label for="address2_line2" id="address2_line2_label" class="field-label">Address Line 2</label><div class="validators"><span id="MaximumLengthValidatoraddress2_line2" style="visibility:hidden;">*</span></div></div><div class="control"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address2_line2" type="text" value="4/1 Atrium Court" maxlength="250" id="address2_line2" class="text form-control " onchange="setIsDirty(this.id);" onkeypress="javascript:return LengthError(this, event);"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			<tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info"><label for="address2_line3" id="address2_line3_label" class="field-label">Address Line 3</label><div class="validators"><span id="MaximumLengthValidatoraddress2_line3" style="visibility:hidden;">*</span></div></div><div class="control"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address2_line3" type="text" value="50 Waterloo Street" maxlength="250" id="address2_line3" class="text form-control " onchange="setIsDirty(this.id);" onkeypress="javascript:return LengthError(this, event);"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			<tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info required"><label for="address2_city" id="address2_city_label" class="field-label">Town</label><div class="validators"><span id="RequiredFieldValidatoraddress2_city" style="display:none;">*</span><span id="MaximumLengthValidatoraddress2_city" style="visibility:hidden;">*</span></div></div><div class="control"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address2_city" type="text" value="GLASGOW" maxlength="80" id="address2_city" class="text form-control " onchange="setIsDirty(this.id);" aria-required="true" title="Town is a required field." aria-label="Town" onkeypress="javascript:return LengthError(this, event);"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			<tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info required"><label for="address2_postalcode" id="address2_postalcode_label" class="field-label">Postcode</label><div class="validators"><span id="RequiredFieldValidatoraddress2_postalcode" style="display:none;">*</span><span id="MaximumLengthValidatoraddress2_postalcode" style="visibility:hidden;">*</span></div></div><div class="control"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address2_postalcode" type="text" value="G2 6HQ" maxlength="20" id="address2_postalcode" class="text form-control " onchange="setIsDirty(this.id);" aria-required="true" title="Postcode is a required field." aria-label="Postcode" onkeypress="javascript:return LengthError(this, event);"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			</tbody></table></fieldset><fieldset aria-label="Registered Address"><legend class="section-title">Registered Address</legend><table role="presentation" data-name="Registered_Address" class="section"><colgroup><col style="width:100%;"><col></colgroup><tbody><tr role="group">
-				<td colspan="1" rowspan="1" class="clearfix cell boolean-radio-cell" role="radiogroup"><div class="info"><label id="new_copytradingaddresstoregaddr_label" class="field-label">Copy from Trading Address</label><div class="validators"></div></div><div class="control"><span id="new_copytradingaddresstoregaddr" class="boolean-radio " onchange="setIsDirty(this.id);"><input id="new_copytradingaddresstoregaddr_0" type="radio" name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$new_copytradingaddresstoregaddr" value="0"><label for="new_copytradingaddresstoregaddr_0"><span class="sr-only">Copy from Trading Address </span>No</label><input id="new_copytradingaddresstoregaddr_1" type="radio" name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$new_copytradingaddresstoregaddr" value="1" checked="checked"><label for="new_copytradingaddresstoregaddr_1"><span class="sr-only">Copy from Trading Address </span>Yes</label></span></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			<tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info"><label for="address1_line1" id="address1_line1_label" class="field-label">Address Line 1</label><div class="validators"><span id="MaximumLengthValidatoraddress1_line1" style="visibility:hidden;">*</span></div></div><div class="control data8-pa-container"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address1_line1" type="text" value="Scottish Enterprise" maxlength="250" id="address1_line1" class="text form-control data8-predictiveaddress" onchange="setIsDirty(this.id);" onkeypress="javascript:return LengthError(this, event);" aria-autocomplete="list" placeholder="Type an address" autocomplete="nope"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			<tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info"><label for="address1_line2" id="address1_line2_label" class="field-label">Address Line 2</label><div class="validators"><span id="MaximumLengthValidatoraddress1_line2" style="visibility:hidden;">*</span></div></div><div class="control"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address1_line2" type="text" value="4/1 Atrium Court" maxlength="250" id="address1_line2" class="text form-control " onchange="setIsDirty(this.id);" onkeypress="javascript:return LengthError(this, event);"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			<tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info"><label for="address1_line3" id="address1_line3_label" class="field-label">Address Line 3</label><div class="validators"><span id="MaximumLengthValidatoraddress1_line3" style="visibility:hidden;">*</span></div></div><div class="control"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address1_line3" type="text" value="50 Waterloo Street" maxlength="250" id="address1_line3" class="text form-control " onchange="setIsDirty(this.id);" onkeypress="javascript:return LengthError(this, event);"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			<tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info"><label for="address1_city" id="address1_city_label" class="field-label">Town</label><div class="validators"><span id="MaximumLengthValidatoraddress1_city" style="visibility:hidden;">*</span></div></div><div class="control"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address1_city" type="text" value="GLASGOW" maxlength="80" id="address1_city" class="text form-control " onchange="setIsDirty(this.id);" onkeypress="javascript:return LengthError(this, event);"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			<tr>
-				<td colspan="1" rowspan="1" class="clearfix cell text form-control-cell"><div class="info"><label for="address1_postalcode" id="address1_postalcode_label" class="field-label">Postcode</label><div class="validators"><span id="MaximumLengthValidatoraddress1_postalcode" style="visibility:hidden;">*</span></div></div><div class="control"><input name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address1_postalcode" type="text" value="G2 6HQ" maxlength="20" id="address1_postalcode" class="text form-control " onchange="setIsDirty(this.id);" onkeypress="javascript:return LengthError(this, event);"></div></td>
-				<td class="cell zero-cell"></td>
-			</tr>
-			</tbody></table></fieldset></div></div></div>
-		</div><div class="actions"><input type="button" name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$UpdateButton" value="Submit" onclick="javascript:if(typeof entityFormClientValidate === 'function'){if(entityFormClientValidate()){if(typeof Page_ClientValidate === 'function'){if(Page_ClientValidate('')){clearIsDirty();disableButtons();this.value = 'Processing...';}}else{clearIsDirty();disableButtons();this.value = 'Processing...';}}else{return false;}}else{if(typeof Page_ClientValidate === 'function'){if(Page_ClientValidate('')){clearIsDirty();disableButtons();this.value = 'Processing...';}}else{clearIsDirty();disableButtons();this.value = 'Processing...';}};WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$UpdateButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="UpdateButton" class="submit-btn btn btn-primary form-action-container-left"></div>
-	</div>
-</div>
-      <div class="cta__go-back">
-        <a href="/company-details"> &lt; Go back</a>
-      </div>
-    </div>
-    </div>
-  </div>
-</section>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <script src="/js/pcf/loadPcfControls.js"></script>
-
-<section id="cookies" class="hide">
-
-  <div class="cookies-management">
-
-    <div class="" id="cookies-overview">
-      <h2>Cookie Permissions</h2>
-      <p>We use cookies and need you to say that’s okay…</p>
-      <p>For details, see our <a href="cookie-policy.html">Cookie Policy</a>.</p>
-      <button class="btn btn-primary" id="accept-all-cookies-overview">I'm fine with that</button>
-      <button class="btn btn-secondary" id="edit-cookie-settings">Edit cookie settings</button>
-    </div>
-
-    <div class="hide" id="cookies-advanced-settings">
-
-      <h2>Manage cookie settings</h2>
-      <p>This website uses cookies to distinguish you from other users of this website. A cookie is a small file
-        of letters and numbers that we store on your browser or the hard drive of your computer, if you agree.</p>
-      <p class="bold">We use cookies to:</p>
-      <ul>
-        <li>
-          <p>Enable functionality on our website</p>
-        </li>
-        <li>
-          <p>Help us understand how you and other visitors use our website to help us improve the experience from
-            everyone</p>
-        </li>
-        <li>
-          <p>Allow our websites to integrate with third-party services</p>
-        </li>
-      </ul>
-
-      <button class="btn btn-primary" id="accept-all-cookies">Accept all cookies</button>
-
-      <p>Or you can select which cookies you want to turn on below.</p>
-      <hr>
-
-
-      <div class="strictly-necessary-cookies">
-        <h3>Strictly necessary cookies</h3>
-        <div class="row">
-          <div class="col-sm-3">
-
-
-
-            <label class="switch switch-disabled">
-              <input type="checkbox" id="necessary-cookies" checked>
-              <span class="tick">
-                <svg width="35" height="35" viewBox="0 0 16 16">
-                  <path
-                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                </svg>
-              </span>
-            </label>
-
-
-          </div>
-          <div class="col-sm-9">
-            <p class="bold">These are cookies that are required for our website to function properly. These include
-              things like:</p>
-            <ul>
-              <li>
-                <p>Cookies that allow you to log into secure areas of our website</p>
-              </li>
-              <li>
-                <p>Cookies that help distribute visitors across different servers to improve page load time</p>
-              </li>
-              <li>
-                <p>Cookies that store information about your cookie preferences</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <hr>
-      </div>
-
-      <div class="performance-cookies">
-        <h3>Performance cookies</h3>
-        <div class="row">
-
-          <div class="col-sm-3">
-            <label class="switch">
-              <input type="checkbox" id="performance-cookies" value="false">
-              <span class="slider round"></span>
-              <span class="switch-label" id="performance-cookies-label">Off</span>
-            </label>
-          </div>
-
-          <div class="col-sm-9">
-            <p>These cookies allow us to aggregate anonymised data from you and other visitors to see how people
-              visit the site, how they're using the site, and what their experience is like. This helps is identify
-              and fix problems on the website. We do not allow Google to use or share the data about how you use
-              this site.</p>
-
-            <p class="bold">Performance cookies include:</p>
-            <ul>
-              <li>
-                <p>Google Analytics helps us understand more about visitors so we can improve the site for everyone
-                </p>
-              </li>
-              <li>
-                <p>Google Optimize helps us run two different versions of the page at once, to see which one
-                  visitors prefer</p>
-              </li>
-              <li>
-                <p>Hotjar helps us to collect feeback through polls and surveys, and provides heatmaps of pages on
-                  our website so we can see how visitors interact with them, helping us to improve those pages</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <hr>
-      </div>
-
-      <div class="functional-cookies">
-        <h3>Functional cookies</h3>
-        <div class="row">
-
-          <div class="col-sm-3">
-            <label class="switch">
-              <input type="checkbox" id="functional-cookies" value="false">
-              <span class="slider round"></span>
-              <span class="switch-label" id="functional-cookies-label">Off</span>
-            </label>
-          </div>
-
-          <div class="col-sm-9">
-            <p class="bold">These are used to recognise you when you return to our website. These cookies allow us
-              to:</p>
-            <ul>
-              <li>
-                <p>Personalise our content for you</p>
-              </li>
-              <li>
-                <p>Remember your preferences (for example, your choice of language or region)</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <hr>
-      </div>
-
-      <div class="marketing-cookies">
-        <h3>Marketing cookies</h3>
-        <div class="row">
-          <div class="col-sm-3">
-            <label class="switch">
-              <input type="checkbox" id="marketing-cookies" value="false">
-              <span class="slider round"></span>
-              <span class="switch-label" id="marketing-cookies-label">Off</span>
-            </label>
-          </div>
-          <div class="col-sm-9">
-            <p class="bold">These cookies record your visit to our website, the pages you have visited and the links
-              you have followed. We use them to:</p>
-            <ul>
-              <li>
-                <p>Help you share content on social media platforms</p>
-              </li>
-              <li>
-                <p>Help us track visitors coming from advertisements on search engines and social media</p>
-              </li>
-              <li>
-                <p>To allow us to target advertisements and promote content on LinkedIn, Twitter, Facebook and
-                  Google to people who have
-                  visited our site.</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <hr>
-
-        <button class="btn btn-primary" id="save-cookie-preferences">Save cookie preferences</button>
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-
-
-<footer>
+<html lang="en-US" data-lang="en-US" crm-lang="en-US" dir="ltr" crm-lcid="1033" same-site-mode="None">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,&#32;initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <script type="text/javascript">
+
+  </script>
+  <title>Customer Portal </title>
+
+  <link href="css/portal/bootstrap.min.css" rel="stylesheet" />
+
+  <link href="css/portal/theme.css" rel="stylesheet" />
+  <link href="css/portal/portalbasictheme.css" rel="stylesheet" />
+  <link href="css/portal/glyphicons-font-awesome-migrate.min.css" rel="stylesheet" />
+
+  <link href="https://content.powerapps.com/resource/powerappsportal/dist/preform.bundle-44b958182c.css"
+    rel="stylesheet" />
+  <link href="css/portal/SEThemeV2.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+</head>
+
+<body data-sitemap-state="/edit-business-details/:/" data-dateformat="dd/MM/yyyy" data-timeformat="HH:mm"
+  data-datetimeformat="dd/MM/yyyy HH:mm" data-app-path="/"
+  data-ckeditor-basepath="/js/BaseHtmlContentDesigner/Libs/msdyncrm_/libs/ckeditor/"
+  data-case-deflection-url="/_services/search/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89" class="edit-business-details"
+  data-new-gr-c-s-check-loaded="14.1138.0" data-gr-ext-installed="">
+  <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="skip-to-content"><a href="#mainContent">Skip to main content</a></div>
     <div class="container">
-        <div class="row">
-            <nav aria-label="Footer navigation links" class="col-md-12 footer__lower-content">
-                <ul class="footer__links">
-                    <li><a class="footer__link" href="/Accessibility">Accessibility</a></li>
-                    <li><a class="footer__link" href="/cookie-policy">Cookie policy</a></li>
-                    <li><a class="footer__link" href="https://www.scottish-enterprise.com/help/privacy-notice">Privacy notice</a></li>
-                    <li><a class="footer__link" href="/terms-and-conditions">Terms and conditions</a></li>
-                    <li><a class="footer__link" href="/contact-us">Contact us</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="row footer__copyright"><span>© Scottish Enterprise 2022. All rights reserved.</span></div>
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed" title="Toggle
+            navigation" data-toggle="collapse" data-target="#navbar" aria-expanded="false" onclick="setHeight();">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <nav aria-label="Main Navigation" class="navbar-right menu-bar" data-weblinks-maxdepth="2">
+          <ul class="nav navbar-nav weblinks">
+            <li class="weblink">
+              <a aria-label="Home" href="/" title="Home">
+                Home
+              </a>
+            </li>
+
+            <li class="divider-vertical" aria-hidden="true"></li>
+            <li role="none" class="dropdown">
+              <a id="search" class="navbar-icon" href="#" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false" aria-label="Search">
+                <span class="glyphicon glyphicon-search"></a>
+              </a>
+              <div class="dropdown-menu dropdown-search">
+
+              </div>
+            </li>
+            <li class="divider-vertical" aria-hidden="true"></li>
+            <li role="none">
+              <a aria-label="Sign in" href="/SignIn?returnUrl=%2F">
+                Sign in
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-</footer>
+  </div>
 
 
-    <script
-      src="https://content.powerapps.com/resource/powerappsportal/dist/postpreform.bundle-f4f91a6eb4.js"
-      type="text/javascript"></script>
+  <!-- Default studio template. Please do not modify -->
+<div id="mainContent" class="wrapper-body" role="main">
 
-    <script
-      src="https://content.powerapps.com/resource/powerappsportal/dist/app.bundle-63b32aa50b.js"
-      type="text/javascript"></script>
+  <div class="page-copy">
+    <div class="xrm-editable-html xrm-attribute">
+      <div class="xrm-attribute-value">
+        <section class="panel">
+          <div data-ppid="ea6c1c62-74d2-1635-a458-d76ffe081e52" class="container">
+            <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-10">
+                <h1 data-ppid="7a637325-e8b6-6170-dc32-7e6b1a909653">Edit business details</h1>
+                <p data-ppid="f3da8d01-4fc1-76cb-f064-902de7a016e3">Here are the details we’ve saved about your company.
+                  If any of this information needs updating, you can edit your details.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-ppid="eafe6602-11ba-d64d-ae5d-0b1a36614999" class="container">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
 
-    <script
-      src="https://content.powerapps.com/resource/powerappsportal/dist/default-1033.bundle-eda4e638fd.js"
-      type="text/javascript"></script>
+              <ul class="breadcrumb">
 
-        <script src="js/SECookieModal.js"></script>
-        <script src="js/SEBetaBanner.js"></script>
+                <li>
+                  <a href="/" title="Home">Home</a>
+                </li>
 
-  </body>
+                <li class="active">Edit business details</li>
+              </ul><!-- <div class="cta__go-back"><a href="/business-details">Cancel changes </a></div> -->
+            </div>
+          </div>
+        </section>
+        <div data-ppid="ccedf9ca-bacb-c274-2ba0-25965e5241a7" class="row sectionBlockLayout text-left"
+          style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+          <div data-ppid="4d3ec66c-da02-c0fb-1a0c-4d07a7b3bcb8" class="container"
+            style="padding: 0px; display: flex; flex-wrap: wrap;">
+            <div data-ppid="d11dbcc1-f059-eafe-8fd5-5fc32697511f" class="col-md-12 columnBlockLayout"
+              style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container adx-form">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+
+
+
+
+
+        <div id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470">
+          <span>
+            <script type="text/javascript">var head = document.getElementsByTagName('head')[0];
+              var link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.type = 'text/css';
+              link.href = 'https://webservices.data-8.co.uk/content/predictiveaddress.css';
+              link.media = 'all';
+              head.appendChild(link);
+
+              var data8JsScript = document.createElement('script');
+              data8JsScript.onload = function () {
+                var txt = document.getElementById('address2_line1');
+                new data8.predictiveaddressui(txt, {
+                  // Change this to your own API Key
+                  ajaxKey: 'VDVE-XI8Q-V35J-MD3I',
+                  fields: [
+                    { element: 'address2_line1', field: 'line1' },
+                    { element: 'address2_line2', field: 'line2' },
+                    { element: 'address2_line3', field: 'line3' },
+                    { element: 'address2_city', field: 'town' },
+                    { element: 'address2_stateorprovince', field: 'county' },
+                    { element: 'address2_postalcode', field: 'postcode' }
+                  ]
+                });
+
+
+                var txt = document.getElementById('address1_line1');
+                new data8.predictiveaddressui(txt, {
+                  // Change this to your own API Key
+                  ajaxKey: 'VDVE-XI8Q-V35J-MD3I',
+                  fields: [
+                    { element: 'address1_line1', field: 'line1' },
+                    { element: 'address1_line2', field: 'line2' },
+                    { element: 'address1_line3', field: 'line3' },
+                    { element: 'address1_city', field: 'town' },
+                    { element: 'address1_stateorprovince', field: 'county' },
+                    { element: 'address1_postalcode', field: 'postcode' }
+                  ]
+                });
+              };
+              data8JsScript.src = 'https://webservices.data-8.co.uk/javascript/predictiveaddress.js';
+              document.head.appendChild(data8JsScript);
+
+
+              $(document).ready(function () {
+
+                $("#new_copytradingaddresstoregaddr_1").change(copyTradingAddress);
+                $("#new_copytradingaddresstoregaddr_0").change(clearRegisteredAddress);
+
+              });
+
+              function copyTradingAddress() {
+                var result = $('#new_copytradingaddresstoregaddr_1').val();
+
+                $('#address1_line1').val($('#address2_line1').val());
+                $('#address1_line2').val($('#address2_line2').val());
+                $('#address1_line3').val($('#address2_line3').val());
+                $('#address1_city').val($('#address2_city').val());
+                $('#address1_postalcode').val($('#address2_postalcode').val());
+              }
+
+              function clearRegisteredAddress() {
+                $('#address1_line1').val('');
+                $('#address1_line2').val('');
+                $('#address1_line3').val('');
+                $('#address1_city').val('');
+                $('#address1_postalcode').val('');
+              }
+
+              // Fix for the out of the box colspan width (input fields)
+              document.addEventListener('DOMContentLoaded', function () {
+                var cells = document.querySelectorAll('td[colspan="1"]');
+                cells.forEach(function (cell) {
+                  cell.colSpan = 2;
+                });
+              });</script>
+          </span>
+          <div id="EntityFormPanel" class="crmEntityFormView" role="form" aria-label="Basic Form">
+            <div id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView" class="entity-form">
+              <input type="hidden"
+                name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityName"
+                id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityName" value="account"><input
+                type="hidden"
+                name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityID"
+                id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityID"
+                value="cc76443c-09a5-4d27-9d2d-f1c6fb6a5138"><input type="hidden"
+                name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityState"
+                id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityState" value="0"><input
+                type="hidden"
+                name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityStatus"
+                id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityStatus"
+                value="134460000"><span
+                id="EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView_EntityLayoutConfig"
+                data-form-layout="{&quot;EntityName&quot;:&quot;account&quot;,&quot;Id&quot;:&quot;00000000-0000-0000-0000-000000000000&quot;,&quot;SubmitActionLink&quot;:{&quot;Modal&quot;:{},&quot;Type&quot;:0,&quot;Enabled&quot;:false,&quot;ShowModal&quot;:0,&quot;FilterCriteriaId&quot;:&quot;2bdb735d-9bbc-4f39-a2f3-c0144b57041a&quot;},&quot;PreviousActionLink&quot;:{&quot;Type&quot;:0,&quot;Enabled&quot;:false,&quot;ShowModal&quot;:0,&quot;FilterCriteriaId&quot;:&quot;7e11032c-d41d-4c94-833d-6924eccccc38&quot;},&quot;NextActionLink&quot;:{&quot;Type&quot;:0,&quot;Enabled&quot;:false,&quot;ShowModal&quot;:0,&quot;FilterCriteriaId&quot;:&quot;e1a153cd-141a-412d-b8b6-003783984027&quot;},&quot;CreateRelatedRecordActionLink&quot;:{&quot;Modal&quot;:{},&quot;Type&quot;:0,&quot;Enabled&quot;:false,&quot;ShowModal&quot;:0,&quot;FilterCriteriaId&quot;:&quot;dd0952a0-327f-409c-afb0-945edf61f19f&quot;},&quot;EnableEntityPermissions&quot;:false,&quot;LanguageCode&quot;:0,&quot;EnableActions&quot;:false,&quot;ShowActionButtonContainer&quot;:0,&quot;AutoGenerateSteps&quot;:false}"></span>
+              <div id="ValidationSummaryEntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView"
+                class="validation-summary alert alert-error alert-danger alert-block" role="alert"
+                style="display:none;">
+
+              </div>
+              <div data-name="general" class="tab clearfix">
+                <div class="tab-column" style="width:100%;">
+                  <div>
+                    <fieldset aria-label="Account Summary">
+                      <legend class="section-title">
+                        <h3>Account Summary</h3>
+                      </legend>
+                      <table role="presentation" data-name="company information" class="section">
+                        <colgroup>
+                          <col style="width:50%;">
+                          <col style="width:50%;">
+                          <col>
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info required"><label for="name" id="name_label" class="field-label">Company
+                                  Name</label>
+                                <div class="validators"><span id="RequiredFieldValidatorname"
+                                    style="display:none;">*</span><span id="MaximumLengthValidatorname"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$name"
+                                  type="text" value="Krzysztof Owczarek Ltd" maxlength="160" id="name"
+                                  class="text form-control " onchange="setIsDirty(this.id);" aria-required="true"
+                                  title="Company Name is a required field." aria-label="Company Name"
+                                  onkeypress="javascript:return LengthError(this, event);"></div>
+                            </td>
+                            <td colspan="2" rowspan="1" class="clearfix cell"></td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="telephone1" id="telephone1_label" class="field-label">Main
+                                  Phone</label>
+                                <div class="validators"><span id="MaximumLengthValidatortelephone1"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$telephone1"
+                                  type="text" value="+44 (0) 141 587 2630" maxlength="50" id="telephone1"
+                                  class="text form-control " onchange="setIsDirty(this.id);"
+                                  placeholder="Provide a telephone number"
+                                  onkeypress="javascript:return LengthError(this, event);"></div>
+                            </td>
+                            <td colspan="2" rowspan="1" class="clearfix cell"></td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="websiteurl" id="websiteurl_label"
+                                  class="field-label">Website</label>
+                                <div class="validators"><span id="MaximumLengthValidatorwebsiteurl"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$websiteurl"
+                                  value="https://test@test.com" maxlength="200" id="websiteurl"
+                                  class="text form-control " type="url" ondblclick="launchUrl(this.value);"
+                                  onchange="setIsDirty(this.id);validateUrlInput(this,200);"
+                                  onkeypress="javascript:return LengthError(this, event);"
+                                  style="text-decoration:underline;"></div>
+                            </td>
+                            <td colspan="2" rowspan="1" class="clearfix cell"></td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="new_companieshouseregistrationnumber"
+                                  id="new_companieshouseregistrationnumber_label" class="field-label">Companies House
+                                  Registration Number</label>
+                                <div class="validators"><span
+                                    id="MaximumLengthValidatornew_companieshouseregistrationnumber"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$new_companieshouseregistrationnumber"
+                                  type="text" value="SC123123" maxlength="8" id="new_companieshouseregistrationnumber"
+                                  class="text form-control " onchange="setIsDirty(this.id);"
+                                  onkeypress="javascript:return LengthError(this, event);"></div>
+                            </td>
+                            <td colspan="2" rowspan="1" class="clearfix cell"></td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </fieldset>
+                    <fieldset aria-label="Trading Address">
+                      <legend class="section-title">
+                        <h3>Trading Address</h3>
+                      </legend>
+                      <table role="presentation" data-name="Trading_Address" class="section">
+                        <colgroup>
+                          <col style="width:50%;">
+                          <col style="width:50%;">
+                          <col>
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="address2_line1" id="address2_line1_label"
+                                  class="field-label">Address Line 1</label>
+                                <div class="validators"><span id="MaximumLengthValidatoraddress2_line1"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control data8-pa-container"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address2_line1"
+                                  type="text" value="Go Barging Ltd" maxlength="250" id="address2_line1"
+                                  class="text form-control data8-predictiveaddress" onchange="setIsDirty(this.id);"
+                                  onkeypress="javascript:return LengthError(this, event);" aria-autocomplete="list"
+                                  placeholder="Type an address" autocomplete="nope"></div>
+                            </td>
+                            <td colspan="2" rowspan="1" class="clearfix cell"></td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="address2_line2" id="address2_line2_label"
+                                  class="field-label">Address Line 2</label>
+                                <div class="validators"><span id="MaximumLengthValidatoraddress2_line2"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address2_line2"
+                                  type="text" value="Scottish Highlander" maxlength="250" id="address2_line2"
+                                  class="text form-control " onchange="setIsDirty(this.id);"
+                                  onkeypress="javascript:return LengthError(this, event);"></div>
+                            </td>
+                            <td colspan="2" rowspan="1" class="clearfix cell"></td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="address2_line3" id="address2_line3_label"
+                                  class="field-label">Address Line 3</label>
+                                <div class="validators"><span id="MaximumLengthValidatoraddress2_line3"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address2_line3"
+                                  type="text" value="Canal Side, Dochgarroch" maxlength="250" id="address2_line3"
+                                  class="text form-control " onchange="setIsDirty(this.id);"
+                                  onkeypress="javascript:return LengthError(this, event);"></div>
+                            </td>
+                            <td colspan="2" rowspan="1" class="clearfix cell"></td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="address2_city" id="address2_city_label"
+                                  class="field-label">Town</label>
+                                <div class="validators"><span id="MaximumLengthValidatoraddress2_city"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address2_city"
+                                  type="text" value="INVERNESS" maxlength="80" id="address2_city"
+                                  class="text form-control " onchange="setIsDirty(this.id);"
+                                  onkeypress="javascript:return LengthError(this, event);"></div>
+                            </td>
+                            <td colspan="2" rowspan="1" class="clearfix cell"></td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="address2_postalcode" id="address2_postalcode_label"
+                                  class="field-label">Postcode</label>
+                                <div class="validators"><span id="MaximumLengthValidatoraddress2_postalcode"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address2_postalcode"
+                                  type="text" value="IV3 8JG" maxlength="20" id="address2_postalcode"
+                                  class="text form-control " onchange="setIsDirty(this.id);"
+                                  onkeypress="javascript:return LengthError(this, event);"></div>
+                            </td>
+                            <td colspan="2" rowspan="1" class="clearfix cell"></td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </fieldset>
+                    <fieldset aria-label="Registered Address" class="registered-address-fieldset">
+                      <legend class="section-title">
+                        <h3>Registered Address</h3>
+                      </legend>
+                      <table role="presentation" data-name="Registered_Address" class="section">
+                        <colgroup>
+                          <col style="width:100%;">
+                          <col>
+                        </colgroup>
+                        <tbody>
+                          <tr role="group">
+                            <td colspan="2" rowspan="1" class="clearfix cell boolean-radio-cell" role="radiogroup">
+                              <div class="info"><label id="new_copytradingaddresstoregaddr_label"
+                                  class="field-label">Copy from Trading Address</label>
+                                <div class="validators"></div>
+                              </div>
+                              <div class="control"><span id="new_copytradingaddresstoregaddr" class="boolean-radio "
+                                  onchange="setIsDirty(this.id);"><input id="new_copytradingaddresstoregaddr_0"
+                                    type="radio"
+                                    name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$new_copytradingaddresstoregaddr"
+                                    value="0"><label for="new_copytradingaddresstoregaddr_0"><span class="sr-only">Copy
+                                      from Trading Address </span>No</label><input
+                                    id="new_copytradingaddresstoregaddr_1" type="radio"
+                                    name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$new_copytradingaddresstoregaddr"
+                                    value="1" checked="checked"><label for="new_copytradingaddresstoregaddr_1"><span
+                                      class="sr-only">Copy from Trading Address </span>Yes</label></span></div>
+                            </td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="address1_line1" id="address1_line1_label"
+                                  class="field-label">Address Line 1</label>
+                                <div class="validators"><span id="MaximumLengthValidatoraddress1_line1"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control data8-pa-container"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address1_line1"
+                                  type="text" value="Go Barging Ltd" maxlength="250" id="address1_line1"
+                                  class="text form-control data8-predictiveaddress" onchange="setIsDirty(this.id);"
+                                  onkeypress="javascript:return LengthError(this, event);" aria-autocomplete="list"
+                                  placeholder="Type an address" autocomplete="nope"></div>
+                            </td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="address1_line2" id="address1_line2_label"
+                                  class="field-label">Address Line 2</label>
+                                <div class="validators"><span id="MaximumLengthValidatoraddress1_line2"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address1_line2"
+                                  type="text" value="Scottish Highlander" maxlength="250" id="address1_line2"
+                                  class="text form-control " onchange="setIsDirty(this.id);"
+                                  onkeypress="javascript:return LengthError(this, event);"></div>
+                            </td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="address1_line3" id="address1_line3_label"
+                                  class="field-label">Address Line 3</label>
+                                <div class="validators"><span id="MaximumLengthValidatoraddress1_line3"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address1_line3"
+                                  type="text" value="Canal Side, Dochgarroch" maxlength="250" id="address1_line3"
+                                  class="text form-control " onchange="setIsDirty(this.id);"
+                                  onkeypress="javascript:return LengthError(this, event);"></div>
+                            </td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="address1_city" id="address1_city_label"
+                                  class="field-label">Town</label>
+                                <div class="validators"><span id="MaximumLengthValidatoraddress1_city"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address1_city"
+                                  type="text" value="INVERNESS" maxlength="80" id="address1_city"
+                                  class="text form-control " onchange="setIsDirty(this.id);"
+                                  onkeypress="javascript:return LengthError(this, event);"></div>
+                            </td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" rowspan="1" class="clearfix cell text form-control-cell">
+                              <div class="info"><label for="address1_postalcode" id="address1_postalcode_label"
+                                  class="field-label">Postcode</label>
+                                <div class="validators"><span id="MaximumLengthValidatoraddress1_postalcode"
+                                    style="visibility:hidden;">*</span></div>
+                              </div>
+                              <div class="control"><input
+                                  name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$address1_postalcode"
+                                  type="text" value="IV3 8JG" maxlength="20" id="address1_postalcode"
+                                  class="text form-control " onchange="setIsDirty(this.id);"
+                                  onkeypress="javascript:return LengthError(this, event);"></div>
+                            </td>
+                            <td class="cell zero-cell"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </fieldset>
+                  </div>
+                </div>
+              </div><input type="button"
+                name="ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$UpdateButton"
+                value="Submit"
+                onclick="javascript:if(typeof entityFormClientValidate === 'function'){if(entityFormClientValidate()){if(typeof Page_ClientValidate === 'function'){if(Page_ClientValidate('')){clearIsDirty();disableButtons();this.value = 'Processing...';}}else{clearIsDirty();disableButtons();this.value = 'Processing...';}}else{return false;}}else{if(typeof Page_ClientValidate === 'function'){if(Page_ClientValidate('')){clearIsDirty();disableButtons();this.value = 'Processing...';}}else{clearIsDirty();disableButtons();this.value = 'Processing...';}};WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentContainer$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470$EntityFormControl_08f02b3024d5ec11a7b5000d3abc3470_EntityFormView$UpdateButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"
+                id="UpdateButton" class="btn btn-primary"><a class="cta__cancel-changes" href="/business-details"
+                style="margin-left:25px;">Cancel changes</a>
+            </div>
+            <div class="actions"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <nav aria-label="Footer navigation links" class="col-md-12 footer__lower-content">
+          <ul class="footer__links">
+            <li><a class="footer__link" href="/Accessibility">Accessibility</a></li>
+            <li><a class="footer__link" href="/cookie-policy">Cookie policy</a></li>
+            <li><a class="footer__link" href="https://www.scottish-enterprise.com/help/privacy-notice">Privacy
+                notice</a></li>
+            <li><a class="footer__link" href="/terms-and-conditions">Terms and conditions</a></li>
+            <li><a class="footer__link" href="/contact-us">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="row footer__copyright"><span>© Scottish Enterprise 2022. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+
+</body>
+
 </html>

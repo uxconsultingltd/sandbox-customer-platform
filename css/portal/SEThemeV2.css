@@ -6,7 +6,6 @@
 body {
   font-family: "Poppins", Arial, Helvetica, sans-serif !important;
   height: 100%;
-  margin-bottom: 8rem !important;
 }
 
 /* Typography */
@@ -37,7 +36,7 @@ h3 {
   margin-top: 2.5rem;
 }
 
-h4 {
+h4, .h4 {
   font-family: "Poppins", Arial, Helvetica, sans-serif !important;
   font-size: 2rem;
   font-weight: 600;
@@ -57,11 +56,11 @@ a {
   text-decoration: underline !important;
 }
 a:focus {
-  color: #134F76;
+  color: #000 !important;
   outline: 3px solid #FFBF47;
 }
 a:hover {
-  color: #134F76 !important;
+  color: #000 !important;
 }
 
 /* part of the terms and condition scroll to top */
@@ -79,24 +78,37 @@ a:hover {
   font-size: 1em;
 }
 .skip-to-content a:hover, .skip-to-content a:focus {
-  background: #09759d;
+  background: #1E7BB8;
   color: white !important;
 }
 
 .cta__go-back {
   margin-top: 5rem;
 }
+.cta__go-back:focus {
+  color: #000;
+  outline: 3px solid #FFBF47;
+}
+.cta__go-back:hover {
+  color: #000 !important;
+}
 
 .cta__link {
   margin-bottom: 2.5rem;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
+.cta__link:focus {
+  color: #000;
+  outline: 3px solid #FFBF47;
+}
+.cta__link:hover {
+  color: #000 !important;
+}
 
-/* Link - edit company details */
-#edit-company-details {
-  padding-top: 2.5rem;
+/* Link - edit details */
+.edit-details {
+  padding-top: 5rem;
 }
 
 /* Buttons styling */
@@ -113,32 +125,42 @@ a.btn-primary:hover {
   color: white !important;
 }
 
-.btn-primary {
+.btn-primary, #nextButton {
   color: white !important;
-  background-color: #09759d !important;
-  border: 2px solid #09759d !important;
+  background-color: #1E7BB8 !important;
+  border: 2px solid #1E7BB8 !important;
 }
-.btn-primary:focus {
+.btn-primary:focus, #nextButton:focus {
   outline: 3px solid #FFBF47;
   background-color: #134F76 !important;
   border: 2px solid #134F76 !important;
 }
-.btn-primary:hover {
+.btn-primary:active, #nextButton:active {
+  outline: 3px solid #FFBF47;
+  background-color: #134F76 !important;
+  border: 2px solid #134F76 !important;
+}
+.btn-primary:hover, #nextButton:hover {
   background-color: #134F76 !important;
   border: 2px solid #134F76 !important;
 }
 
-.btn-secondary {
-  color: #09759d !important;
+.btn-secondary, .previous-btn {
+  color: #1E7BB8 !important;
   background-color: white !important;
-  border: 2px solid #09759d !important;
+  border: 2px solid #1E7BB8 !important;
 }
-.btn-secondary:focus {
-  outline: 3px solid #FFBF47;
+.btn-secondary:focus, .previous-btn:focus {
   color: #134F76 !important;
   border: 2px solid #134F76 !important;
+  outline: 3px solid #FFBF47;
 }
-.btn-secondary:hover {
+.btn-secondary:active, .previous-btn:active {
+  color: #134F76 !important;
+  border: 2px solid #134F76 !important;
+  outline: 3px solid #FFBF47;
+}
+.btn-secondary:hover, .previous-btn:hover {
   color: #134F76 !important;
   border: 2px solid #134F76 !important;
 }
@@ -160,22 +182,39 @@ a.btn-primary:hover {
   }
 }
 
-.crmEntityFormView .actions {
-  border-top: none;
-  margin: 2rem 0;
-  padding: 0;
-}
-
 /* Individual pages styling */
 /* Company details page */
-.company-details h4 {
-  font-weight: 600;
-  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+/* Edit business details page (out of the box form fixes)*/
+.edit-business-details section.container {
+  padding-bottom: 2.5rem;
 }
-.company-details h4:not(:first-child) {
-  margin-top: 3.5rem;
+.edit-business-details .crmEntityFormView fieldset {
+  margin-bottom: 2.5rem;
+}
+.edit-business-details .actions {
+  margin-top: 0;
+}
+.edit-business-details .crmEntityFormView .actions:empty {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .edit-business-details .cta__cancel-changes {
+    display: block;
+    margin-left: 0 !important;
+    margin-top: 5rem !important;
+  }
+  .edit-business-details .crmEntityFormView .cell {
+    padding: 0 !important;
+  }
+  .edit-business-details .crmEntityFormView .registered-address-fieldset td {
+    margin-bottom: 2.5rem;
+  }
+  .edit-business-details .crmEntityFormView .tab {
+    margin-bottom: 5rem;
+  }
+  .edit-business-details .crmEntityFormView .actions:empty {
+    display: none;
+  }
 }
 
 /* Registration confirmation page */
@@ -194,7 +233,7 @@ a.btn-primary:hover {
 
 /* Accessibility page */
 .accessibility-statement {
-  padding-top: 0;
+  padding-top: 5rem;
 }
 .accessibility-statement h2 {
   margin: 5rem 0 2.5rem 0;
@@ -205,12 +244,10 @@ a.btn-primary:hover {
 }
 
 /* Company details page */
-section.company-details {
-  padding-top: 1.5rem !important;
-  padding-bottom: 0;
-}
-
 /* Terms and conditions page */
+.terms-and-conditions {
+  padding-top: 5rem;
+}
 .terms-and-conditions h2 {
   margin-top: 5rem;
   margin-bottom: 2.5rem;
@@ -223,6 +260,8 @@ section.company-details {
 #terms-and-conditions-section {
   margin-top: 0;
   padding-top: 0;
+  /* "I agree ..." label position fix */
+  /* Continue button width fix for desktop */
 }
 #terms-and-conditions-section h1 {
   padding: 5rem 11rem;
@@ -231,6 +270,12 @@ section.company-details {
 #terms-and-conditions-section .form-group {
   padding-left: 11rem;
 }
+#terms-and-conditions-section span.xrm-attribute-value-encoded.xrm-attribute-value {
+  margin-left: 25px !important;
+}
+#terms-and-conditions-section #submit-agreement {
+  width: 200px;
+}
 @media screen and (max-width: 991px) {
   #terms-and-conditions-section h1 {
     padding-left: 3rem;
@@ -238,6 +283,9 @@ section.company-details {
   #terms-and-conditions-section .form-group {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+  #terms-and-conditions-section #submit-agreement {
+    width: 100%;
   }
 }
 
@@ -255,6 +303,9 @@ section.company-details {
 }
 
 /* Cookie policy page */
+.cookie-policy-cp {
+  padding-top: 5rem;
+}
 .cookie-policy-cp li {
   font-size: 1.9rem;
 }
@@ -263,8 +314,14 @@ section.company-details {
 }
 
 /* Contact us page*/
+.contact-us-form {
+  margin-top: 2.5rem;
+}
 .contact-us-form input[type=email] {
   width: 100%;
+}
+.contact-us-form .cell.checkbox-cell div.info {
+  padding-left: 45px !important;
 }
 
 #se_accepttermsandconditions {
@@ -276,6 +333,156 @@ section.company-details {
   font-size: 1.6rem;
 }
 
+/* Confirm engagement details page */
+.confirm-engagement-details h2 {
+  margin-bottom: 0;
+}
+.confirm-engagement-details form {
+  margin-top: 2.5rem;
+}
+.confirm-engagement-details form div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.confirm-engagement-details .engagement-details-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-top: 2rem;
+}
+.confirm-engagement-details input[type=checkbox] {
+  height: 25px;
+  width: 25px;
+  margin: 5px 15px 5px 0;
+}
+.confirm-engagement-details label {
+  font-weight: 400;
+  margin: 0;
+}
+.confirm-engagement-details ul {
+  margin-bottom: 1.5rem;
+}
+
+.cta-form-submit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+
+.paragraph-with-bullets {
+  display: list-item;
+  margin-left: 5rem;
+}
+
+/* Account manager and account team panels (am - account manager; atm - account team member) */
+.am-card {
+  border: 3px solid #1E7BB8;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.am-card__title {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #1E7BB8;
+  margin: 2.5rem 25px;
+}
+.am-card__title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.am-card__content {
+  margin: 0 2.5rem 2.5rem 2.5rem;
+}
+.am-card__content .am-card__photo {
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+.am-card__content .am-card__photo img {
+  max-width: 140px;
+}
+.am-card__content .am-card__description p {
+  padding-bottom: 15px;
+}
+
+.am-card__footer {
+  background-color: #1E7BB8;
+  color: white;
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+}
+.am-card__footer .am__name {
+  padding-top: 1.5rem;
+  width: 100%;
+}
+.am-card__footer .am__name h3 {
+  color: white;
+  margin: 0;
+}
+.am-card__footer .am__contact-details {
+  overflow-wrap: break-word;
+}
+.am-card__footer .am__contact-details a {
+  color: white;
+}
+
+.your-account-team h2 {
+  margin-bottom: 2rem;
+}
+
+.account-team-members {
+  width: 100%;
+  margin: 0 -15px;
+  padding-top: 2.5rem;
+}
+.account-team-members .atm-card {
+  border: 3px solid #1E7BB8;
+  border-radius: 5px;
+  background-color: white;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  min-height: 265px;
+}
+
+.atm-name h4 {
+  padding-bottom: 15px;
+  border-bottom: 2px solid #1E7BB8;
+}
+
+.atm-team {
+  padding: 1.5rem 0;
+  overflow-wrap: break-word;
+}
+
+.atm-email {
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 991px) {
+  .account-team-members {
+    margin: 0;
+  }
+  .am-card__title {
+    margin: 2.5rem 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .am-card__description p {
+    padding-top: 2.5rem;
+  }
+  .am__contact-details {
+    text-align: center;
+  }
+  .am__phone-number {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+}
 /*Form elements*/
 .form-group {
   display: flex;
@@ -283,12 +490,6 @@ section.company-details {
 }
 
 input::-moz-placeholder {
-  font-weight: 400;
-  font-size: 1.4rem;
-  opacity: 0.5;
-}
-
-input:-ms-input-placeholder {
   font-weight: 400;
   font-size: 1.4rem;
   opacity: 0.5;
@@ -306,7 +507,7 @@ input::placeholder {
   position: relative;
   top: 0 !important;
   width: 100%;
-  background-color: #09759d;
+  background-color: #1E7BB8;
   padding: 1.5rem 0;
   z-index: 1;
   color: white;
@@ -337,7 +538,7 @@ input::placeholder {
   font-weight: 600;
   padding: 0.5rem 1rem;
   background-color: white;
-  color: #09759d;
+  color: #1E7BB8;
 }
 
 .icon__close {
@@ -360,7 +561,7 @@ input::placeholder {
 
 .navbar-static-top.navbar .menu-bar > .navbar-nav > li > a {
   font-family: Poppins, Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
@@ -376,7 +577,7 @@ input::placeholder {
 }
 .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:active {
   color: #fff !important;
-  background-color: #09759d;
+  background-color: #1E7BB8;
   outline: none;
   padding: 1.5rem;
 }
@@ -436,7 +637,7 @@ a.dropdown-toggle:active {
 .breadcrumb {
   font-size: 2rem;
   padding: 0 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
   list-style: none;
   background-color: #fff;
   border-radius: 0;
@@ -460,6 +661,10 @@ legend.section-title {
   font-size: 2.5rem;
   font-weight: 600;
 }
+legend.section-title h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 
 table.section {
   max-width: 60%;
@@ -468,12 +673,108 @@ table.section {
 
 /* Edit company details form - heading spacing */
 .crmEntityFormView .section-title {
-  padding-top: 1.5rem !important;
+  padding-top: 0 !important;
   margin-bottom: 0.5rem;
 }
 
 #websiteurl {
   width: 100%;
+}
+
+/* Onboarding form styling */
+.crmEntityFormView .actions {
+  display: flex;
+  border-top: none;
+  margin: -15px;
+  padding: 0;
+  margin-bottom: 5rem;
+  margin-top: 2.5rem;
+  /*fix for the processing button onboarding form*/
+}
+@media screen and (min-width: 991px) {
+  .crmEntityFormView .actions {
+    width: 800px;
+  }
+}
+
+/* Spacing between the forms buttons */
+.btn-group {
+  margin-right: 1.5rem;
+}
+
+.crmEntityFormView fieldset {
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0;
+  border: 0 none;
+}
+
+.crmEntityFormView td {
+  padding-bottom: 25px !important;
+}
+
+.list-group-item {
+  border-top: none !important;
+}
+
+#WebFormPanel {
+  padding-left: 95px;
+}
+#WebFormPanel h2.tab-title {
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 0;
+}
+#WebFormPanel h2.tab-title:focus {
+  outline: none;
+}
+#WebFormPanel h2.tab-title:hover {
+  background-color: white;
+  color: black !important;
+}
+@media only screen and (max-width: 991px) {
+  #WebFormPanel {
+    padding: 0px;
+  }
+}
+
+/* Onboarding - your business*/
+/*js controls adding extra padding-top when conditional logic for radio btns is applied*/
+div#WebFormPanel.onboarding-your-business .actions {
+  position: relative;
+  top: -110px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#se_business_ispartofgroup, #se_businessisnotyetearningrevenue {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#se_business_ispartofgroup input, #se_business_ispartofgroup label, #se_businessisnotyetearningrevenue input, #se_businessisnotyetearningrevenue label {
+  margin: 0;
+}
+#se_business_ispartofgroup label, #se_businessisnotyetearningrevenue label {
+  margin-left: 10px;
+  margin-right: 30px;
+}
+
+.your-business {
+  margin: -15px 0 2.5rem 0;
+}
+
+.onboarding-no-access p {
+  margin-bottom: 2.5rem;
+}
+
+/* Onboarding - financial information*/
+div#WebFormPanel.onboarding-financial-info h2 {
+  margin-bottom: 5rem;
+}
+div#WebFormPanel.onboarding-financial-info h3 {
+  margin: 25px 0 0 0;
+  padding-top: 25px;
 }
 
 /* Input fields */
@@ -500,14 +801,20 @@ input.form-control:focus, .form-control:focus {
 /* Radio's & checkboxes styling */
 input[type=radio], input[type=checkbox] {
   border: 2px solid black;
-  width: 1.5rem;
-  height: 1.9rem;
+  width: 25px;
+  height: 25px;
   padding: 0.5rem;
 }
 input[type=radio]:focus, input[type=checkbox]:focus {
   color: #134F76;
   outline: 3px solid #FFBF47;
-  border-color: black;
+  border-color: #134F76;
+  outline-offset: 1px;
+}
+input[type=radio]:active, input[type=checkbox]:active {
+  color: #134F76;
+  outline: 3px solid #FFBF47;
+  border-color: #134F76;
   outline-offset: 1px;
 }
 
@@ -518,6 +825,11 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   font-weight: normal;
   cursor: pointer;
   font-size: 1.9rem;
+}
+
+label {
+  font-size: 1.9rem !important;
+  font-weight: 500;
 }
 
 /* Form view out-of-the-box overwrite */
@@ -541,6 +853,8 @@ input[type=radio]:focus, input[type=checkbox]:focus {
 
 /* Section */
 section {
+  display: flex;
+  flex-direction: column;
   padding: 5rem 0;
 }
 
@@ -562,7 +876,7 @@ section h2 {
 }
 
 .bg-primary {
-  background-color: #09759d;
+  background-color: #1E7BB8;
 }
 .bg-primary h1 {
   color: white;
@@ -593,9 +907,12 @@ section h2 {
   padding: 1.5rem 5rem;
   margin-bottom: 5rem;
 }
+.confirmation-panel h1 {
+  color: white;
+}
 
 .info-panel {
-  background-color: #09759d;
+  background-color: #1E7BB8;
   width: 100%;
   padding: 1.5rem 5rem;
   margin-bottom: 5rem;
@@ -652,11 +969,40 @@ section h2 {
   }
 }
 
+/* New requests and engagements panel with a table*/
+.new-requests table {
+  width: 100%;
+}
+.new-requests tr {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.new-requests th {
+  padding: 2rem 0 2rem 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-weight: 400;
+  font-size: 1.9rem;
+}
+@media screen and (max-width: 991px) {
+  .new-requests th {
+    font-size: 1.6rem;
+  }
+}
+.new-requests .th-set-width {
+  width: 150px;
+  text-align: center;
+}
+@media screen and (max-width: 991px) {
+  .new-requests .th-set-width {
+    width: 120px;
+  }
+}
+
 /* Footer */
 footer {
   display: flex;
   flex-direction: row;
-  position: fixed;
+  position: relative;
   bottom: 0;
   background: #E5E5E5;
   padding: 1rem;
@@ -675,14 +1021,22 @@ footer {
   justify-content: center;
   list-style: none;
   padding: 1.5rem;
+  margin-bottom: 0;
 }
 
 .footer__link {
   font-weight: 400;
   color: #666;
-  margin: 1.5rem 2.5rem;
+  margin: 1.5rem 1.5rem;
   text-decoration: none;
   padding-bottom: 0;
+}
+.footer__link:focus {
+  color: #1E7BB8 !important;
+  outline: 3px solid #FFBF47;
+}
+.footer__link:hover {
+  color: #1E7BB8 !important;
 }
 
 .footer__copyright {
@@ -706,6 +1060,14 @@ footer {
   border-right: none;
 }
 
+ul {
+  margin-bottom: 5rem;
+}
+
+li {
+  font-size: 1.9rem;
+}
+
 /* Cards */
 .card {
   display: flex;
@@ -727,6 +1089,113 @@ footer {
   width: 100px !important;
 }
 
+#WebFormPanel table.section {
+  max-width: 80% !important;
+}
+
+ol.progress.left, ol.progress.right {
+  margin-top: 0px;
+  margin-bottom: 5rem;
+  width: 150px;
+}
+
+.list-group-item {
+  background-color: white !important;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  color: white;
+  background-color: #1E7BB8 !important;
+  border: none;
+}
+
+ol.progress li.incomplete {
+  background-color: white;
+  border: none;
+}
+
+.form-action-container-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cta__cancel-changes {
+  margin-left: 25px !important;
+}
+
+.tabs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 35%;
+}
+
+@media screen and (max-width: 767px) {
+  .tabs-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .tabs {
+    width: 100%;
+  }
+}
+.tab-title {
+  text-align: left;
+  border: none;
+  background-color: white;
+  font-size: 1.9rem;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+  color: #000;
+  text-decoration: none !important;
+}
+.tab-title:focus {
+  outline: 3px solid orange;
+}
+.tab-title:hover {
+  background-color: #1E7BB8;
+  color: white !important;
+}
+
+.tab-title.active {
+  color: white;
+  background-color: #1E7BB8;
+}
+
+.tab-content {
+  padding-bottom: 5rem;
+  width: 100%;
+}
+.tab-content .h4 {
+  font-weight: 600;
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.tab-content .h4:not(:first-child) {
+  margin-top: 3.5rem;
+}
+.tab-content:focus {
+  outline: 3px solid orange;
+}
+
+.help-text {
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-size: 1.6rem;
+  color: #4e4e4e;
+}
+
+/* Tabs styling */
 /* Helpers, Utilities */
 .sr-only {
   position: absolute !important;
@@ -797,13 +1266,7 @@ footer {
   h4 {
     font-size: 2rem;
   }
-  p {
-    font-size: 1.6rem;
-  }
-  a {
-    font-size: 1.6rem;
-  }
-  .btn {
+  p, a, .btn, li, label > span {
     font-size: 1.6rem;
   }
   /* Fix for the horizontal scrollbar on mobile view .row, .container overwrite */
@@ -813,6 +1276,9 @@ footer {
   }
   .container {
     width: 100%;
+  }
+  .breadcrumb .active {
+    font-size: 1.6rem;
   }
   .panel {
     padding: 5rem 0px;
@@ -844,8 +1310,12 @@ footer {
   .beta-banner p {
     margin: 0;
   }
+  .edit-details {
+    padding-top: 2.5rem;
+  }
   footer {
     position: relative !important;
+    margin-top: 5rem;
   }
   .footer__links {
     display: flex;
@@ -868,25 +1338,62 @@ footer {
   table.section {
     padding: 0px;
   }
+  .tab-title {
+    padding: 5px 10px;
+  }
+  .tab-content {
+    padding-bottom: 0;
+  }
 }
 /* Offline banner styling */
+#web {
+  display: none;
+}
+
 #offlineNotificationBar {
   display: flex;
   flex-direction: row;
   justify-content: center;
   font-size: 1.6rem;
-  background-color: #09759d !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid black;
 }
 #offlineNotificationBar a {
   font-size: 1.6rem;
-  color: white;
 }
 
 #message {
   font-family: "Poppins", Arial, Helvetica, sans-serif !important;
   font-weight: 400 !important;
   font-size: 1.6rem !important;
-  color: white !important;
+  color: black !important;
+}
+
+/*Notification banners*/
+/* Success */
+.notification-banner--success {
+  border: 3px solid #00703C !important;
+  background-color: #00703C;
+  padding: 2.5rem 5rem;
+  width: 100%;
+}
+.notification-banner--success p {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/* Info */
+.notification-banner--info {
+  border: 3px solid #1E7BB8 !important;
+  padding: 2.5rem 5rem;
+  width: 100%;
+}
+.notification-banner--info p {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 /* Cookies */
@@ -916,6 +1423,7 @@ footer {
 
 .cookies-management {
   display: flex;
+  flex-direction: column;
   max-height: inherit;
   padding: 5rem 5rem 0 5rem;
   border-radius: 5px;
@@ -956,6 +1464,21 @@ footer {
   margin: 5rem 0 !important;
 }
 
+#cta-cookie-policy {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 1.9rem;
+  color: #1E7BB8;
+  text-decoration: underline;
+}
+#cta-cookie-policy:hover {
+  color: #134F76;
+}
+#cta-cookie-policy:focus {
+  outline: 3px solid #FFBF47;
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -984,6 +1507,7 @@ footer {
 
 .tick {
   position: absolute;
+  left: 0;
 }
 .tick svg {
   fill: #00703C;
@@ -1012,7 +1536,7 @@ footer {
 }
 
 input:checked + .slider {
-  background-color: #09759d;
+  background-color: #1E7BB8;
 }
 
 input:focus + .slider {

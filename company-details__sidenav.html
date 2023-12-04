@@ -114,91 +114,120 @@
     </section>
 
     <section class="container">
+
       <div class="row">
         <div class="col-md-1"></div>
+
+
         <div class="col-md-10">
 
-        <ul class="breadcrumb">
-          <li>
-            <a href="/" title="Home">Home</a>
-          </li>
-          <li class="active">Company details</li>
-        </ul>
+          <ul class="breadcrumb">
+            <li>
+              <a href="/" title="Home">Home</a>
+            </li>
+            <li class="active">Company details</li>
+          </ul>
+
+            <div class="tabs-container">
+
+                <!-- <div class="tabs" role="tablist" aria-label="Company information tabs">
+                  <button class="tab-title active" role="tab" aria-selected="true" aria-controls="company-details-tab-content"
+                    id="company-details-tab" tabindex="0">
+                    Company details
+                  </button>
+
+                  <button class="tab-title" role="tab" aria-selected="false" aria-controls="leadership-tab-content"
+                    id="leadership-tab" tabindex="-1">
+                    Leadership
+                  </button>
+                </div> -->
+
 
         <div class="tabs" role="tablist" aria-label="Company information tabs">
-          <button class="tab-title active" role="tab" aria-selected="true" aria-controls="company-details-tab-content" id="company-details-tab" tabindex="0">
-            Company details
-          </button>
-
-          <button class="tab-title" role="tab" aria-selected="false" aria-controls="leadership-tab-content" id="leadership-tab" tabindex="-1">
-            Leadership
-          </button>
-        </div>
-
-        <div class="tab-content" id="company-details-tab-content" role="tabpanel" tabindex="0" aria-labelledby="company-details-tab">
-          
-            <div class="notification-banner--info">
-              <p>We're reviewing the latest changes you've made. You'll get a notification once they've been approved. We might need to get in touch in the meantime to discuss your changes.</p>
-            </div>
+          <a href="/business-details" class="tab-title active" role="tab" aria-selected="true"
+            aria-controls="company-details-tab-content" id="company-details-tab" tabindex="0">
+            Business details
+          </a>
         
-            <h2 class="h4">Your Business Account</h2>
-            <p>Krzysztof Owczarek Ltd</p>
-          
-            <h2 class="h4">Trading Address</h2>
-            <p>
-              Scottish Enterprise <br>
-              4/1 Atrium Court <br>
-              GLASGOW <br>
-              G2 6HQ <br>
-            </p>
-          
-            <h2 class="h4">Registered Address</h2>
-            <p>
-              Hamilton Race Course <br>
-              Bothwell Road <br>
-              HAMILTON <br>
-              Lanarkshire <br>
-              ML3 0DW <br>
-            </p>
-          
-            <h2 class="h4">Contact Details</h2>
-            <p>
-              +44 (0) 141 587 2630 <br>
-            </p>
-          
-            <div class="edit-details">
-              <a href="#">Edit details</a>
+          <a href="/leadership" class="tab-title" role="tab" aria-selected="false" aria-controls="leadership-tab-content"
+            id="leadership-tab" tabindex="-1">
+            Leadership
+          </a>
+        </div>
+
+                <div class="tab-content" id="company-details-tab-content" role="tabpanel" tabindex="0"
+                  aria-labelledby="company-details-tab">
+
+                  <div class="notification-banner--info">
+                    <p>We're reviewing the latest changes you've made. You'll get a notification once they've been approved.
+                      We might need to get in touch in the meantime to discuss your changes.</p>
+                  </div>
+
+                  <h2 class="h4">Your Business Account</h2>
+                  <p>Krzysztof Owczarek Ltd</p>
+
+                  <h2 class="h4">Trading Address</h2>
+                  <p>
+                    Scottish Enterprise <br>
+                    4/1 Atrium Court <br>
+                    GLASGOW <br>
+                    G2 6HQ <br>
+                  </p>
+
+                  <h2 class="h4">Registered Address</h2>
+                  <p>
+                    Hamilton Race Course <br>
+                    Bothwell Road <br>
+                    HAMILTON <br>
+                    Lanarkshire <br>
+                    ML3 0DW <br>
+                  </p>
+
+                  <h2 class="h4">Contact Details</h2>
+                  <p>
+                    +44 (0) 141 587 2630 <br>
+                  </p>
+
+                  <div class="edit-details">
+                    <a href="#">Edit details</a>
+                  </div>
+
+                </div>
+
+                <div class="tab-content" id="leadership-tab-content" role="tabpanel" tabindex="0"
+                  aria-labelledby="leadership-tab" hidden>
+
+                  <div class="notification-banner--success">
+                    <p>Your changes have been saved</p>
+                  </div>
+
+                  <h2 class="h4">Is your business a woman led business?</h2>
+                  <p class="help-text">By this, we mean that all or most of your directors are women.</p>
+                  <p>No data</p>
+
+                  <h2 class="h4">Is your business a young person led business?</h2>
+                  <p class="help-text">By this, we mean that all or most of your directors are aged 16-24 years.</p>
+                  <p>No data</p>
+
+                  <h2 class="h4">Is your business a disabled person led business?</h2>
+                  <p class="help-text">By this, we mean that all or most of your directors are disabled.</p>
+                  <p>No data</p>
+
+                  <h2 class="h4">Is your business an ethnic minority led business?</h2>
+                  <p class="help-text">By this, we mean that all or most of your directors are people from ethnic minorities.
+                  </p>
+                  <p>No data</p>
+
+
+                  <div class="edit-details">
+                    <a href="#">Edit details</a>
+                  </div>
+                </div>
+
             </div>
-          
-        </div>
 
-        <div class="tab-content" id="leadership-tab-content" role="tabpanel" tabindex="0" aria-labelledby="leadership-tab" hidden>
 
-          <div class="notification-banner--success">
-            <p>Your changes have been saved</p>
-          </div>
-          
-          <h2 class="h4">Is your business a woman led business?</h2>
-          <p class="help-text">By this, we mean that all or most of your directors are women.</p>
-          <p>No data</p>
-          
-          <h2 class="h4">Is your business a young person led business?</h2>
-          <p class="help-text">By this, we mean that all or most of your directors are aged 16-24 years.</p>
-          <p>No data</p>
 
-          <h2 class="h4">Is your business a disabled person led business?</h2>
-          <p class="help-text">By this, we mean that all or most of your directors are disabled.</p>
-          <p>No data</p>
-
-          <h2 class="h4">Is your business an ethnic minority led business?</h2>
-          <p class="help-text">By this, we mean that all or most of your directors are people from ethnic minorities.</p>
-          <p>No data</p>
-
-          
-          <div class="edit-details">
-            <a href="#">Edit details</a>
-          </div>
-        </div>
         </div>
       </div>
     </section>
@@ -400,7 +429,7 @@
 
   <script src="js/SECookieModal.js"></script>
   <script src="js/SEBetaBanner.js"></script>
-  <script src="js/SETabs.js"></script>
+  <script src="js/SESideNav.js"></script>
 
 </body>
 

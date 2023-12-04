@@ -153,92 +153,196 @@
 
 
     <!-- Default studio template. Please do not modify -->
-    <div id="mainContent" class="wrapper-body" role="main">
-      <div class="page-copy">
-        <div class="xrm-editable-html&#32;xrm-attribute">
-          <div class="xrm-attribute-value">
+<div id="mainContent" class="wrapper-body" role="main">
 
-<!-- Copy custom markup from here -->
+  <script>
+    $(document).ready(function () {
+      const regConfirmation = document.querySelector("#registration-confirmation");
+      const homePage = document.querySelector("#home-page");
+      if (window.location.href.includes("#id_token=")) {
+        regConfirmation.classList.remove("hide");
+        homePage.classList.add("hide");
+      } else {
+        regConfirmation.classList.add("hide");
+        homePage.classList.remove("hide");
+      }
+    });
+  </script>
+  <section id="registration-confirmation" class="container hide">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-7">
+        <section class="registration-confirmation">
+          <div class="confirmation-panel">
+            <h1>You've successfully created your account</h1>
+          </div>
+          <p>The first time you access your account, you’ll need to read and agree to our terms and conditions. We’ll be
+            in touch soon with your next steps.</p>
+          <a href="/Account/Login/ExternalLogin?returnUrl=/&amp;provider=https://sedevadb2c.b2clogin.com/tfp/a8dc3e1c-6059-4178-83a5-2b6d7d732a6c/b2c_1_customerportal_signup/v2.0/"
+            class="cta__link">Continue to terms and conditions</a>
+          <p>If there are any issues with your account, just get in touch with your Scottish Enterprise contact, or <a
+              href="/contact-us">submit an enquiry</a>.</p>
+        </section>
+      </div>
+    </div>
+  </section>
+  <div id="home-page" class="">
 
-            <!-- Hero-panel -->
-            <div class="panel">
-              <div class="container ">
-                  <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-10">
-                      <h1>Welcome to your Scottish Enterprise account</h1>
-                      <p>Thanks for creating an account and taking part in our test phase.</p>
-                      <p>Here you’ll find the information we’ve saved about you and your business. We’ll be adding more functionality over the coming months to help you access our services and manage ongoing interactions with us.</p>
-
-                    </div>
-                  </div>
-              </div>
-            </div>
-
-            <!-- What you can expect in the future -->
-            <section class="account-features">
-            <div class="container">
-
-              <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10 ">
-                    <h2 class="text-center">What you can expect in the future</h2>
-                    <p class="">For now, this is a basic account that lets you sign in and see your company and personal data. Here’s a taste of what we’re hoping to add to the account space in the future.</p>
-                </div>
-              </div>
-
-              <div class="row">
-              <div class="col-md-3 col-sm-6 col-xs-12 ">
-              <div class="card">
-              <div class="card__icon"><img alt="Icon" role="presentation" src="/icon1.svg"></div>
-
-              <h3 class="card__title">Save the things that interest you</h3>
-
-              <p>Search for and save information, support and resources to come back to later</p>
-              </div>
-              </div>
-
-              <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="card">
-              <div class="card__icon"><img alt="Icon" role="presentation" src="/icon5.svg"></div>
-
-              <h3 class="card__title">A personalised experience</h3>
-
-              <p>Based on the support you’ve already accessed, we can match you with other services that might be helpful to you</p>
-              </div>
-              </div>
-
-              <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="card">
-              <div class="card__icon"><img alt="Icon" role="presentation" src="/icon__3.svg"></div>
-
-              <h3 class="card__title">Quicker applications</h3>
-
-              <p>We’ll store the information you give us to save you time when you next fill out a form or application</p>
-              </div>
-              </div>
-
-              <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="card">
-              <div class="card__icon"><img alt="Icon" role="presentation" src="/icon__4.svg"></div>
-
-              <h3 class="card__title">Keep track of your interactions with us</h3>
-
-              <p>Track the progress of applications and other interactions with us from your account space</p>
-              </div>
-              </div>
-              </div>
-              
-            </div>
-
-            </section>
-
-
+    <div class="panel">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <h1>Welcome to your Scottish Enterprise account</h1>
+            <p>Thanks for creating an account and taking part in our test phase.</p>
+            <p>Here you’ll find the information we’ve saved about you and your business. We’ll be adding more
+              functionality over the coming months to help you access our services and manage ongoing interactions with
+              us.</p>
           </div>
         </div>
       </div>
     </div>
 
+    <section class="invitation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <h2 class="text-center">Scaling and high growth support - next steps</h2>
+            <p class="">You’ve been invited to receive scaling and high growth support. We need you to complete our
+              starter form before we can approve your company for support.</p>
+            <p class="margin-top-l">Before you start, you’ll need:</p>
+            <ul class="">
+              <li>Your companies house number (if you have one)</li>
+              <li>Your latest turnover details and employee numbers</li>
+              <li>Your three-year turnover and employee numbers forecast</li>
+              <li>Key documents like your business plan, investor pitch deck, financial accounts and financial forecasts
+              </li>
+            </ul>
+            <a href="/onboarding" class="btn btn-primary">Complete form</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ajith -->
+    <section class="new-requests">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+              <h2 class="text-center">New requests and engagements</h2>
+              <table id="new-requests">
+                <tbody>
+                  <tr>
+                    <th style="width: 40%;"> New requests and engagements request </th>
+                    <th>
+                    </th>
+                    <th style="width: 20%; padding: 0 15px 0 15px;">25/09/2023</th>
+                    <th style="width: 40%;"><a href="https://crm2devportal.powerappsportals.com/onboarding">Initial plan submission</a></th>
+                  </tr>
+                  <tr>
+                    <th style="max-width: 250px;">request </th>
+                    <th>
+                    </th>
+                    <th style="max-width: 100px;">25/09/2023</th>
+                    <th><a href="https://crm2devportal.powerappsportals.com/onboarding">Initial plan submission</a></th>
+                  </tr>
+              
+ 
+                  <tr>
+                    <th>Another request 3</th>
+                    <th>
+                    </th>
+                    <th>25/09/2023</th>
+                    <th><a href="https://crm2devportal.powerappsportals.com/onboarding">Click here</a></th>
+                  </tr>
+              
+                  <tr>
+                    <th>Complete onboarding request 4</th>
+                    <th>
+                    </th>
+                    <th>25/09/2023</th>
+                    <th><a href="https://crm2devportal.powerappsportals.com/onboarding">Click here</a></th>
+                  </tr>
+              
+                </tbody>
+              </table>
+
+
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What you can expect in the future -->
+    <!-- TODO: remove 'panel' class if the invitation is hidden -->
+    <section class="account-features panel">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <h2 class="text-center">What you can expect in the future</h2>
+            <p class="">For now, this is a basic account that lets you sign in and see your company and personal data.
+              Here’s a taste of what we’re hoping to add to the account space in the future.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="card">
+              <div class="card__icon"><img alt="Icon" role="presentation" src="/icon1.svg"></div>
+              <h3 class="card__title">Save the things that interest you</h3>
+              <p>Search for and save information, support and resources to come back to later</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="card">
+              <div class="card__icon"><img alt="Icon" role="presentation" src="/icon5.svg"></div>
+              <h3 class="card__title">A personalised experience</h3>
+              <p>Based on the support you’ve already accessed, we can match you with other services that might be
+                helpful to you</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="card">
+              <div class="card__icon"><img alt="Icon" role="presentation" src="/icon__3.svg"></div>
+              <h3 class="card__title">Complete forms quicker</h3>
+              <p>We’ll store the information you give us to save you time when you next fill out a form or application
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="card">
+              <div class="card__icon"><img alt="Icon" role="presentation" src="/icon__4.svg"></div>
+              <h3 class="card__title">Keep track of your interactions with us</h3>
+              <p>Track the progress of applications and other interactions with us from your account space</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Markup visible for NOT Signed in users -->
+
+  </div>
+  <div class="row sectionBlockLayout text-left"
+    style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+    <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+      <div class="col-md-12 columnBlockLayout"
+        style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"></div>
+    </div>
+  </div>
+
+  <div class="container adx-form">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+
+      </div>
+    </div>
+  </div>
+</div>
 
     <script src="/js/pcf/loadPcfControls.js"></script>
 

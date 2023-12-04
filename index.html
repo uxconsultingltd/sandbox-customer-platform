@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        td,
+        th {
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            z-index: 1;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            table,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            th {
+                text-align: center;
+            }
+
+            td {
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+            }
+
+            td:before {
+                content: attr(data-label);
+                font-weight: bold;
+                display: inline-block;
+                width: 60%;
+                margin-left: -0.5rem;
+                padding-top: 1rem;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my page</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor enim eget urna sodales feugiat.
+            </p>
+        </section>
+        <section>
+            <h2>Section 2</h2>
+            <p>Phasellus bibendum sapien ut ante dignissim laoreet. Duis elementum velit vitae purus venenatis, ut
+                suscipit nibh molestie.</p>
+        </section>
+        <section>
+            <h2>Section 3</h2>
+            <p>Cras consequat augue nec lectus accumsan, eget pharetra purus pulvinar. Sed eu velit a augue vestibulum
+                consectetur eu sit amet nulla.</p>
+        </section>
+
+        <section>
+            <h2>Responsive table</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Name">John Doe</td>
+                            <td data-label="Age">30</td>
+                            <td data-label="City">New York</td>
+                            <td data-label="Country">USA</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name">Jane Smith</td>
+                            <td data-label="Age">25</td>
+                            <td data-label="City">London</td>
+                            <td data-label="Country">UK</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name">Bob Johnson</td>
+                            <td data-label="Age">40</td>
+                            <td data-label="City">Sydney</td>
+                            <td data-label="Country">Australia</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Page</p>
+    </footer>
+</body>
+
+</html>

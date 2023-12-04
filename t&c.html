@@ -27,23 +27,108 @@
 	<link href="https://crm2devportal.powerappsportals.com/css/offlinenotification.css" rel="stylesheet" />
 </head>
 
-<body data-sitemap-state="/" data-dateformat="M/d/yyyy" data-timeformat="h:mm tt" data-datetimeformat="M/d/yyyy h:mm tt"
+<body data-sitemap-state="/" data-dateformat="dd/MM/yyyy" data-timeformat="HH:mm" data-datetimeformat="dd/MM/yyyy HH:mm"
 	data-app-path="/" data-ckeditor-basepath="/js/BaseHtmlContentDesigner/Libs/msdyncrm_/libs/ckeditor/"
-	data-case-deflection-url="/_services/search/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89">
+	data-case-deflection-url="/_services/search/e55c9a13-d9d1-ec11-a7b5-000d3a2eaf89"
+	data-new-gr-c-s-check-loaded="14.1139.0" data-gr-ext-installed="">
+
+
+	<link href="https://content.powerapps.com/resource/powerappsportal/dist/pcf-style.bundle-0d8f841437.css"
+		onerror="javascript: var target = event.target; var link = document.createElement('link'); link.crossOrigin = target.crossOrigin; link.href = '/dist/pcf-style.bundle-0d8f841437.css'; link.rel = 'stylesheet'; target.insertAdjacentElement('afterend',link);"
+		rel="stylesheet">
+
+
+
+
 
 	<div id="offlineNotificationBar" style="display: none;">
-		<div id="web"></div>
+		<img alt=" " id="web"
+			onerror="javascript: var target = event.target; var img = document.createElement('img'); img.src = '/css/images/web.png'; img.alt = 'web'; img.id = 'web' ; target.insertAdjacentElement('afterend',img); target.remove();"
+			src="https://content.powerapps.com/resource/powerappsportal/img/web.png">
 		<div id="message">You’re offline. This is a read only version of the page.</div>
-		<div id="close" onclick="this.parentElement.style.display='none';"></div>
+
+		<a href="#" id="linkClose">Close</a>
 	</div>
 
-	<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+
+
+	<script type="text/javascript">
+		window.DisableCkEditor = window.DisableCkEditor || {};
+		DisableCkEditor.Value = 'False';
+	</script>
+
+	<script type="text/javascript">
+		var isPvaBotAuthenticated = sessionStorage['isPvaBotAuthenticated'];
+		var isPortalUserLoggedIn = 'False';
+
+		if ((isPvaBotAuthenticated != null || isPvaBotAuthenticated != undefined) && isPvaBotAuthenticated != isPortalUserLoggedIn) {
+			sessionStorage['triggerPvaBotSignOut'] = true;
+			sessionStorage.removeItem('c2Token');
+			sessionStorage.removeItem('directLinetoken');
+			sessionStorage.removeItem('conversation_Id');
+		}
+		sessionStorage['isPvaBotAuthenticated'] = isPortalUserLoggedIn;
+	</script>
+
+	<script type="text/javascript">
+		window["Microsoft"] = window["Microsoft"] || {};
+		window["Microsoft"].Dynamic365 = {
+			Portal: {
+
+				User: {
+					userName: '',
+					contactId: ''
+				},
+
+				version: '9.5.9.17',
+				type: 'StarterPortal',
+				id: '05b81a92-aa4e-42cd-b9f2-17ccfc3e77cf',
+				geo: 'EUR',
+				tenant: '50374495-fdde-4d04-bc5c-574982680e19',
+				correlationId: 'b333b05f-5556-4ce4-9732-602297f49fe7',
+				isTelemetryEnabled: 'True',
+				InstrumentationSettings: {
+					instrumentationKey: '197418c5cb8c4426b201f9db2e87b914-87887378-2790-49b0-9295-51f43b6204b1-7172',
+					collectorEndpoint: 'https://eu-mobile.events.data.microsoft.com/OneCollector/1.0/'
+				},
+				timerProfileForBatching: 'NEAR_REAL_TIME'
+			}
+		}
+
+		// Mark request not cacheable if Dynamics365PortalAnalytics cookie is being refreshed by the server or if the cookie in request header is invalid
+
+
+		// For client side telemetry intializing Dynamics365PortalAnalytics cookie object
+
+		window["Microsoft"].Dynamic365.Portal.dynamics365PortalAnalytics = 'TWFP6IBd4ohgqppbqKvKkf5UiBbh0ezU9gjrlHrJBGCz7mfn6nBR4p4wMD2X40E_H1indkzlbiOvR-HPlFgBYc1hR4nmCyUhFncYA3kGIZjCB36RKZP66zaF4ghySZmxanaDbRn8YFuLGddRT4_2Hg2';
+
+
+	</script>
+
+
+
+
+	<div class="navbar navbar-inverse navbar-static-top" role="banner">
 		<div class="skip-to-content"><a href="#mainContent">Skip to main content</a></div>
 		<div class="container">
+			<div class="col-md-1"></div>
 			<div class="navbar-header">
 
-				<button type="button" class="navbar-toggle collapsed" title="Toggle navigation" data-toggle="collapse"
-					data-target="#navbar" aria-expanded="false" onclick="setHeight();">
+				<!--div class="visible-xs-block">
+              <div class="xrm-editable-html&#32;xrm-attribute" data-languageContext="English&#32;(United&#32;Kingdom)"><div class="xrm-attribute-value"><div><a href="/"><img id="logo" src="/se-logo-transparent.png?v=1661339733660" name="se-logo-transparent.png" alt=" " style="width: 100%; height: 35px; background-color: transparent;"><span class="sr-only">Link to the home page</span></a></div></div></div>
+            </div-->
+				<div class="visible-sm-block visible-md-block visible-lg-block visible-xs-block navbar-brand">
+					<div class="xrm-editable-html xrm-attribute" data-languagecontext="English (United Kingdom)">
+						<div class="xrm-attribute-value">
+							<div><a href="/"><img id="logo" src="/se-logo-transparent.png?v=1661339733660"
+										name="se-logo-transparent.png" alt=" "
+										style="width: 100%; height: 35px; background-color: transparent;"><span
+										class="sr-only">Link to the home page</span></a></div>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="false" onclick="setHeight();">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -52,52 +137,29 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 
+
 				<nav aria-label="Main Navigation" class="navbar-right menu-bar " data-weblinks-maxdepth="2">
 					<ul class="nav navbar-nav weblinks">
 
+
+
+
+
 						<li class="weblink ">
-							<a aria-label="Home" href="/" title="Home">
+							<a href="/en-GB/">
 								Home
 							</a>
 
 						</li>
 
-						<li class="divider-vertical" aria-hidden="true"></li>
-						<li role="none" class="dropdown">
-							<a id="search" class="navbar-icon" href="#" data-toggle="dropdown" role="button"
-								aria-haspopup="true" aria-expanded="false" aria-label="Search">
-								<span class="glyphicon glyphicon-search"></a>
-							</a>
-							<div class="dropdown-menu dropdown-search">
 
-								<form method="GET" action="/search/" role="search" class="form-search">
-									<div class="input-group">
-
-
-
-										<label for="q" class="sr-only">
-											Search
-										</label>
-										<input type="text" class="form-control" id="q" name="q" placeholder="Search"
-											value="" title="Search">
-										<div class="input-group-btn">
-											<button type="submit" class="btn btn-default" title="Search"
-												aria-label="Search">
-												<span class="fa fa-search" aria-hidden="true"></span>
-											</button>
-										</div>
-									</div>
-								</form>
-
-
-							</div>
-						</li>
 
 						<li class="divider-vertical" aria-hidden="true"></li>
 
 
-						<li role="none">
-							<a aria-label="Sign in" href="/SignIn?returnUrl=%2F">
+						<li>
+							<a
+								href="/en-GB/Account/Login/ExternalLogin?returnUrl=%2Fen-GB%2F&amp;provider=https%3A%2F%2Fsedevadb2c.b2clogin.com%2Ftfp%2Fa8dc3e1c-6059-4178-83a5-2b6d7d732a6c%2Fb2c_1_customerportal_signup%2Fv2.0%2F">
 								Sign in
 							</a>
 						</li>
@@ -110,6 +172,130 @@
 		</div>
 	</div>
 
+	<!-- Beta banner -->
+	<div id="beta-banner" class="">
+		<div class="container">
+			<div class="col-md-1"></div>
+			<div class="beta-banner">
+				<div class="beta-tag">beta</div>
+				<p>This is a new beta site, you can give us feedback <a href="/contact-us" class="cta-link">here. </a>
+				</p>
+				<button id="close-beta-banner" class="icon__close" href="">X</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const betaBanner = document.querySelector("#beta-banner");
+		const iconCloseBetaBanner = document.querySelector("#close-beta-banner");
+
+		setCookie = (cName, cValue, expDays) => {
+			let date = new Date();
+			date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+			const expires = "expires=" + date.toUTCString();
+			document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+		}
+
+		getCookie = (cName) => {
+			const name = cName + "=";
+			const cDecoded = decodeURIComponent(document.cookie);
+			const cArr = cDecoded.split("; ");
+			let value;
+			cArr.forEach(val => {
+				if (val.indexOf(name) === 0) value = val.substring(name.length);
+			})
+			return value;
+		}
+
+		iconCloseBetaBanner.addEventListener("click", () => {
+			betaBanner.classList.add("hide");
+			setCookie("SE-Beta-banner", true, 1);
+		})
+
+		displayBetaBanner = () => {
+			if (getCookie("SE-Beta-banner")) {
+				betaBanner.classList.add("hide");
+			} else {
+				betaBanner.classList.remove("hide");
+			}
+		}
+
+		window.addEventListener("load", displayBetaBanner);
+	</script>
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		window.onload = function () {
+			if (window.navigator.appName == "Microsoft Internet Explorer" || window.navigator.userAgent.indexOf("Trident") > 0) {
+				var searchElement = document.getElementById("search");
+				if (searchElement != null) searchElement.setAttribute("href", "");
+			}
+		};
+		function setHeight() {
+			var windowHeight = window.innerHeight - 140;
+			var navbar = document.getElementById("navbar");
+			if (navbar) {
+				navbar.style.maxHeight = windowHeight + "px";
+			}
+		}
+		window.addEventListener('resize', function (event) {
+			setHeight();
+		});
+	</script>
+
+	<!-- add anti-forgery token-->
+	<div id="antiforgerytoken" data-url="/_layout/tokenhtml"></div>
+
+
+
+	<!-- Client Telemetry init if telemetry enabled-->
+	<script
+		onerror="javascript: var target = event.target; var script = document.createElement('script'); script.crossOrigin = target.crossOrigin; script.src = '/dist/client-telemetry.bundle-4335d2f4b0.js'; script.type = 'text/javascript'; target.insertAdjacentElement('afterend',script);"
+		src="https://content.powerapps.com/resource/powerappsportal/dist/client-telemetry.bundle-4335d2f4b0.js"
+		type="text/javascript"></script>
+
+
+
+	<!-- Client Telemetry Wrapper init -->
+	<script
+		onerror="javascript: var target = event.target; var script = document.createElement('script'); script.crossOrigin = target.crossOrigin; script.src = '/dist/client-telemetry-wrapper.bundle-963910d4c3.js'; script.type = 'text/javascript'; target.insertAdjacentElement('afterend',script);"
+		src="https://content.powerapps.com/resource/powerappsportal/dist/client-telemetry-wrapper.bundle-963910d4c3.js"
+		type="text/javascript"></script>
+
+	<script>
+		window.clientLogWrapper = new ClientLogWrapper();
+	</script>
+	<script
+		onerror="javascript: var target = event.target; var script = document.createElement('script'); script.crossOrigin = target.crossOrigin; script.src = '/dist/preform.moment_2_29_4.bundle-79a29b80d8.js'; script.type = 'text/javascript'; target.insertAdjacentElement('afterend',script);"
+		src="https://content.powerapps.com/resource/powerappsportal/dist/preform.moment_2_29_4.bundle-79a29b80d8.js"
+		type="text/javascript"></script>
+
+
+
+	<script
+		onerror="javascript: var target = event.target; var script = document.createElement('script'); script.crossOrigin = target.crossOrigin; script.src = '/dist/pcf-dependency.bundle-805a1661b7.js'; script.type = 'text/javascript'; target.insertAdjacentElement('afterend',script);"
+		src="https://content.powerapps.com/resource/powerappsportal/dist/pcf-dependency.bundle-805a1661b7.js"
+		type="text/javascript"></script>
+
+	<script
+		onerror="javascript: var target = event.target; var script = document.createElement('script'); script.crossOrigin = target.crossOrigin; script.src = '/dist/pcf.bundle-d13e85b491.js'; script.type = 'text/javascript'; target.insertAdjacentElement('afterend',script);"
+		src="https://content.powerapps.com/resource/powerappsportal/dist/pcf.bundle-d13e85b491.js"
+		type="text/javascript"></script>
+
+	<script
+		onerror="javascript: var target = event.target; var script = document.createElement('script'); script.crossOrigin = target.crossOrigin; script.src = '/dist/pcf-extended.bundle-e303d53553.js'; script.type = 'text/javascript'; target.insertAdjacentElement('afterend',script);"
+		src="https://content.powerapps.com/resource/powerappsportal/dist/pcf-extended.bundle-e303d53553.js"
+		type="text/javascript"></script>
+
+
+
 	<div id="content-container" class="container wrapper-body" role="main">
 		<div id="content">
 
@@ -118,334 +304,1146 @@
 
 
 				<section id="terms-and-conditions-section">
-					<h1><span class="xrm-editable-text xrm-attribute" data-languagecontext="English"><span
-								class="xrm-attribute-value-encoded xrm-attribute-value">Terms and Conditions
-
-							</span></span></h1>
-					<div class="xrm-editable-html xrm-attribute terms-and-conditions" data-languagecontext="English">
+					<h1><span class="xrm-editable-text xrm-attribute"
+							data-languagecontext="English (United Kingdom)"><span
+								class="xrm-attribute-value-encoded xrm-attribute-value">Terms and
+								Conditions</span></span></h1>
+					<div class="xrm-editable-html xrm-attribute terms-and-conditions"
+						data-languagecontext="English (United Kingdom)">
 						<div class="xrm-attribute-value">
-							<h2>Scottish Enterprise terms of use for websites</h2>
+							<div class="container">
+								<div class="row">
+									<div class="col-md-1"></div>
+									<div class="col-md-10">
+										<div class="info-panel">
+											<p style="font-size: 25px; color: white; margin:0;">Before you can access
+												your account you need to read and agree to our terms and conditions.</p>
+										</div>
+										<div class="terms-and-conditions">
 
-							<p>These terms of use (together with the privacy policy and the cookies policy) tell you the
-								terms on which you may use this website. By using this website, you confirm that you
-								accept these terms of use and that you agree to comply with them. If you do not agree to
-								these terms of use, you are not permitted to use this website.</p>
+											<button id="btn__scroll-up" class="btn btn-primary" onclick="scrollUp()"
+												style="display: block;">Top<span class="sr-only">On click scrolls to the
+													top of page</span>
+											</button>
 
-							<p>This website is operated by Scottish Enterprise, established under the Enterprise and New
-								Towns (Scotland) Act 1990 and having a principal office at Atrium Court, 50 Waterloo
-								Street, Glasgow G2 6HQ ("SE").</p>
+											<h2 class="margin-top-0">On this page</h2>
+											<p><a href="#terms-0">0. Introduction: Scottish Enterprise Customer Portal
+													Terms</a></p>
+											<p><a href="#terms-1">1. Definitions and interpretation</a></p>
+											<p><a href="#terms-2">2. Rights of use</a></p>
+											<p><a href="#terms-3">3. Use of the portal</a></p>
+											<p><a href="#terms-4">4. Access to the portal</a></p>
+											<p><a href="#terms-5">5. Updates and upgrades</a></p>
+											<p><a href="#terms-6">6. Warranties</a></p>
+											<p><a href="#terms-7">7. Customer’s responsibilities</a></p>
+											<p><a href="#terms-8">8. Intellectual property</a></p>
+											<p><a href="#terms-9">9. Data protection</a></p>
+											<p><a href="#terms-10">10. Limitation of liability</a></p>
+											<p><a href="#terms-11">11. Term and termination</a></p>
+											<p><a href="#terms-12">12. Variation</a></p>
+											<p><a href="#terms-13">13. General</a></p>
+											<p><a href="#terms-14">14. Governing law and jurisdiction</a></p>
 
-							<p>SE accept no responsibility and, to the fullest extent permitted by law, exclude all
-								liability in connection with browsing this site, use of information on this site and
-								downloading any material from it including, but not limited to, any liability for
-								errors, inaccuracies, omissions or misleading or defamatory statements. SE's disclaimers
-								of liability are set out in more detail on this page.</p>
+											<!-- 0 -->
+											<h2 id="terms-0">Scottish Enterprise Customer Portal Terms </h2>
+											<p class="lead">Please read these terms and conditions carefully:</p>
 
-							<p>SE reserves the right to change these terms of use at any time by amending this page. Any
-								new terms will be displayed on the website and by continuing to use and access the
-								website following such changes, you agree to be bound by any variation made by us. It is
-								your responsibility to check these terms of use from time to time to verify such
-								variations</p>
+											<p>This document sets out the terms and conditions (the “Conditions”) that
+												apply to the use of the Portal (as defined below) provided by Scottish
+												Enterprise, established by the Enterprise and New Towns (Scotland) Act
+												1990 and having its principal place of business at Atrium Court, 50
+												Waterloo Street, Glasgow, G2 6HQ (“SE”) by any business entity or
+												business person creating the customer account (“Customer” ). These
+												Conditions apply to the Customer’s use of the Portal to the exclusion of
+												any other terms the Customer seeks to impose or incorporate, or which
+												are implied by law, trade custom, practice or course of dealing. </p>
 
+											<p><b>The Portal is intended for use by businesses and persons that are
+													conducting business. It is not suitable for use by consumers.</b>
+											</p>
+
+											<p><b>When the Customer Representative clicks the “Continue” button on the
+													“Terms and Conditions” page of the Portal, the Customer shall be
+													bound by these Conditions. If the Customer does not agree to these
+													Conditions, the Customer Representative must not use or access the
+													Portal. If the Customer Representative continues to use the Portal,
+													the Customer Representative will be deemed to have accepted these
+													Conditions for and on behalf of the Customer.</b></p>
+
+											<!-- 1 -->
+
+											<h2 id="terms-1">1. DEFINITIONS AND INTERPRETATION</h2>
+											<p class="item-level-1">1.1 In these Conditions:</p>
+
+											<p><b>“Account”</b> means the account created for the Customer, by a
+												Customer Representative by accepting these Conditions on behalf of the
+												Customer on the “Terms and Conditions” page of the Portal, which
+												entitles Authorised Users to use the Portal in accordance with these
+												Conditions in the UK;</p>
+
+											<p><b>“Authorised Users”</b> means the employees and contractors of the
+												Customer who are authorised by the Customer to use the Portal;</p>
+
+											<p><b>“Controller”, “Personal Data”</b>, shall have the respective meanings
+												given to them in applicable Data Protection Laws </p>
+
+											<p><b>“Customer Data”</b> means all data in any form (including Customer
+												Personal Data) that is provided to SE or uploaded or hosted on any part
+												of the Portal by the Customer or by any Authorised User;</p>
+
+											<p><b>“Customer Personal Data”</b> means Personal Data received from or on
+												behalf of the Customer in connection with the performance of SE’s
+												obligations under these Conditions; </p>
+
+											<p><b>“Customer Representative”</b> mean the person that creates an Account;
+											</p>
+
+											<p><b>“Data Protection Law”</b> means all applicable data protection and
+												privacy legislation in force from time to time in the UK including
+												without limitation the UK GDPR; the Data Protection Act 2018 (and
+												regulations made thereunder) (<b>“DPA 2018”</b>); the Privacy and
+												Electronic Communications Regulations 2003 (SI 2003/2426) as amended and
+												all other legislation and regulatory requirements in force from time to
+												time which apply to a party relating to the use of Personal Data
+												(including, without limitation, the privacy of electronic
+												communications); and the guidance and codes of practice issued by the UK
+												Information Commissioner’s Office (or equivalent regulatory body) from
+												time to time;</p>
+
+											<p><b>“Effective Date”</b> means the date the Customer enters in to these
+												Conditions which shall be the date on which the Customer creates an
+												Account on the Portal;</p>
+
+											<p><b>“Intellectual Property Rights”</b> means any and all copyright, rights
+												in inventions, patents, know-how, trade secrets, trade marks and trade
+												names, service marks, design rights, rights in get-up, database rights
+												and rights in data, semiconductor chip topography rights, utility
+												models, domain names and all similar rights and, in each case:</p>
+											<p>(a) whether registered or not; </p>
+											<p>(b) including any applications to protect or register such rights;</p>
+											<p>(c) including all renewals and extensions of such rights or applications;
+											</p>
+											<p>(d) whether vested, contingent or future; and</p>
+											<p>(e) wherever existing;</p>
+
+
+											<p><b>“Portal”</b> means the portal provided by SE, which is available to
+												Customers operating in Scotland or with intent to operate in Scotland,
+												where businesses can create an Account which enables a bidirectional
+												digital channel of communication between SE and the Customer, and shall
+												include any upgrade and/or update;</p>
+
+											<p><b>“Term”</b> has the meaning given in clause 12.1 of these Conditions;
+												and</p>
+
+											<p><b>“UK GDPR”</b> has the meaning given to it in section 3(10) (as
+												supplemented by section 205(4)) of the DPA 2018.</p>
+
+											<!-- 2 -->
+											<h2 id="terms-2">2. RIGHTS OF USE</h2>
+											<p class="item-level-1">2.1 Subject to these Conditions, SE hereby grants to
+												the Customer a limited, non-exclusive, non-transferrable right (without
+												the right to grant sub-licences) to allow the Customer and Authorised
+												Users to access and use the Portal (and any updates and upgrades) during
+												the Term in order for Customer to:
+
+											</p>
+											<p class="item-level-2">2.1.1 register and maintain the Customer Account on
+												the Portal;</p>
+											<p class="item-level-2">2.1.2 review, submit and complete documentations
+												(“Documentation”) and to receive and accept communications from SE
+												relating to the Documentation;</p>
+											<p class="item-level-2">2.1.3 upload business documents, business plans,
+												data and/or other business information relating to any Documentation.
+											</p>
+
+											<!-- 3 -->
+
+											<h2 id="terms-3">3. USE OF THE PORTAL</h2>
+											<p class="item-level-1">3.1 The Customer shall, and shall procure all
+												Authorised Users shall, at all times, comply with all provisions of
+												these Conditions and any Amended Terms that may be issued from
+												time-to-time.</p>
+
+											<p class="item-level-1">3.2 The Customer shall comply with any limits on the
+												number of permitted Authorised Users that may be notified to the
+												Customer by SE from time to time and the Customer shall not permit any
+												additional users to have access to the Portal in excess of the number of
+												permitted Authorised Users.</p>
+
+											<p class="item-level-1">3.3 The Customer shall not knowingly access, store,
+												distribute or transmit any viruses, or any material during the course of
+												its use of the Portal that:</p>
+
+											<p class="item-level-2">3.3.1 is unlawful, harmful, threatening, defamatory,
+												obscene, infringing, harassing or racially or ethnically offensive;</p>
+											<p class="item-level-2">3.3.2 infringes any rights of third parties;</p>
+											<p class="item-level-2">3.3.3 facilitates illegal activity;</p>
+											<p class="item-level-2">3.3.4 depicts sexually explicit images;</p>
+											<p class="item-level-2">3.3.5 promotes unlawful violence;</p>
+											<p class="item-level-2">3.3.6 is discriminatory based on race, gender,
+												colour, religious belief, sexual orientation, disability; or</p>
+											<p class="item-level-2">3.3.7 is otherwise illegal or causes damage or
+												injury to any person or property.</p>
+
+											<p class="item-level-1">3.4 The Customer shall not except as may be allowed
+												by any applicable law which is incapable of exclusion by agreement
+												between SE and the Customer and except to the extent expressly permitted
+												under these Conditions:</p>
+
+											<p class="item-level-2">3.4.1 attempt to copy, modify, duplicate, create
+												derivative works from, frame, mirror, republish, download, display,
+												transmit, or distribute all or any portion of the Portal in any form or
+												media or by any means; or</p>
+											<p class="item-level-2">3.4.2 attempt to de-compile, reverse compile,
+												disassemble, reverse engineer, work around technical limitations in the
+												Portal or otherwise reduce to human-perceivable form all or any part of
+												the Portal; or</p>
+											<p class="item-level-2">3.4.3 access all or any part of the Portal in order
+												to build a product or service which competes with the Portal; or</p>
+											<p class="item-level-2">3.4.4 use the Portal to provide services to third
+												parties; or</p>
+											<p class="item-level-2">3.4.5 license, sell, rent, lease, transfer, assign,
+												distribute, display, disclose, or otherwise commercially exploit, or
+												otherwise make the Portal available to any third party except the
+												Authorised Users; or</p>
+											<p class="item-level-2">3.4.6 attempt to obtain, or assist third parties in
+												obtaining, access to the Portal, other than as provided under these
+												Conditions.</p>
+
+											<p class="item-level-1">3.5 The Customer shall use all reasonable endeavours
+												to prevent any unauthorised access to, or use of, the Portal and, in the
+												event of any such unauthorised access or use, shall promptly notify SE.
+											</p>
+
+											<p class="item-level-1">3.6 The Customer shall promptly notify SE about any
+												possible misuse of the Portal or authentication credentials or any
+												security incidents related to the Portal.</p>
+
+
+											<!-- 4 -->
+											<h2 id="terms-4">4. ACCESS TO THE PORTAL</h2>
+
+											<p class="item-level-1">4.1 SE may suspend access to the Portal to the
+												Customer and its Authorised Users if SE suspects that there has been any
+												breach of security, misuse of the Portal or a breach of these Conditions
+												by the Customer and/or its Authorised Users. Where SE suspends the
+												Customer’s access to the Portal pursuant to this clause 4.1, SE will
+												take such steps as it considers appropriate to investigate the issue and
+												may restore or continue to suspend access to the Portal at its
+												discretion. The Customer shall provide all such information and/or
+												assistance to SE as part of any investigation under this clause 4.1.</p>
+
+											<p class="item-level-1">4.2 The Portal may be subject to delays,
+												interruptions, errors or other problems resulting from use of the
+												internet or public electronic communications networks used by the
+												parties or third parties. The Customer acknowledges that such risks are
+												inherent in the use of such communications facilities and that SE shall
+												have no liability for any such delays, interruptions, errors or other
+												problems relating to (without limitation) the Portal, Documentation.</p>
+
+											<!-- 5 -->
+											<h2 id="terms-5">5. UPDATES AND UPGRADES</h2>
+
+											<p class="item-level-1">5.1 The Customer acknowledges that SE shall be
+												entitled to modify the features and functionality of the Portal by means
+												of an update or upgrade.</p>
+											<p class="item-level-1">5.2 The Customer acknowledges that additional
+												features and functionality modified by means of an update or upgrade may
+												require amendments to these Conditions. </p>
+
+
+											<!-- 6 -->
+											<h2 id="terms-6">6. WARRANTIES</h2>
+
+											<p class="item-level-1">6.1 In consideration for access to the Portal, the
+												Customer warrants and undertakes that:</p>
+
+											<p class="item-level-2">6.1.1 the details provided in registering an Account
+												for the Portal are correct; </p>
+											<p class="item-level-2">6.1.2 the Customer Representative is duly authorised
+												by the Customer to create an Account on the Portal on behalf of the
+												Customer; </p>
+											<p class="item-level-2">6.1.3 the Customer Representative is duly authorised
+												by the Customer to accept these Conditions on behalf of the Customer and
+												bind the Customer to these Conditions; </p>
+											<p class="item-level-2">6.1.4 any Documentation is accurate and not
+												misleading;</p>
+											<p class="item-level-2">6.1.5 only use the Portal for its own benefit and in
+												connection with, and in its capacity as, a business or company; and</p>
+											<p class="item-level-2">6.1.6 it will comply with all applicable legal and
+												regulatory requirements applying to the fulfilment of its obligations
+												under these Conditions.</p>
+
+											<!-- 7 -->
+											<h2 id="terms-7">7. CUSTOMER’S RESPONSIBILITIES</h2>
+
+											<p class="item-level-1">7.1 The Customer shall (and shall ensure all its
+												Authorised Users shall):</p>
+
+											<p class="item-level-2">7.1.1 at all times comply with all applicable laws
+												relating to:</p>
+											<p class="item-level-2">(a) the use or receipt of the Portal and any support
+												services (if applicable); and </p>
+											<p class="item-level-2">(b) its obligations under these Conditions;</p>
+
+											<p class="item-level-2">7.1.2 provide SE with all necessary co-operation in
+												relation to these Conditions and access to such information as may be
+												required by SE in order to meet its obligations under these Conditions;
+											</p>
+											<p class="item-level-2">7.1.3 ensure that the Authorised Users use the
+												Portal and the any support services (if applicable) in accordance with
+												these Conditions and</p>
+											<p class="item-level-2">7.1.4 be, to the extent permitted by applicable law
+												and except as otherwise expressly provided in these Conditions, solely
+												responsible for:</p>
+											<p class="item-level-2">(a) procuring, maintaining and securing its network
+												connections and telecommunications links from its systems to the Portal
+												and all problems, conditions, delays, delivery failures and all other
+												loss or damage arising from or relating to the Customer’s network
+												connections or telecommunications links or caused by the internet; and
+											</p>
+											<p class="item-level-2">(b) complying with any cybersecurity requirement the
+												Customer may be subject to, or requirement that applies to any regulated
+												activity that the Customer may be engaged in.</p>
+
+
+											<!-- 8 -->
+											<h2 id="terms-8">8. INTELLECTUAL PROPERTY</h2>
+
+											<p class="item-level-1">8.1 All Intellectual Property Rights in and to the
+												Portal (including any source code), and the support services belong to
+												and shall remain vested in SE or SE’s licensors. </p>
+
+											<p class="item-level-1">8.2 Subject to clause 8.5, all Intellectual Property
+												Rights in and to the information (including Customer Data) that is
+												uploaded to the Portal by the Customer (excluding any Intellectual
+												Property Rights contained in any documents, reports, forms and/or
+												templates produced or provided by SE that are available on the Portal)
+												shall remain vested in the Customer and the Customer hereby grants a
+												royalty-free, non-transferable, non-exclusive licence for SE to use,
+												disclose, modify, copy and other otherwise utilise such information and
+												the Customer Data to the extent necessary to:</p>
+
+											<p class="item-level-2">8.2.1 provide the Customer with access to the Portal
+												and to provide any support services (where applicable);</p>
+											<p class="item-level-2">8.2.2 maintain and administer the Customer’s Account
+												on the Portal; and/or</p>
+											<p class="item-level-2">8.2.3 exercise or perform SE’s rights, remedies and
+												obligations under these Conditions.</p>
+
+											<p class="item-level-1">8.3 Except for the rights expressly granted in these
+												Conditions, the Customer and any Authorised Users and their direct and
+												indirect sub-contractors, shall not acquire in any way any title, rights
+												of ownership, or Intellectual Property Rights of whatever nature in the
+												Portal or the support services (as applicable) and no Intellectual
+												Property Rights of either party are transferred or licensed as a result
+												of these Conditions.</p>
+
+											<p class="item-level-1">8.4 SE may use any feedback and suggestions for
+												improvement relating to the Portal or the support services (as
+												applicable) provided by the Customer, or any Authorised User without
+												charge or limitation (“Feedback”). The Customer hereby assigns (or shall
+												procure the assignment of) all Intellectual Property Rights in the
+												Feedback with full title guarantee (including by way of present
+												assignment of future Intellectual Property Rights) to SE at the time
+												such Feedback is first provided to SE. </p>
+
+											<p class="item-level-1">8.5 Customer agrees that SE may collect, use, and
+												disclose quantitative data derived from the use of the Portal for its
+												business purposes, including industry analysis, benchmarking and
+												analytics. Any data collected, used, and disclosed will be in aggregate
+												and anonymised form only and will not identify Customer or its
+												Authorised Users.</p>
+
+											<!-- 9 -->
+											<h2 id="terms-9">9. DATA PROTECTION</h2>
+
+											<p><b>SE as a Controller</b></p>
+
+											<p class="item-level-1">9.1 SE may process Customer Personal Data (i) in
+												order to review, consider and/or make a decision on an Application and
+												the granting of funding to the Customer; or (ii) to administer and
+												maintain the Customer’s Account on the Portal or (ii) for such other
+												purposes as set out in the “How we use your information” section of SE’s
+												privacy policy, as amended from time to time, and in each case SE shall
+												process such Customer Personal Data as a Controller for these purposes;
+												(“Controller Purposes”). SE shall process Customer Personal Data for the
+												Controller Purposes in accordance with Data Protection Law and the terms
+												of SE’s privacy policy which is available here: <a
+													href="https://www.scottish-enterprise.com/help/privacy-notice">SE
+													Privacy Policy</a></p>
+
+											<!-- 10 -->
+											<h2 id="terms-10">10. LIMITATION OF LIABILITY</h2>
+
+											<p class="item-level-1">10.1 Notwithstanding any other provision of these
+												Conditions, either party’s liability shall not be limited in any way in
+												respect of the following:</p>
+
+											<p class="item-level-2">10.1.1 death or personal injury caused by
+												negligence;</p>
+											<p class="item-level-2">10.1.2 fraud or fraudulent misrepresentation; or</p>
+											<p class="item-level-2">10.1.3 any other liability which cannot be excluded
+												or limited by applicable law.</p>
+
+
+											<p class="item-level-1">10.2 Subject to clause 10.1, in no event shall SE
+												shall be liable to the Customer whether in contract, delict (including
+												negligence) or restitution, or for breach of statutory duty or
+												misrepresentation, or otherwise, for any special, indirect or
+												consequential loss including loss of profit, loss of goodwill, business
+												interruption, wasted expenditure and loss or damage to data, or the
+												Customer providing any incorrect, misleading or insufficient information
+												to SE, or the Customer’s incorrect use of the Portal.</p>
+
+											<p class="item-level-1">10.3 Subject to clauses 10.1 and 10.2, SE’s total
+												aggregate liability howsoever arising under or in connection with these
+												Conditions shall not exceed an amount equal to [one hundred pounds
+												sterling (£100)].</p>
+
+											<p class="item-level-1">10.4 Except as expressly and specifically provided
+												in these Conditions:</p>
+
+											<p class="item-level-2">10.4.1 the Customer assumes sole responsibility for
+												results obtained from the use of the Portal by the Customer, and for
+												conclusions drawn from such use. SE shall have no liability for any
+												damage caused by errors or omissions in any information, data, reports,
+												instructions or scripts provided to SE by the Customer in connection
+												with the Portal, or any actions taken by SE at the Customer’s direction;
+											</p>
+											<p class="item-level-2">10.4.2 SE shall have full discretion in considering
+												any Documentation;</p>
+											<p class="item-level-2">10.4.3 all warranties, representations, conditions
+												and all other terms of any kind whatsoever implied by statute or common
+												law are, to the fullest extent permitted by applicable law, excluded
+												from these Conditions; and</p>
+											<p class="item-level-2">10.4.4 the Portal and the support services (as
+												applicable) are provided to the Customer on an “as is” basis.</p>
+
+											<!-- 11 -->
+											<h2 id="terms-11">11. TERM AND TERMINATION</h2>
+
+											<p class="item-level-1">11.1 These Conditions shall come into force on the
+												Effective Date and shall continue until terminated in accordance with
+												the terms of these Conditions <b>(“Term”)</b>. </p>
+											<p class="item-level-1">11.2 SE may terminate, disable or withdraw access to
+												the for the Customer and /or the Customer’s Authorised Users immediately
+												at any time and for any reason. </p>
+											<p class="item-level-1">11.3 If SE withdraws the Customer’s access to the
+												Portal under 11.2, it will endeavour to provide no less than one month’s
+												advance notice, however this will not always be possible. Such notices
+												may be provided by email. </p>
+											<p class="item-level-1">11.4 SE may, at its sole discretion, cease or
+												withdraw the provision of the Portal at any time. </p>
+											<p class="item-level-1">11.5 If SE withdraws the Portal under 11.4, the
+												Customer shall still be entitled to contact SE by alternative means.
+											</p>
+											<p class="item-level-1">11.6 These Conditions shall automatically terminate
+												in the event that the Customer’s Account on the Portal is deleted for
+												any reason. </p>
+
+											<!-- 12 -->
+											<h2 id="terms-12">12. VARIATION</h2>
+
+											<p class="item-level-1">12.1 SE may amend these Conditions by notifying
+												Customer of the updated terms through the Portal (“<b>Amended
+													Terms</b>”) and the Amended Terms shall be deemed to be accepted by
+												Customer and shall take effect at the point the Customer first accesses
+												the Portal following such notification (“<b>Amendment Date</b>”) </p>
+
+											<!-- 13 -->
+											<h2 id="terms-13">13. GENERAL</h2>
+
+											<p class="item-level-1">13.1 SE will communicate with the Customer at the
+												email address the Customer uses to register for the Portal. </p>
+
+											<p class="item-level-1">13.2 SE shall not be in breach of any of these
+												Conditions or otherwise liable to the Customer for any breakdown of or
+												failure to perform any obligations under these Conditions as a result of
+												an event, circumstances or causes beyond SE’s reasonable control. </p>
+
+											<p class="item-level-1">13.3 SE shall have the right to assign, transfer,
+												sub-contract, sub-licence, mortgage, charge, declare a trust of or deal
+												in any other manner with any or all of its rights or obligations under
+												these Conditions (including the licence rights granted), in whole or in
+												part, without the Customer’s consent. </p>
+
+											<p class="item-level-1">13.4 These Conditions are personal to the Customer
+												and the Customer shall not assign, transfer, sub-contract, sub-licence,
+												mortgage, charge, declare a trust of or deal in any other manner with
+												any or all of SE’s rights or obligations under these Conditions
+												(including the licence rights granted), in whole or in part.</p>
+
+											<p class="item-level-1">13.5 These Conditions contain the entire contract
+												between SE and the Customer with regard to access to the Portal and any
+												associated services and these Conditions supersede all previous
+												contracts between SE and the Customer in respect of access to the Portal
+												and any associated services. </p>
+
+											<p class="item-level-1">13.6 SE will exercise reasonable care and skill in
+												making the Portal available to the Customer based on the information
+												provided by the Customer, but the Customer will remain responsible for
+												the accuracy of that information and the consequences if it is
+												inaccurate. </p>
+
+											<p class="item-level-1">13.7 A waiver of any right or remedy under these
+												Conditions or by law is only effective if given in writing and shall not
+												be deemed a waiver of any subsequent right or remedy. A failure or delay
+												by SE to exercise any right or remedy provided under these Conditions or
+												by law shall not constitute a waiver of that or any other right or
+												remedy, nor shall it prevent or restrict any further exercise of that or
+												any other right or remedy. No single or partial exercise of any right or
+												remedy provided under these Conditions or by law shall prevent or
+												restrict the further exercise of that or any other right or remedy.</p>
+
+											<p class="item-level-1">13.8 If any provision or part-provision of these
+												Conditions is or becomes invalid, illegal or unenforceable, it shall be
+												deemed deleted, but that shall not affect the validity and
+												enforceability of the rest of these Conditions. If any provision or
+												part-provision of these Conditions is deleted under this clause 13.8, SE
+												and the Customer shall negotiate in good faith to agree a replacement
+												provision that, to the greatest extent possible, achieves the intended
+												commercial result of the original provision. </p>
+
+											<p class="item-level-1">13.9 A person who is not a party to these Conditions
+												will have no rights under the Contract (Third Party Rights) (Scotland)
+												Act 2017 or otherwise to enforce any of these Conditions. </p>
+
+											<!-- 14 -->
+											<h2 id="terms-14">14. GOVERNING LAW AND JURISDICTION</h2>
+											<p class="item-level-1">14.1 These Conditions and any dispute or claim
+												arising out of or in connection with it or its subject matter or
+												formation (including non-contractual disputes or claims) shall be
+												governed by and construed in accordance with the law of Scotland. Each
+												party irrevocably agrees that the courts of Scotland shall have
+												exclusive jurisdiction to settle any dispute or claim arising out of or
+												in connection with these Conditions or its subject matter or formation
+												(including non-contractual disputes or claims).</p>
+										</div>
+
+										<script>
+											let mybutton = document.getElementById("btn__scroll-up");
+											window.onscroll = function () { scrollFunction() };
+
+											function scrollFunction() {
+												if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+													mybutton.style.display = "block";
+												} else {
+													mybutton.style.display = "none";
+												}
+											}
+
+											function scrollUp() {
+												window.scroll({ top: 0, behavior: "smooth" })
+											}
+
+											// Adds aria-required='true' to the checkbox
+											window.addEventListener("load", addAriaRequried);
+
+											function addAriaRequried() {
+												let tcCheckbox = document.getElementById("terms-conditions-confirmation");
+												tcCheckbox.setAttribute('aria-required', true);
+												console.log('aria added');
+											}
+
+										</script>
+									</div>
+								</div>
+							</div>
 						</div>
-
 					</div>
 
+					<form action="/en-GB/Account/Login/TermsAndConditions?returnUrl=%2Fen-GB%2F" method="post">
+						<fieldset>
+							<input name="__RequestVerificationToken" type="hidden"
+								value="pnXbwWViNr2Wrpjk2LjYqvLtJ37kFksBk6QqTwIWOBEjTRFqFK_AjkhOCxDI5gq8TVdR0gd7g0RPKGg_V1X0wMtmFbA5YELr5WYQ3HAXB-s1">
+							<input id="InvitationCode" name="InvitationCode" type="hidden" value="">
+							<input data-val="true" data-val-required="The IsFacebook field is required." id="IsFacebook"
+								name="IsFacebook" type="hidden" value="False">
+							<input data-val="true" data-val-required="The UseExternalSignInAsync field is required."
+								id="UseExternalSignInAsync" name="UseExternalSignInAsync" type="hidden" value="True">
+							<input data-val="true" data-val-required="The IsInternalAADUser field is required."
+								id="IsInternalAADUser" name="IsInternalAADUser" type="hidden" value="False">
+							<div class="form-group" role="presentation">
+								<div class="checkbox" role="presentation">
+									<label for="terms-conditions-confirmation">
+										<input data-val="true"
+											data-val-required="The IsTermsAndConditionsAccepted field is required."
+											id="terms-conditions-confirmation" name="IsTermsAndConditionsAccepted"
+											tabindex="0" type="checkbox" value="true" aria-required="true" style="
+    margin-right: 30px;
+    display: block;
+"><input name="IsTermsAndConditionsAccepted" type="hidden" value="false">
+										<span class="xrm-editable-text xrm-attribute"
+											data-languagecontext="English (United Kingdom)"><span
+												class="xrm-attribute-value-encoded xrm-attribute-value">I agree to these
+												terms and conditions.</span></span>
+									</label>
+								</div>
+							</div>
+							<div class="form-group" role="presentation">
+								<input type="submit" id="submit-agreement" class="btn btn-primary" tabindex="0"
+									value="Continue" disabled="">
+							</div>
+						</fieldset>
+					</form>
+				</section>
+				<script type="text/javascript">
+					$(document).ready(function () {
+						var submitAgreement = $('#submit-agreement'),
+							termsConfirmation = $('#terms-conditions-confirmation'),
+							validationSummary = $('#terms-validation-summary');
 
-					</ul>
-			</div>
-			<form action="/Account/Login/TermsAndConditions?returnUrl=%2F" method="post">
-				<fieldset>
-					<input name="__RequestVerificationToken" type="hidden"
-						value="UJzGZ3PJhbKLHmqcfPbVrC_g1sNRN3kwR3MdG3H0mMAYtYrNAfjOM1TSh4PUBMWuuCmc1qoXNuxj8ZOMh2El6PMRda-aFE9j40P1OL3DU7w1">
-					<input id="InvitationCode" name="InvitationCode" type="hidden" value="">
-					<input data-val="true" data-val-required="The IsFacebook field is required." id="IsFacebook"
-						name="IsFacebook" type="hidden" value="False">
-					<input data-val="true" data-val-required="The UseExternalSignInAsync field is required."
-						id="UseExternalSignInAsync" name="UseExternalSignInAsync" type="hidden" value="True">
-					<input data-val="true" data-val-required="The IsInternalAADUser field is required."
-						id="IsInternalAADUser" name="IsInternalAADUser" type="hidden" value="False">
-					<div class="form-group" role="presentation">
-						<div class="checkbox" role="presentation">
-							<label for="terms-conditions-confirmation">
-								<input data-val="true"
-									data-val-required="The IsTermsAndConditionsAccepted field is required."
-									id="terms-conditions-confirmation" name="IsTermsAndConditionsAccepted" tabindex="0"
-									type="checkbox" value="true"><input name="IsTermsAndConditionsAccepted"
-									type="hidden" value="false">
-								<span class="xrm-editable-text xrm-attribute" data-languagecontext="English"><span
-										class="xrm-attribute-value-encoded xrm-attribute-value">I agree to these terms
-										and conditions.</span></span>
-							</label>
-						</div>
-					</div>
-					<div class="form-group" role="presentation">
-						<input type="submit" id="submit-agreement" class="btn btn-primary" tabindex="0" value="Continue"
-							disabled="">
-					</div>
-				</fieldset>
-			</form>
-			</section>
+						if (validationSummary.length && validationSummary.find('li').length) {
+							validationSummary
+								.attr("role", "alert")
+								.attr("aria-live", "assertive")
+								.trigger("focus");
+						}
 
-			<!-- Adds aria-required='true' to the checkbox -->
-			<script>
+						submitAgreement.prop('disabled', !termsConfirmation.is(':checked'));
+						termsConfirmation.on("change", function () {
+							submitAgreement.prop('disabled', !this.checked);
+						});
 
-				window.onload = function () { 
-					let checkbox = document.getElementById("terms-conditions-confirmation");					
-					window.onload = checkbox.setAttribute('aria-required', true);
-				};
-			
-			</script>
+						submitAgreement.on("click", function () {
+							$.blockUI({ message: null, overlayCSS: { opacity: .3 } });
+						});
+					});
+				</script>
 
-			<!-- Offline banner fixes -->
-			<script>
-				let offlineBanner = document.getElementById("offlineNotificationBar");
-				let btnClose = document.getElementById("close");
-				let aTag = document.createElement('a');
-
-				window.onload = function () { updateOfflineBanner() };
-
-				function updateOfflineBanner() {
-					btnClose.remove();
-					aTag.setAttribute('href', '#');
-					aTag.setAttribute('id', 'linkClose');
-					aTag.innerText = "Close";
-					offlineBanner.appendChild(aTag);
-
-					let linkClose = document.getElementById('linkClose');
-					linkClose.addEventListener('click', hideBanner);
-				}
-
-				function hideBanner() {
-					offlineBanner.style.display = 'none';
-				}
-			</script>
-
-
-		</div>
-
-	</div>
-	</div>
-
-	<script src="/js/pcf/loadPcfControls.js"></script>
-
-
-<section id="cookies" class="hide">
-
-	<div class="cookies-management">
-
-		<div class="" id="cookies-overview">
-			<h2>Cookie Permissions</h2>
-			<p>We use cookies and need you to say that’s okay…</p>
-			<p>For details, see our <a href="cookie-policy.html">Cookie Policy</a>.</p>
-			<button class="btn btn-primary" id="accept-all-cookies-overview">I'm fine with that</button>
-			<button class="btn btn-secondary" id="edit-cookie-settings">Edit cookie settings</button>
-		</div>
-
-		<div class="hide" id="cookies-advanced-settings">
-
-			<h2>Manage cookie settings</h2>
-			<p>This website uses cookies to distinguish you from other users of this website. A cookie is a small file
-				of letters and numbers that we store on your browser or the hard drive of your computer, if you agree.
-			</p>
-			<p class="bold">We use cookies to:</p>
-			<ul>
-				<li>
-					<p>Enable functionality on our website</p>
-				</li>
-				<li>
-					<p>Help us understand how you and other visitors use our website to help us improve the experience
-						from
-						everyone</p>
-				</li>
-				<li>
-					<p>Allow our websites to integrate with third-party services</p>
-				</li>
-			</ul>
-
-			<button class="btn btn-primary" id="accept-all-cookies">Accept all cookies</button>
-
-			<p>Or you can select which cookies you want to turn on below.</p>
-			<hr>
-
-
-			<div class="strictly-necessary-cookies">
-				<h3>Strictly necessary cookies</h3>
-				<div class="row">
-					<div class="col-sm-3">
-
-
-
-						<label class="switch switch-disabled">
-							<input type="checkbox" id="necessary-cookies" checked>
-							<span class="tick">
-								<svg width="35" height="35" viewBox="0 0 16 16">
-									<path
-										d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-								</svg>
-							</span>
-						</label>
-
-
-					</div>
-					<div class="col-sm-9">
-						<p class="bold">These are cookies that are required for our website to function properly. These
-							include
-							things like:</p>
-						<ul>
-							<li>
-								<p>Cookies that allow you to log into secure areas of our website</p>
-							</li>
-							<li>
-								<p>Cookies that help distribute visitors across different servers to improve page load
-									time</p>
-							</li>
-							<li>
-								<p>Cookies that store information about your cookie preferences</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<hr>
-			</div>
-
-			<div class="performance-cookies">
-				<h3>Performance cookies</h3>
-				<div class="row">
-
-					<div class="col-sm-3">
-						<label class="switch">
-							<input type="checkbox" id="performance-cookies" value="false">
-							<span class="slider round"></span>
-							<span class="switch-label" id="performance-cookies-label">Off</span>
-						</label>
-					</div>
-
-					<div class="col-sm-9">
-						<p>These cookies allow us to aggregate anonymised data from you and other visitors to see how
-							people
-							visit the site, how they're using the site, and what their experience is like. This helps is
-							identify
-							and fix problems on the website. We do not allow Google to use or share the data about how
-							you use
-							this site.</p>
-
-						<p class="bold">Performance cookies include:</p>
-						<ul>
-							<li>
-								<p>Google Analytics helps us understand more about visitors so we can improve the site
-									for everyone
-								</p>
-							</li>
-							<li>
-								<p>Google Optimize helps us run two different versions of the page at once, to see which
-									one
-									visitors prefer</p>
-							</li>
-							<li>
-								<p>Hotjar helps us to collect feeback through polls and surveys, and provides heatmaps
-									of pages on
-									our website so we can see how visitors interact with them, helping us to improve
-									those pages</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<hr>
-			</div>
-
-			<div class="functional-cookies">
-				<h3>Functional cookies</h3>
-				<div class="row">
-
-					<div class="col-sm-3">
-						<label class="switch">
-							<input type="checkbox" id="functional-cookies" value="false">
-							<span class="slider round"></span>
-							<span class="switch-label" id="functional-cookies-label">Off</span>
-						</label>
-					</div>
-
-					<div class="col-sm-9">
-						<p class="bold">These are used to recognise you when you return to our website. These cookies
-							allow us
-							to:</p>
-						<ul>
-							<li>
-								<p>Personalise our content for you</p>
-							</li>
-							<li>
-								<p>Remember your preferences (for example, your choice of language or region)</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<hr>
-			</div>
-
-			<div class="marketing-cookies">
-				<h3>Marketing cookies</h3>
-				<div class="row">
-					<div class="col-sm-3">
-						<label class="switch">
-							<input type="checkbox" id="marketing-cookies" value="false">
-							<span class="slider round"></span>
-							<span class="switch-label" id="marketing-cookies-label">Off</span>
-						</label>
-					</div>
-					<div class="col-sm-9">
-						<p class="bold">These cookies record your visit to our website, the pages you have visited and
-							the links
-							you have followed. We use them to:</p>
-						<ul>
-							<li>
-								<p>Help you share content on social media platforms</p>
-							</li>
-							<li>
-								<p>Help us track visitors coming from advertisements on search engines and social media
-								</p>
-							</li>
-							<li>
-								<p>To allow us to target advertisements and promote content on LinkedIn, Twitter,
-									Facebook and
-									Google to people who have
-									visited our site.</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<hr>
-
-				<button class="btn btn-primary" id="save-cookie-preferences">Save cookie preferences</button>
 			</div>
 
 		</div>
 	</div>
 
-</section>
+
+	<script
+		onerror="javascript: var target = event.target; var script = document.createElement('script'); script.crossOrigin = target.crossOrigin; script.src = '/dist/pcf-loader.bundle-f4a0e619b8.js'; script.type = 'text/javascript'; target.insertAdjacentElement('afterend',script);"
+		src="https://content.powerapps.com/resource/powerappsportal/dist/pcf-loader.bundle-f4a0e619b8.js"
+		type="text/javascript"></script>
 
 
+
+
+
+
+
+
+	<!-- Offline banner fixes -->
+	<script>
+		let offlineBanner = document.getElementById("offlineNotificationBar");
+		let btnClose = document.getElementById("close");
+		let aTag = document.createElement('a');
+		let img = document.getElementById("web");
+
+		window.onload = function () { updateOfflineBanner() };
+
+		function updateOfflineBanner() {
+			btnClose.remove();
+			aTag.setAttribute('href', '#');
+			aTag.setAttribute('id', 'linkClose');
+			aTag.innerText = "Close";
+			offlineBanner.appendChild(aTag);
+
+			img.setAttribute('alt', ' ');
+
+			let linkClose = document.getElementById('linkClose');
+			linkClose.addEventListener('click', hideBanner);
+		}
+
+		function hideBanner() {
+			offlineBanner.style.display = 'none';
+		}
+	</script>
 
 
 	<footer>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 footer__lower-content">
-					<div class="footer__links">
-						<a class="footer__link" href="/help/accessibility/">Accessibility</a>
-						<a class="footer__link" href="/help/cookie-policy/">Cookie policy</a>
-						<a class="footer__link" href="/help/privacy-notice/">Privacy notice</a>
-						<a class="footer__link" href="/help/terms-of-use/">Terms of use</a>
-						<a class="footer__link" href="/help/beta">Beta: this is a new service</a>
-					</div>
-				</div>
+				<nav aria-label="Footer navigation links" class="col-md-12 footer__lower-content">
+					<ul class="footer__links">
+						<li><a class="footer__link" href="/Accessibility">Accessibility</a></li>
+						<li><a class="footer__link" href="#" id="edit-cookies-footer-link">Edit cookie settings</a></li>
+						<li><a class="footer__link" href="/cookie-policy">Cookie policy</a></li>
+						<li><a class="footer__link"
+								href="https://www.scottish-enterprise.com/help/privacy-notice">Privacy notice</a></li>
+						<li><a class="footer__link" href="/terms-and-conditions">Terms and conditions</a></li>
+						<li><a class="footer__link" href="/contact-us">Contact us</a></li>
+					</ul>
+				</nav>
 			</div>
-			<div class="row footer__copyright"><span>© Scottish Enterprise 2022. All rights reserved.</span></div>
+			<div class="row footer__copyright"><span><span aria-hidden="true">© </span>Scottish Enterprise 2023. All
+					rights reserved.</span></div>
 		</div>
 	</footer>
 
-	<script src="js/SECookieModal.js"></script>
-	<script src="js/SEBetaBanner.js"></script>
+	<section id="cookies" class="hide">
+
+		<div class="cookies-management">
+
+			<div class="" id="cookies-overview">
+				<h2>Cookie Permissions</h2>
+				<p>We’d like to use cookies to enable functionality, to understand how you use our site and to help us
+					improve the site.</p>
+				<p>For details, see our <button id="cta-cookie-policy">cookie policy</button>.</p>
+				<button class="btn btn-primary" id="accept-all-cookies-overview">I'm fine with that</button>
+				<button class="btn btn-secondary" id="edit-cookie-settings">Edit cookie settings</button>
+			</div>
+
+			<div class="hide" id="policy">
+				<h2>Cookie policy</h2>
+				<div class="cookie-policy-cp">
+					<p>This website uses cookies to distinguish you from other users of this website. A cookie is a
+						small file of letters and numbers that we store on your browser or the hard drive of your
+						computer if you agree. Cookies contain information that is transferred to your computer's hard
+						drive.</p>
+					<p>Cookies help Scottish Enterprise (“SE”, “us” or “we”) to provide you with a good experience when
+						you browse our website and also allow us to improve our website. We assume that you are happy to
+						receive all the cookies that your browser settings allow. You can change your cookie settings at
+						any time.</p>
+					<p>We use the following cookies:</p>
+
+					<ul class="cookies-list">
+						<li><b aria-label="Strictly necessary cookies">Strictly necessary cookies</b> - These are
+							cookies that are required for the operation of our website. They include, for example,
+							cookies that enable you to log into secure areas of our website.</li>
+					</ul>
+
+					<p>You can find more information about the individual cookies we use and the purposes for which we
+						use them in this table:</p>
+
+					<table aria-label="Cookies in Power Apps portals" class="table table-sm space-l-top cookies-table">
+						<thead>
+							<tr>
+								<th>Cookie name</th>
+								<th>Description</th>
+								<th>Lifetime</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>ARRAffinity</td>
+								<td>Added automatically by Azure websites and ensures that requests are load balanced
+									between different sites. Doesn't store any of user information.</td>
+								<td>Session</td>
+							</tr>
+							<tr>
+								<td>ASP.NET_SessionId</td>
+								<td>Used to maintain the session of a logged in user to avoid repeated sign-in.</td>
+								<td>Session</td>
+							</tr>
+							<tr>
+								<td>ContextLanguageCode</td>
+								<td>Stores the default language of the user accessing portal within a session and across
+									webpages. The cookie is deleted after session closes.</td>
+								<td>Session</td>
+							</tr>
+							<tr>
+								<td>Dynamics365PortalAnalytics</td>
+								<td>Critical service cookie to analyze service usage anonymously and aggregated for
+									statistical purpose.</td>
+								<td>90 days</td>
+							</tr>
+							<tr>
+								<td>isDSTObserved</td>
+								<td>Stores a value to indicate if the current moment is in daylight saving time.</td>
+								<td>Session</td>
+							</tr>
+							<tr>
+								<td>isDSTSupport</td>
+								<td>Indicates whether a specified date and time falls in the range of daylight saving
+									time.</td>
+								<td>Session</td>
+							</tr>
+							<tr>
+								<td>timeZoneCode</td>
+								<td>Stores the <em>timezonecode</em> field value of <em>CRM timezonedefinition</em>
+									table for the current timezone.</td>
+								<td>Session</td>
+							</tr>
+							<tr>
+								<td>timezoneoffset</td>
+								<td>Stores the <a data-linktype="external"
+										href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset">timezone
+										difference</a> between UTC and Local browser time.</td>
+								<td>Session</td>
+							</tr>
+							<tr>
+								<td>SE_Necessary_Cookies</td>
+								<td>Stores a value to show/hide the cookie banner.</td>
+								<td>365 days</td>
+							</tr>
+							<tr>
+								<td>SE-Beta-banner</td>
+								<td>Stores a value to show/hide the beta banner.</td>
+								<td>1 day</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<ul class="cookies-list">
+						<li><b aria-label="Performance cookies">Performance cookies</b> - These cookies allow us to
+							aggregate anonymised data from you and other visitors to see how people visit the site, how
+							they're using the site, and what their experience is like. This helps us identify and fix
+							problems on the website.</li>
+					</ul>
+
+					<table aria-label="Cookies in Power Apps portals" class="table table-sm space-l-top cookies-table">
+						<thead>
+							<tr>
+								<th>Cookie name</th>
+								<th>Description</th>
+								<th>Lifetime</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>_ga</td>
+								<td>The _ga cookie is a Google Analytics cookie and contains a unique identifier that is
+									used to track users.</td>
+								<td>400 days</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p>Similarly, SE sometimes embeds photos and video content from websites such as YouTube and Flickr.
+						As a result, when you visit a page with content embedded from, for example, YouTube or Flickr,
+						you may be presented with cookies from these websites. SE does not control the dissemination of
+						these cookies. Again, you should check the relevant third party website for more information
+						about these.</p>
+					<p>SE will not use cookies to collect personally identifiable information about you. However, if you
+						wish to restrict or block the cookies which are set by SE websites, or any third party websites,
+						you can do this through your browser settings. The Help function within your browser should tell
+						you how.</p>
+					<p>Alternatively, you may wish to visit the <a href="https://www.aboutcookies.org/"
+							target="_blank">About cookies</a><span aria-label="Opens a new tab" class="sr-only">Opens a
+							new tab</span> website, which contains comprehensive information about cookies and how to
+						restrict or delete cookies on a wide variety of browsers.</p>
+					<p>Please be aware that restricting cookies may impact on the functionality of the SE website.</p>
+					<p>SE and our other websites use a number of suppliers who set cookies on our behalf in order to
+						deliver the services that they are providing. We are constantly reviewing our use of cookies
+						and, as such, this cookies policy will be regularly renewed to include up to date information
+						about the cookies used by our suppliers. We would highly recommend that you check this page on a
+						regular basis.</p>
+				</div>
+				<button class="btn btn-secondary" id="edit-cookie-settings-policy-view">Edit cookie settings</button>
+			</div>
+
+			<div class="hide" id="cookies-advanced-settings">
+				<h2>Manage cookie settings</h2>
+				<p>This website uses cookies to distinguish you from other users of this website. A cookie is a small
+					file
+					of letters and numbers that we store on your browser or the hard drive of your computer, if you
+					agree.</p>
+				<p class="bold">We use cookies to:</p>
+				<ul>
+					<li>
+						<p>Enable functionality on our website</p>
+					</li>
+					<li>
+						<p>Help us understand how you and other visitors use our website to help us improve the
+							experience from
+							everyone</p>
+					</li>
+					<li>
+						<p>Allow our websites to integrate with third-party services</p>
+					</li>
+				</ul>
+
+				<button class="btn btn-primary" id="accept-all-cookies">Accept all cookies</button>
+				<p>Or you can select which cookies you want to turn on below.</p>
+				<hr>
+
+				<div class="strictly-necessary-cookies">
+					<h3>Strictly necessary cookies</h3>
+					<div class="row">
+
+						<div class="col-sm-3">
+							<label class="switch switch-disabled">
+								<input type="checkbox" id="necessary-cookies" checked="">
+								<span class="tick">
+									<svg width="35" height="35" viewBox="0 0 16 16">
+										<path
+											d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z">
+										</path>
+									</svg>
+								</span>
+							</label>
+						</div>
+
+						<div class="col-sm-9">
+							<p class="bold">These are cookies that are required for our website to function properly.
+								These include
+								things like:</p>
+							<ul>
+								<li>
+									<p>Cookies that allow you to log into secure areas of our website</p>
+								</li>
+								<li>
+									<p>Cookies that help distribute visitors across different servers to improve page
+										load time</p>
+								</li>
+								<li>
+									<p>Cookies that store information about your cookie preferences</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<hr>
+				</div>
+
+				<div class="performance-cookies">
+					<h3>Performance cookies</h3>
+					<div class="row">
+
+						<div class="col-sm-3">
+							<label class="switch">
+								<input type="checkbox" id="performance-cookies" value="false">
+								<span class="slider round"></span>
+								<span class="switch-label" id="performance-cookies-label">Off</span>
+							</label>
+						</div>
+
+						<div class="col-sm-9">
+							<p>These cookies allow us to aggregate anonymised data from you and other visitors to see
+								how people
+								visit the site, how they're using the site, and what their experience is like. This
+								helps us identify
+								and fix problems on the website. We do not allow Google to use or share the data about
+								how you use
+								this site.</p>
+							<p class="bold">Performance cookies include:</p>
+							<ul>
+								<li>
+									<p>Google Analytics helps us understand more about visitors so we can improve the
+										site for everyone
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<hr>
+				</div>
+
+				<button class="btn btn-primary" id="save-cookie-preferences">Save cookie preferences</button>
+
+			</div>
+		</div>
+
+	</section>
+
+	<script>
+		window.addEventListener("load",
+			function () {
+				const cookieModal = document.getElementById('cookies');
+				const acceptAllCookiesOverview = document.getElementById('accept-all-cookies-overview');
+				const editCookies = document.getElementById('edit-cookie-settings');
+				const acceptAllCookies = document.getElementById('accept-all-cookies');
+				const saveCookiePreferences = document.getElementById('save-cookie-preferences');
+				const cookiesOverview = document.getElementById('cookies-overview');
+				const cookiesAdvancedSettings = document.getElementById('cookies-advanced-settings');
+
+				const performanceCookies = document.getElementById('performance-cookies');
+				const performanceCookiesLabel = document.getElementById('performance-cookies-label');
+
+				const ctaCookiePolicy = document.getElementById('cta-cookie-policy');
+				const cookiesPolicyBanner = document.getElementById('policy');
+				const editCookiesPolicy = document.getElementById('edit-cookie-settings-policy-view');
+				const editCookiesFooterLink = document.getElementById('edit-cookies-footer-link');
+
+				const body = document.querySelector("body");
+
+				//getCookie is set in the <head> with the gtag 
+
+				setCookie = (cName, cValue, expDays) => {
+					let date = new Date();
+					date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+					const expires = "expires=" + date.toUTCString();
+					document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+				};
+
+				deleteCookie = (cName) => {
+					setCookie(cName, '', -1);
+				};
+
+				editCookies.addEventListener('click', () => {
+					cookiesOverview.classList.add('hide');
+					cookiesAdvancedSettings.classList.remove('hide');
+				});
+
+				editCookiesFooterLink.addEventListener('click', () => {
+					cookieModal.classList.remove('hide');
+					savedCookiesPreferences();
+				});
+
+				ctaCookiePolicy.addEventListener('click', () => {
+					cookiesOverview.classList.add('hide');
+					cookiesPolicyBanner.classList.remove('hide');
+					cookiesAdvancedSettings.classList.add('hide');
+				});
+
+				editCookiesPolicy.addEventListener('click', () => {
+					cookiesOverview.classList.add('hide');
+					cookiesPolicyBanner.classList.add('hide');
+					cookiesAdvancedSettings.classList.remove('hide');
+				});
+
+				acceptAllCookiesOverview.addEventListener("click", () => {
+					agreeToAllCookies();
+				});
+
+				acceptAllCookies.addEventListener("click", () => {
+					agreeToAllCookies();
+				});
+
+				performanceCookies.addEventListener('click', () => {
+					if (performanceCookies.checked == true) {
+						performanceCookiesLabel.innerText = 'On';
+					} else {
+						performanceCookiesLabel.innerText = 'Off';
+
+					}
+				});
+
+				saveCookiePreferences.addEventListener("click", () => {
+					setCookie("SE_Necessary_Cookies", true, 365);
+
+					if (performanceCookies.checked == true) {
+						setCookie("SE_Performance_Cookies", true, 365);
+						enableGtag();
+					} else {
+						deleteCookie("SE_Performance_Cookies");
+						disableGtag();
+					}
+
+					//sets cookies banner to a default view
+					cookiesOverview.classList.remove('hide');
+					cookiesAdvancedSettings.classList.add('hide');
+					cookieModal.classList.add("hide");
+
+					setOverflow();
+				});
+
+				savedCookiesPreferences = () => {
+					if (getCookie("SE_Performance_Cookies")) {
+						performanceCookies.checked = true;
+						performanceCookiesLabel.innerText = 'On';
+					} else {
+						performanceCookies.checked = false;
+						performanceCookiesLabel.innerText = 'Off';
+					}
+				}
+
+				agreeToAllCookies = () => {
+					setCookie("SE_Necessary_Cookies", true, 365);
+					setCookie("SE_Performance_Cookies", true, 365);
+					enableGtag();
+					cookieModal.classList.add("hide");
+					setOverflow();
+				};
+
+				toggleCookieBanner = () => {
+					if (getCookie("SE_Necessary_Cookies")) {
+						cookieModal.classList.add("hide");
+					} else {
+						cookieModal.classList.remove("hide");
+						setOverflow();
+					}
+				}
+
+				setOverflow = () => {
+					if (!cookieModal.classList.contains("hide")) {
+						body.style.overflow = "hidden";
+					} else {
+						body.style.overflow = "auto";
+					}
+				}
+
+				toggleCookieBanner();
+			});
+	</script>
+
+
+
+
+
+
+
+	<script
+		onerror="javascript: var target = event.target; var script = document.createElement('script'); script.crossOrigin = target.crossOrigin; script.src = '/dist/bootstrap.bundle-105a4995b8.js'; script.type = 'text/javascript'; target.insertAdjacentElement('afterend',script);"
+		src="https://content.powerapps.com/resource/powerappsportal/dist/bootstrap.bundle-105a4995b8.js"
+		type="text/javascript"></script>
+
+	<script
+		onerror="javascript: var target = event.target; var script = document.createElement('script'); script.crossOrigin = target.crossOrigin; script.src = '/dist/postpreform.bundle-184c77da50.js'; script.type = 'text/javascript'; target.insertAdjacentElement('afterend',script);"
+		src="https://content.powerapps.com/resource/powerappsportal/dist/postpreform.bundle-184c77da50.js"
+		type="text/javascript"></script>
+
+	<script
+		onerror="javascript: var target = event.target; var script = document.createElement('script'); script.crossOrigin = target.crossOrigin; script.src = '/dist/app.bundle-9e3ce8f0b4.js'; script.type = 'text/javascript'; target.insertAdjacentElement('afterend',script);"
+		src="https://content.powerapps.com/resource/powerappsportal/dist/app.bundle-9e3ce8f0b4.js"
+		type="text/javascript"></script>
+
+	<script
+		onerror="javascript: var target = event.target; var script = document.createElement('script'); script.crossOrigin = target.crossOrigin; script.src = '/dist/default-1033.moment_2_29_4.bundle-eda4e638fd.js'; script.type = 'text/javascript'; target.insertAdjacentElement('afterend',script);"
+		src="https://content.powerapps.com/resource/powerappsportal/dist/default-1033.moment_2_29_4.bundle-eda4e638fd.js"
+		type="text/javascript"></script>
+
+
+
+	<!-- Tracking code -->
+	<script type="text/javascript">
+		!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+			src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", // The SDK URL Source
+			// name: "appInsights", // Global SDK Instance name defaults to "appInsights" when not supplied
+			// ld: 0, // Defines the load delay (in ms) before attempting to load the sdk. -1 = block page load and add to head. (default) = 0ms load after timeout,
+			// useXhr: 1, // Use XHR instead of fetch to report failures (if available),
+			crossOrigin: "anonymous", // When supplied this will add the provided value as the cross origin attribute on the script tag
+			// onInit: null, // Once the application insights instance has loaded and initialized this callback function will be called with 1 argument -- the sdk instance (DO NOT ADD anything to the sdk.queue -- As they won't get called)
+			cfg: { // Application Insights Configuration
+				connectionString: "InstrumentationKey=45e0f49e-d45b-4961-85e6-7776bc111c53;IngestionEndpoint=https://uksouth-1.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+				/* ...Other Configuration Options... */
+				disableCookiesUsage: true
+			}
+		});
+	</script>
+	<script>
+		//this event will update the title of the page based on active breadcrumb
+		$('.breadcrumb').ready(function () {
+			if ($('.breadcrumb').is(':visible')) {
+				document.querySelector('title').innerHTML = ($('.breadcrumb > li.active').text() + "&nbsp;·&nbsp;Scottish Enterprise Account");
+			}
+		});
+
+		function GoToNewEditor() {
+			var editCmsUrlSegment = "EditInCms";
+			var currentUrl = window.location.href;
+			if (currentUrl.indexOf('?') > -1) {
+				var urlSegments = currentUrl.split("?");
+				window.location.href = window.location.origin + '/' + editCmsUrlSegment + window.location.pathname + '?' + urlSegments[1];
+			}
+			else {
+				window.location.href = window.location.origin + '/' + editCmsUrlSegment + window.location.pathname;
+			}
+		}
+	</script>
+
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.getRegistrations().then(function (registrations) {
+				for (let registration of registrations) {
+					registration.unregister();
+				}
+			}).catch(function (err) {
+				console.log('Service Worker unregister action failed: ', err);
+			});
+		}
+	</script>
+
+	<!--Start Show Session Expire Warning Popup here -->
 
 </body>
 

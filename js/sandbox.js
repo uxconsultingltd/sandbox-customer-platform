@@ -1,162 +1,124 @@
-const cookieModal = document.getElementById('cookies');
-const acceptAllCookiesOverview = document.getElementById('accept-all-cookies-overview');
-const editCookies = document.getElementById('edit-cookie-settings');
-const acceptAllCookies = document.getElementById('accept-all-cookies');
-const saveCookiePreferences = document.getElementById('save-cookie-preferences');
-const cookiesOverview = document.getElementById('cookies-overview');
-const cookiesAdvancedSettings = document.getElementById('cookies-advanced-settings');
+//tabs from youtube tut
 
-const performanceCookies = document.getElementById('performance-cookies');
-const performanceCookiesLabel = document.getElementById('performance-cookies-label');
+const tabs = document.querySelectorAll('[data-tab-target]');
+const tabContents = document.querySelectorAll('[data-tab-content');
 
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.tabTarget);
+        
+        tabContents.forEach(tabContent => {
+            tabContent.classList.remove('active');
+        })
 
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+            // tab.setAttribute("aria-selected", false);
+        })
 
-//Hide cookies overviews and display cookies edit state
-editCookies.addEventListener('click', () => {
-    cookiesOverview.classList.add('hide');
-    cookiesAdvancedSettings.classList.remove('hide');
-
-    if(getCookie("SE_Performance_Cookies")) {
-        performanceCookies.checked = true;
-        performanceCookiesLabel.innerText = 'On';
-
-        } else {
-        performanceCookies.checked = false;
-        performanceCookiesLabel.innerText = 'Off';
-    }
-
-});
-
-setCookie = (cName, cValue, expDays) => {
-    let date = new Date();
-    date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
-    const expires = "expires=" + date.toUTCString();
-    document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-}
-
-getCookie = (cName) => {
-    const name = cName + "=";
-    const cDecoded = decodeURIComponent(document.cookie);
-    const cArr = cDecoded.split('; ');
-    let value;
-    cArr.forEach(val => {
-        // if(val.indexOf(name) === 0 ) value = val.substring(name.length);
-        if(val.indexOf(name) === 0 ) value = val.substring(name);
+        tab.classList.add('active');
+        // tab.setAttribute("aria-selected", true);
+        target.classList.add('active');
     })
-    return value;
-}
-
-deleteCookie = (cName) => {
-    setCookie(cName, '', -1);
-}
-
-// Accept all cookies (overview)
-acceptAllCookiesOverview.addEventListener("click", () => {
-    agreeToAllCookies();
 })
 
-//Accept all cookies (edit)
-acceptAllCookies.addEventListener("click", () => {
-    agreeToAllCookies();
-})
+        //   <ul class="breadcrumb">
 
-agreeToAllCookies = () => {
-    setCookie("SE_Necessary_Cookies", true, 365);
-    setCookie("SE_Performance_Cookies", true, 365);
-    // enableGtag();
-    cookieModal.classList.add("hide");
-}
+        //     <li>
+        //       <a href="/" title="Home">Home</a>
+        //     </li>
+
+        //     <li class="active">Company details</li>
+        //   </ul>
+
+        //   <section>
+
+        //     <ul class="tabs" role="tablist">
+        //       <li data-tab-target="#js-company-details" class="active tab" tabindex="0">Company details</li>
+        //       <li data-tab-target="#js-leadership" class="tab" tabindex="0">Leadership</li>
+        //     </ul>
+
+        //     <div class="tab-content">
+        //       <div id="js-company-details" class="active" data-tab-content>
+        //         <section class="company-details">
+
+        //           <h4>Your Business Account</h4>
+        //           <p>Krzysztof Owczarek Ltd</p>
+
+        //           <h4>Trading Address</h4>
+        //           <p>
+        //             Scottish Enterprise <br>
+        //             4/1 Atrium Court <br>
+        //             GLASGOW <br>
+
+        //             G2 6HQ <br>
+
+        //           </p>
+
+        //           <h4>Registered Address</h4>
+        //           <p>
+        //             Hamilton Race Course <br>
+        //             Bothwell Road <br>
+        //             HAMILTON <br>
+        //             Lanarkshire <br>
+        //             ML3 0DW <br>
+
+        //           </p>
+
+        //           <h4>Contact Details</h4>
+        //           <p>
+        //             +44 (0) 141 587 2630 <br>
+
+        //           </p>
+
+        //           <div id="edit-company-details">
+        //             <a href="/acedit">Edit company details</a>
+        //           </div>
+
+        //         </section>
+
+        //       </div>
+
+        //       <div id="js-leadership" data-tab-content>
+
+        //         <p>Leadership markup goes here</p>
+        //       </div>
+
+        //     </div>
+
+        //   </section>
 
 
-//1st approach enable/disable gtag when toggle clicked
-//Add/remove performance cookies
-performanceCookies.addEventListener('click', () => {
-    if (performanceCookies.checked == true) {
-        performanceCookiesLabel.innerText = 'On';
-        // setCookie("SE_Performance_Cookies", true, 365);
-        // enableGtag();
-    } else {
-        performanceCookiesLabel.innerText = 'Off';
-        // deleteCookie("SE_Performance_Cookies");
-        // disableGtag();
-    }
-});
-
-//2nd approach enable/disable gtag when 'save cookies' btn clicked
-saveCookiePreferences.addEventListener("click", () => {
-    setCookie("SE_Necessary_Cookies", true, 365);
-
-    if (performanceCookies.checked == true) {
-        setCookie("SE_Performance_Cookies", true, 365);
-        enableGtag();
-    } else {
-        deleteCookie("SE_Performance_Cookies");
-        disableGtag();
-    }
-
-    cookieModal.classList.add("hide"); 
-})
-
-// cookieMessage = () => {
-//     if(getCookie("SE_Necessary_Cookies")) {
-//         cookieModal.classList.add("hide");
-//     } else {
-//         cookieModal.classList.remove("hide");
-//     }
+        // CSS
+// [data-tab-content]{
+//   display: none;
 // }
 
+// .active[data-tab-content]{
+//   display: block;
+// }
 
-// TODO: add gtag
-// Define dataLayer and the gtag function.
-window.dataLayer = window.dataLayer || [];
+// .tabs {
+//   display: flex;
+//   justify-content: space-around;
+//   list-style-type: none;
+//   margin: 0;
+//   padding: 0;
+//   border-bottom: 1px solid $primary;
+// }
 
-function gtag(){dataLayer.push(arguments);}
+// .tab {
+//   cursor: pointer;
+//   padding: 5px 10px;
+//   width: 100%;
 
-// Default gtag values
-gtag('consent', 'default', {
-  'ad_storage': 'denied',
-  'analytics_storage': 'denied',
-  'wait_for-update': 2000,
-});
+//   &:hover {
+//     background-color: $primary;
+//     color: white;
+//   }
+// }
 
-
-enableGtag = () => {
-    // window['ga-disable-G-R0VW66LFWP'] = false;
-    setTimeout(
-        gtag('consent', 'update', {
-            'ad_stoarage': 'granted',
-            'analytics_storage': 'granted',
-        }), 300);
-};
-
-
-disableGtag = () => {
-    // window['ga-disable-G-R0VW66LFWP'] = true;
-    setTimeout(
-        gtag('consent', 'update', {
-            'ad_stoarage': 'denied',
-            'analytics_storage': 'denied',
-        }), 300);
-};
-
-
-//enable/disable GA on page load
-setTracking = () => {
-    if(getCookie("SE_Performance_Cookies")) {
-        enableGtag();
-    } else {
-        disableGtag();
-    }
-}
-
-     cookieModal.classList.remove("hide");
-
-// window.addEventListener("load", cookieMessage);
-window.addEventListener("load", setTracking);
-
-
-//Checks if cookies exists and show/hide cookie banner
-// !! This functionality is not required !! 
-//TODO: check if performance cookies exists and show/hide modal
-//TODO: check if functional cookies exists and show/hide modal
-//TODO: check if marketing cookies exists and show/hide modal
+// .tab.active{
+//     background-color: $primary;
+//     color: white;
+// }
